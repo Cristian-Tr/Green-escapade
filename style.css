@@ -4,7 +4,6 @@
 }
 
 body {
-  font-size: 1.4rem;
   background: white;
 }
 
@@ -82,7 +81,8 @@ p {
   width: 100%;
 }
 
-.options>div>div>h6 {
+.options>div>div>h4 {
+  font-weight: 100;
   background: blue;
   text-align: center;
   color: white;
