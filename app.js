@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     {
         photo: "sigillum moldavie rosu demisec.png",
-        choices: ["Proles Pontica rosu denidulce - merlot 12% recomandari: friptura, branza, aperitiv", "Grand Reserve rosu sec - pinot noir 14% recomandari: aperitiv, gratar, peste", "Sigillum Moldavie rosu demisec - feteasca neagra 13% recomandari: carne", "Sceptrus rosu dulce - pinot noir 12% recomandari: aperitiv, crustacee, desrt "],
+        choices: ["Proles Pontica rosu demidulce - merlot 12% recomandari: friptura, branza, aperitiv", "Grand Reserve rosu sec - pinot noir 14% recomandari: aperitiv, gratar, peste", "Sigillum Moldavie rosu demisec - feteasca neagra 13% recomandari: carne", "Sceptrus rosu dulce - pinot noir 12% recomandari: aperitiv, crustacee, desrt "],
         hint: "_ _ g _ _ _ u _  _ _ l _ _ _ _ e  -  _ e _ e _ _ _ _   _ e _ _ _ a",
         answer: 2
 
