@@ -29,7 +29,7 @@ p {
 .quiz {
   width: 100%;
   margin: auto;
-  background:black;
+  background: black;
 }
 
 .buttons-wrapper {
@@ -37,7 +37,7 @@ p {
 }
 
 .buttons-wrapper>button {
- cursor: pointer;
+  cursor: pointer;
   border: none;
   background: transparent;
   font-size: 12px;
@@ -52,14 +52,14 @@ p {
 
 
 .productImage {
- padding: 1px;
+  padding: 1px;
 }
 
 .productImage img {
   max-width: 210px;
   width: auto;
   margin: auto;
-  display:block;
+  display: block;
   margin-top: -20px;
 }
 
@@ -147,8 +147,8 @@ p {
   border-radius: 10px;
   padding: 20px;
   position: relative;
-  top:20%;
-  left:15%;
+  top: 20%;
+  left: 15%;
 }
 
 .modal-body span {
@@ -169,9 +169,9 @@ p {
 
 .resetBtn {
   padding: 10px;
-  font-size: 1.2rem;
+  font-size: 1em;
   margin: 10px;
-  border-radius: 4px;
+  border-radius: 35px;
   background: red;
   color: #fff;
   border: none;
@@ -179,6 +179,6 @@ p {
   cursor: pointer;
 }
 
-  .buttons-wrapper>button{
-    font-size:20px;
-  }
+.buttons-wrapper>button {
+  font-size: 20px;
+}
