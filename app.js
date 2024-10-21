@@ -1,34 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
-const image = document.querySelector(".productImage img");
-const optionsMode = document.querySelector(".options");
-const inputMode = document.querySelector(".input-mode");
-const options = document.querySelectorAll(".options .option");
+    const image = document.querySelector(".productImage img");
+    const optionsMode = document.querySelector(".options");
+    const inputMode = document.querySelector(".input-mode");
+    const options = document.querySelectorAll(".options .option");
 
-const mainModal = document.querySelector(".hint-modal");
-const closeModalBtn = mainModal.querySelector(".modal-body span");
-const modalHint = mainModal.querySelector(".modal-body .theHint");
-const hintText = modalHint.querySelector("p");
-const gameOver = mainModal.querySelector(".modal-body .gameover");
+    const mainModal = document.querySelector(".hint-modal");
+    const closeModalBtn = mainModal.querySelector(".modal-body span");
+    const modalHint = mainModal.querySelector(".modal-body .theHint");
+    const hintText = modalHint.querySelector("p");
+    const gameOver = mainModal.querySelector(".modal-body .gameover");
 
-const scoreDisplay = gameOver.querySelector("p");
-const progress = document.querySelector(".quest-num");
+    const scoreDisplay = gameOver.querySelector("p");
+    const progress = document.querySelector(".quest-num");
 
-const modeBtn = document.querySelector(".buttons .mode");
-const skipBtn = document.querySelector(".buttons .skip");
+    const modeBtn = document.querySelector(".buttons .mode");
+    const skipBtn = document.querySelector(".buttons .skip");
 
-const input = document.querySelector(".input-mode input");
-const submitBtn = document.querySelector(".input-mode button");
-const resetBtn = document.querySelector(".resetBtn");
+    const input = document.querySelector(".input-mode input");
+    const submitBtn = document.querySelector(".input-mode button");
+    const resetBtn = document.querySelector(".resetBtn");
 
 
-var index = 0;
-var score = 0;
-var mode = 0;
+    var index = 0;
+    var score = 0;
+    var mode = 0;
 
-var question = [{
-        photo: "beciul domnesc rosu dulce.png", 
+    var question = [{
+        photo: "beciul domnesc rosu dulce.png",
         choices: ["Beciul Domnesc rosu dulce - cabernet sauvignon 12% recomandari: desert", "Grand Reserve rosu demisec - feteasca alba 14% recomandari: peste, desert", "Beciul Domnesc rosu sec - feteasca regala, pinot noir 14.5% carne, peste, desert", "Beciul Domnesc rosu demidulce - tamaioasa romaneasca 11.5% recomandari: carne"],
         hint: "B _ _ _ _ l D _ _ _ _ s _ - c _ _ _ _ _ _ t s _ _ v _ g _ _ _",
         answer: 0
@@ -51,7 +51,7 @@ var question = [{
     {
         photo: "egregio alb sec.png",
         choices: ["Beciul Domnesc alb demisec - merlot 12.5% recomandari: aperitiv, carne, peste", "Egregio alb sec - chardonnay 14.5% recomandari peste, fructe de mare, salate", "Egregio alb dulce - feteasca neagra 12% recomandari paste, peste, desert", "Grand Reserve alb demisec -  feteasca alba recomandari: salate, desert"],
-      hint:"_ g _ _ _ i _ - _ h _ _ _ _ n _ _ _", 
+        hint: "_ g _ _ _ i _ - _ h _ _ _ _ n _ _ _",
         answer: 1
 
     },
@@ -92,125 +92,125 @@ var question = [{
         hint: "_ _ g _ _ _ u _  _ _ l _ _ _ _ e  -  _ e _ e _ _ _ _   _ e _ _ _ a",
         answer: 2
 
-    }      
-];
-
-
-
-
-window.addEventListener("keypress", konami);
-options.forEach((element) => {
-    element.addEventListener("click", check);
-});
-
-submitBtn.addEventListener("click", check);
-resetBtn.addEventListener("click", replay);
-
-modeBtn.addEventListener("click", switchMode);
-
-closeModalBtn.addEventListener("click", () => mainModal.style.display = "none");
-
-skipBtn.addEventListener("click", () => {
-    if (index < question.length - 1) {
-        index++;
-        init();
-    } else {
-        displayScores();
     }
-});
+    ];
 
-var randQuestion = shuffle(question.slice());
 
-function check() {
-    let userInput;
-    if (mode == 0) {
-        userInput = this.textContent;
-    } else {
-        userInput = input.value.trim();
-        input.value = "";
+
+
+    window.addEventListener("keypress", konami);
+    options.forEach((element) => {
+        element.addEventListener("click", check);
+    });
+
+    submitBtn.addEventListener("click", check);
+    resetBtn.addEventListener("click", replay);
+
+    modeBtn.addEventListener("click", switchMode);
+
+    closeModalBtn.addEventListener("click", () => mainModal.style.display = "none");
+
+    skipBtn.addEventListener("click", () => {
+        if (index < question.length - 1) {
+            index++;
+            init();
+        } else {
+            displayScores();
+        }
+    });
+
+    var randQuestion = shuffle(question.slice());
+
+    function check() {
+        let userInput;
+        if (mode == 0) {
+            userInput = this.textContent;
+        } else {
+            userInput = input.value.trim();
+            input.value = "";
+        }
+        userInput === randQuestion[index].choices[randQuestion[index].answer] ? score++ : "";
+        console.log(userInput);
+        console.log(randQuestion[index].choices[randQuestion[index].answer]);
+        if (index < question.length - 1) {
+            index++;
+            init();
+        } else {
+            displayScores();
+        }
+
     }
-    userInput === randQuestion[index].choices[randQuestion[index].answer] ? score++ : "";
- console.log(userInput);
-  console.log(randQuestion[index].choices[randQuestion[index].answer]);
-    if (index < question.length - 1) {
-        index++;
-        init();
-    } else {
-        displayScores();
+
+    function switchMode() {
+        if (mode == 0) {
+            optionsMode.style.display = "none";
+            inputMode.style.display = "block";
+            modeBtn.innerText = "Options Mode";
+            mode++;
+        } else {
+            inputMode.style.display = "none";
+            optionsMode.style.display = "block";
+            modeBtn.innerText = "Direct Mode";
+            mode = 0;
+        }
     }
 
-}
-
-function switchMode() {
-    if (mode == 0) {
-        optionsMode.style.display = "none";
-        inputMode.style.display = "block";
-        modeBtn.innerText = "Options Mode";
-        mode++;
-    } else {
-        inputMode.style.display = "none";
-        optionsMode.style.display = "block";
-        modeBtn.innerText = "Direct Mode";
+    function replay() {
+        score = 0;
+        index = 0;
         mode = 0;
+        modalHint.style.display = "block";
+        gameOver.style.display = "none";
+        mainModal.style.display = "none";
+        init();
     }
-}
 
-function replay() {
-    score = 0;
-    index = 0;
-    mode = 0;
-    modalHint.style.display = "block";
-    gameOver.style.display = "none";
-    mainModal.style.display = "none";
+    function displayScores() {
+        scoreDisplay.innerText = `${score} /  ${question.length}`
+        modalHint.style.display = "none";
+        gameOver.style.display = "block";
+        mainModal.style.display = "block";
+    }
+
+    function init() {
+        progress.innerText = `${index + 1} / ${question.length}`;
+        console.table(randQuestion);
+        console.log(index);
+        let randOptions = shuffle(randQuestion[index].choices.slice());
+        image.src = randQuestion[index].photo;
+        for (let i = 0; i < options.length; i++) {
+            options[i].innerText = randOptions[i];
+        }
+
+        hintText.innerText = randQuestion[index].hint;
+    }
+
+    function shuffle(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            let rand = Math.ceil(Math.random() * arr.length - 1);
+            let temp = arr[i];
+            arr[i] = arr[rand];
+            arr[rand] = temp;
+        }
+        return arr;
+    }
+
+    let testWord = "test";
+    let wordArr = [];
+
+    function konami(e) {
+        wordArr.push(e.key);
+        if (wordArr.length > testWord.length) {
+            wordArr.shift();
+        }
+        console.log(wordArr);
+        if (wordArr.join("").toLowerCase() === testWord) {
+            console.log("Succes");
+            hintText.innerText = randQuestion[index].choices[randQuestion[index].answer];
+        }
+    }
+
     init();
-}
-
-function displayScores() {
-    scoreDisplay.innerText = `${score} /  ${question.length}`
-    modalHint.style.display = "none";
-    gameOver.style.display = "block";
-    mainModal.style.display = "block";
-}
-
-function init() {
-    progress.innerText = `Question ${ index + 1} of ${question.length}`;
-    console.table(randQuestion);
-  console.log(index);
-    let randOptions = shuffle(randQuestion[index].choices.slice());
-    image.src = randQuestion[index].photo;
-    for (let i = 0; i < options.length; i++) {
-        options[i].innerText = randOptions[i];
-    }
-
-    hintText.innerText = randQuestion[index].hint;
-}
-
-function shuffle(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        let rand = Math.ceil(Math.random() * arr.length - 1);
-        let temp = arr[i];
-        arr[i] = arr[rand];
-        arr[rand] = temp;
-    }
-    return arr;
-}
-
-let testWord = "test";
-let wordArr = [];
-
-function konami(e) {
-    wordArr.push(e.key);
-    if (wordArr.length > testWord.length) {
-        wordArr.shift();
-    }
-    console.log(wordArr);
-    if (wordArr.join("").toLowerCase() === testWord) {
-        console.log("Succes");
-        hintText.innerText = randQuestion[index].choices[randQuestion[index].answer];
-    }
-}
-
-init();
 
 
 
