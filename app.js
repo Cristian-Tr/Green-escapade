@@ -29,66 +29,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var question = [{
         photo: "beciul domnesc rosu dulce.png",
-        choices: ["Beciul Domnesc rosu dulce - cabernet sauvignon 12% recomandari: desert", "Grand Reserve rosu demisec - feteasca alba 14% recomandari: peste, desert", "Beciul Domnesc rosu sec - feteasca regala, pinot noir 14.5% carne, peste, desert", "Beciul Domnesc rosu demidulce - tamaioasa romaneasca 11.5% recomandari: carne"],
+        choices: ["Beciul Domnesc roșu dulce - cabernet sauvignon 12% recomandări: desert", "Grand Reserve roșu demisec - fetească albă 14% recomandări: peăte, desert", "Beciul Domnesc roșu sec - fetească regală, pinot noir 14.5% carne, pește, desert", "Beciul Domnesc roșu demidulce - tămâioasă românească 11.5% recomandări: carne"],
         hint: "B _ _ _ _ l D _ _ _ _ s _ - c _ _ _ _ _ _ t s _ _ v _ g _ _ _",
         answer: 0
 
     },
     {
         photo: "ciocarlia alb demisec.png",
-        choices: ["Ciocarlia alb dulce - feteasca neagra 13.5% recomandari: gratar, desert", "Ciocarlia alb denidulce - feteasca neagra 14% recomandari: aperitiv. gratar", "Ciocarlia alb demisec - feteasca neagra 12% recomandari: aperitiv. gratar, peste, desert", "Ciocarlia alb sec - tamaioasa romaneasca 11% recomandari: aperitiv. desert"],
+        choices: ["Ciocârlia alb dulce - fetească neagră 13.5% recomandări: gratar, desert", "Ciocârlia alb demidulce - fetească neagră 14% recomandări: aperitiv. gratar", "Ciocârlia alb demisec - fetească regală 12% recomandări: aperitiv. gratar, pește, desert", "Ciocârlia alb sec - tămâioasa românească 11% recomandări: aperitiv. desert"],
         hint: "_ i _ _ _ _ _ _ a - f _ _ _ _ _ _ a  _ e _ _ _ a",
         answer: 2
 
     },
     {
         photo: "comoara pivnitei rosu sec.png",
-        choices: ["Comoara pivnitei rosu demisec - tamaioasa romaneasca 14.5% recomandari: carne", "Vinoteca rosu sec - feteasca neagra 17% recomandari: peste, fructe de mare", "Comoara pivnitei rosu dulce - feteasca alba 10.5% recomandari: aperitiv, desert", "Comoara pivnitei rosu sec - feteasca neagra 14.5% recomandari: carne, branza"],
+        choices: ["Comoara pivniței roșu demisec - tămâioasă româneasca 14.5% recomandări: carne", "Vinoteca roșu sec - fetească neagră 17% recomandări: pește, fructe de mare", "Comoara pivniței roșu dulce - fetească albă 10.5% recomandări: aperitiv, desert", "Comoara pivniței roșu sec - fetească neagră 14.5% recomandări: carne, brânză"],
         hint: "_ _ m _ _ _ a _ i _ _ _ _ _  e _ - m _ _ _ _ t",
         answer: 3
 
     },
     {
         photo: "egregio alb sec.png",
-        choices: ["Beciul Domnesc alb demisec - merlot 12.5% recomandari: aperitiv, carne, peste", "Egregio alb sec - chardonnay 14.5% recomandari peste, fructe de mare, salate", "Egregio alb dulce - feteasca neagra 12% recomandari paste, peste, desert", "Grand Reserve alb demisec -  feteasca alba recomandari: salate, desert"],
+        choices: ["Beciul Domnesc alb demisec - merlot 12.5% recomandări: aperitiv, carne, pește", "Egregio alb sec - chardonnay 14.5% recomandări pește, fructe de mare, salate", "Egregio alb dulce - fetească neagră 12% recomandări paste, pește, desert", "Grand Reserve alb demisec -  fetească albă recomandări: salate, desert"],
         hint: "_ g _ _ _ i _ - _ h _ _ _ _ n _ _ _",
         answer: 1
 
     },
     {
         photo: "grand reserve alb sec.png",
-        choices: ["Beciul Domnesc alb dulce - pinot noir 14% recomandari: aperitiv, desert", "Sceptrus alb dulce - feteasca neagra 13% recomandari: aperitiv, peste, paste, desert", "Grand Reserve rose demidulce - pinot noir 12.5% recomandari: aperitiv", "Grand Reserve alb sec - chardonnay 14.5% recomandari: carne, peste, salate"],
+        choices: ["Beciul Domnesc alb dulce - pinot noir 14% recomandări: aperitiv, desert", "Sceptrus alb dulce - fetească neagră 13% recomandări: aperitiv, pește, paste, desert", "Grand Reserve rose demidulce - pinot noir 12.5% recomandări: aperitiv", "Grand Reserve alb sec - chardonnay 14.5% recomandări: carne, pește, salate"],
         hint: "_ _ a _ _  _ e _ _ r _ e - _ _ a _ _ _ _ _ _ y",
         answer: 3
     },
     {
         photo: "mirabilis machina alb sec.png",
-        choices: ["Egregio alb sec - feteasca neagra 10.5% recomandari: aperitiv, carne, peste", "Mirabilis Machina alb sec - blanc de noir 13.5% recomandari: salate, crustacee", "Mirabilis Machina alb dulce - pinot noir 13% recomandari: aperitiv, desert", "Mirabilis Machina alb demidulce - feteasca alba 10% recomandari: crustacee, desert"],
+        choices: ["Egregio alb sec - fetească neagră 10.5% recomandări: aperitiv, carne, pește", "Mirabilis Machina alb sec - blanc de noir 13.5% recomandări: salate, crustacee", "Mirabilis Machina alb dulce - pinot noir 13% recomandări: aperitiv, desert", "Mirabilis Machina alb demidulce - fetească albă 10% recomandări: crustacee, desert"],
         hint: "_ _ _ _ b _ _ _ _  _ _ c _ _ _ a - _ i _ _ _  _ _ i _",
         answer: 1
     },
     {
         photo: "proles pontica rosu demidulce.png",
-        choices: ["Beciul Domnesc rosu sec - pinot noir 13% recomandari: carne, peste", "Proles Pontica rosu dulce - feteasca alba 15% recomandari: aperitiv, peste, desert", "Proles Pontica rosu demidulce - merlot, pinot noir 12% recomandari: friptura", "Sigillum Moldavie rosu sec - feteasca neagra 12.5% recomandari: gratar, peste"],
+        choices: ["Beciul Domnesc roșu sec - pinot noir 13% recomandări: carne, pește", "Proles Pontica roșu dulce - fetească albă 15% recomandări: aperitiv, pește, desert", "Proles Pontica roșu demidulce - merlot, pinot noir 12% recomandări: friptura", "Sigillum Moldavie roșu sec - fetească neagră 12.5% recomandări: gratar, pește"],
         hint: "_ r _ _ _ _  _ o _ _ _ _ _  - m _ _ _ _ t  p _ _ _ _  _ _ _ r",
         answer: 2
 
     },
     {
         photo: "rose verite rose sec.png",
-        choices: ["Ciocarlia rose dulce - feteasca regala 12% recomandari: aperitiv, desert", "Rose verite rosu dulce - feteasca neagra 14% recomandari: aperitiv, desert", "Sigillum Moldavie rose dulce - feteasca alba 14.5% recomandari: branza, desert", "Rose verite rose sec - cabernet sauvignon 14.5% recomandari: branza, peste, risoto"],
+        choices: ["Ciocârlia rose dulce - fetească regală 12% recomandări: aperitiv, desert", "Rose verite roșu dulce - fetească neagră 14% recomandări: aperitiv, desert", "Sigillum Moldavie rose dulce - fetească albă 14.5% recomandări: brânză, desert", "Rose verite rose sec - cabernet sauvignon 14.5% recomandări: brânză, pește, risoto"],
         hint: "_ _ _ e  _ _ _ _ t _ - _ _ _ _ d _ _ n _ _",
         answer: 3
     },
     {
         photo: "sceptrus fume alb sec.png",
-        choices: ["Sigillum Moldavie alb dulce - tamaioasa romaneasca 10.5% recomandari: aperitiv", "Sceptrus fume alb sec - chardonnay, sauvignon blanc 14.5% recomandari: carne", "Mirabilis Machina alb demisec - feteasca regala 13% recomandari: branza, salata", "Grand Reserve alb dulce - tamaioasa romaneasca 12% recomandari: aperitiv, risoto"],
+        choices: ["Sigillum Moldavie alb dulce - tămâioasă românească 10.5% recomandări: aperitiv", "Sceptrus fume alb sec - chardonnay, sauvignon blanc 14.5% recomandări: carne", "Mirabilis Machina alb demisec - fetească regală 13% recomandări: brânză, salata", "Grand Reserve alb dulce - tămâioasă românească 12% recomandări: aperitiv, risoto"],
         hint: "_ c _ _ _ _ _ s   _ u _ _  -  c _ _ _ _ _ _ _ ",
         answer: 1
     },
     {
         photo: "sigillum moldavie rosu demisec.png",
-        choices: ["Proles Pontica rosu demidulce - merlot 12% recomandari: friptura, branza, aperitiv", "Grand Reserve rosu sec - pinot noir 14% recomandari: aperitiv, gratar, peste", "Sigillum Moldavie rosu demisec - feteasca neagra 13% recomandari: carne", "Sceptrus rosu dulce - pinot noir 12% recomandari: aperitiv, crustacee, desrt "],
+        choices: ["Proles Pontica roșu demidulce - merlot 12% recomandări: friptură, brânză, aperitiv", "Grand Reserve roșu sec - pinot noir 14% recomandări: aperitiv, gratar, pește", "Sigillum Moldavie roșu demisec - fetească neagră 13% recomandări: carne", "Sceptrus roșu dulce - pinot noir 12% recomandări: aperitiv, pește, desert "],
         hint: "_ _ g _ _ _ u _  _ _ l _ _ _ _ e  -  _ e _ e _ _ _ _   _ e _ _ _ a",
         answer: 2
 
