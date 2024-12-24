@@ -1,0 +1,87 @@
+label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  height: 25px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 4px;
+  background-color: lightblue;
+  font-size: 0.6rem;
+  resize: none;
+}
+
+@media (min-width: 768px) {
+  input {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    align-items: center;
+  }
+}
+
+.fake-input {
+  width: 100%;
+  height: 25px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid blue;
+  border-radius: 4px;
+  background-color: lightblue;
+  font-size: 0.6rem;
+  resize: none;
+}
+
+@media (min-width: 768px) {
+  .fake-input {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 1.3rem;
+    font-weight: 700;
+    align-items: center;
+  }
+}
+
+.checkbox {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.form label {
+  display: flex;
+  justify-content: center;
+}
+
+h5 {
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  h5 {
+    font-size: 15px;
+  }
+}
+
+button {
+  width: 25%;
+  margin-left: 37%;
+  background-color: pink;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#invoiceData label {
+  display: flex;
+  justify-content: center;
+}

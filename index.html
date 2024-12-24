@@ -3,91 +3,387 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Quiz produse</title>
-  <meta name="Quiz produse" content="quiz" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+  <title>Green Adventure</title>
+  <meta name="gREEN aDVENTURE" content="sea cruises" />
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="app.js"></script>
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./app.js"></script>
+  <script src="./like.js"></script>
 </head>
 
 <body>
 
+  <header id="myPage" data-spy="scroll">
+
+    <nav class="navbar navbar-default navbar-fixed-top align-items-center"
+      style="background-color: transparent; border: none;">
 
 
-  <div class="title">
-    <h3>QUIZ PRODUSE</h3>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#myPage">
+          <span id="nav-logo">🚤</span> GREEN ADVENTURE</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./order.html" target="_blank">
+              <span class="glyphicon glyphicon-shopping-cart">Orders</span></a></li>
+
+        </ul>
+
+
+      </div>
+    </nav>
+
+    <div id="header" class="container-fluid text-center align-items-center">
+
+      <!-- Start video hero -->
+      <div class="video-boats">
+        <video autoplay muted loop poster>
+          <source src="boats.mp4" type="video/mp4">
+        </video>
+
+
+        <div id="header-logo">🚤</div>
+        <h1 style="color: springgreen;">GREEN ADVENTURE</h1>
+        <h4>UNFORGETTABLE</h4><br>
+
+        <div class="col-sm-12">
+          <form>
+            <div class="input-group">
+              <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+              <div class="input-group-btn">
+                <button type="button" id="form" class="btn btn-danger">Subscribe</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+  </header><br><br>
+
+  <!-- Container (About Section) -->
+  <div class="container-fluid text-center bg-white" id="history">
+
+    <div class="col-sm-12">
+      <h2>HISTORY</h2><br>
+
+      <img src="5.png" width="80%" alt="pachet special" border="0"><br><br>
+
+      <h4 style="color: springgreen;">We have been organizing short-term sea cruises at unbeatable prices for more than
+        10 years<br>
+        Our ships are environmentally friendly because they are powered by energy from wind turbines<br>Our program
+        includes sports activities based on swimming, snorkeling, rowing boats, fishing<br> Then
+        you can enjoy healthy Mediterranean dishes based on fish, seafood, olive oil, feta cheese. <br>Come and
+        enjoy
+        these activities with us!
+      </h4><br>
+
+      <button class="btn btn-default btn-lg">Get in Touch</button><br>
+
+
+    </div>
+  </div><br><br>
+
+  <!-- Container (Portfolio Section) -->
+  <div id="products" class="container-fluid text-center bg-white">
+    <h2>SERVICES</h2><br><br>
+    <div class="row text-center slideanim">
+
+
+      <div class="col-sm-3 col-xs-12">
+        <img src="1.png" width="71%" alt="pachet special" border="0" class="shake">
+        <h4>
+          <span style="color: cyan;">MINI<br>
+            CRUISE</span><br>
+          <span style="color: grey;">Price: low</span>
+        </h4>
+        <a href="#"
+          style="background: springgreen; padding: 8px 17px; color: red; font-family: sans-serif; font-size: 17px; font-weight: 800; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold; width: 170px; margin: auto;">
+          BUY</a><br><br>
+      </div>
+
+
+      <div class="col-sm-3 col-xs-12">
+
+        <img src="2.png" width="71%" alt="pachet special" border="0" class="shake">
+        <h4>
+          <span style="color: #ffa500;">MEDIUM<br>
+            CRUISE</span><br>
+          <span style="color: grey;">Price: medium</span>
+        </h4>
+        <a href="#"
+          style="background: springgreen; padding: 8px 17px; color: red; font-family: sans-serif; font-size: 17px; font-weight: 800; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold; width: 170px; margin: auto;">
+          BUY</a><br><br>
+      </div>
+
+
+      <div class="col-sm-3 col-xs-12">
+
+        <img src="3.png" width="71%" alt="pachet special" border="0" class="shake">
+        <h4>
+          <span style="color: red;">MAXI<br>
+            CRUISE</span><br>
+          <span style="color: grey;">Price: high</span>
+        </h4>
+        <a href="#"
+          style="background: springgreen; padding: 8px 17px; color: red; font-family: sans-serif; font-size: 17px; font-weight: 800; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold; width: 170px; margin: auto;">
+          BUY</a><br><br>
+      </div>
+
+
+      <div class="col-sm-3 col-xs-12">
+
+        <img src="4.png" width="71%" alt="pachet special" border="0" class="shake">
+        <h4>
+          <span style="color: springgreen;">EXTRA<br>
+            CRUISE</span><br>
+          <span style="color: grey;">Price: huge</span>
+        </h4>
+        <a href="#"
+          style="background: springgreen; padding: 8px 17px; color: red; font-family: sans-serif; font-size: 17px; font-weight: 800; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold; width: 170px; margin: auto;">
+          BUY</a><br><br>
+      </div>
+    </div>
+  </div><br>
+
+
+  <div id="products" class="container-fluid text-center bg-white">
+
+    <h2>REVIEWS</h2>
+
+
+
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <h4 style="color: springgreen;">"This company is the wow. I like the cruises organized by them. We fished,
+            swam, went diving, the meals
+            were enriched!"<br><span>French citizen</span></h4>
+        </div>
+        <div class="item">
+          <h4 style="color: springgreen;">"What can I say... Green Adventure is WOW! They offer diversified sea
+            activities environmentally friendly
+            cruise ships!"<br><span>American citizen</span></h4>
+        </div>
+        <div class="item">
+          <h4 style="color: springgreen;">"Green Adventure offers you the opportunity to do sports, to breathe fresh
+            air, to eat healthy fish and
+            seafood dishes!"<br><span>English citizen</span></h4>
+        </div>
+      </div>
+
+    </div>
   </div>
-  <div class="quiz">
-    <div class="buttons">
-      <div class="buttons-wrapper">
-
-        <button class="mode"></button>
-        <button class="hint" style="color: red; font-size: .8rem; font-weight: 100;">HINT</button>
-
-        <div class="hint-modal">
-          <div class="modal-body">
-            <span>&times;</span>
-            <div class="theHint">
-
-              <p></p>
-            </div>
-            <div class="gameover">
-              <h3>Rezultat:</h3>
-              <p></p>
-              <button class="resetBtn">Mai încerci o dată?</button>
-            </div>
+  </white>
+  <!-- Container (Pricing Section) -->
+  <div id="pricing">
+    <div class="text-center">
+      <h2>DETAILS</h2><br><br>
+    </div>
+    <div class="row slideanim">
+      <div class="col-sm-3 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3>MINI CRUISE</h3>
+          </div>
+          <div class="panel-body">
+            <h4><strong>BREAKFEST</strong></h4>
+            <h4><strong>CRUISE</strong></h4>
+            <h4><strong>FISHING</strong></h4>
+            <h4><strong>SNORKELING</strong></h4>
+            <h4><strong>-</strong></h4>
+            <h4><strong>-</strong></h4>
+            <h4><strong>-</strong></h4>
+          </div>
+          <div class="panel-footer">
+            <button id="like-btn1">Like!&nbsp<span></span></button>
           </div>
         </div>
-        <button class="skip"></button>
       </div>
-    </div>
-    <div class="productImage">
-      <img src="download.jpg" alt="No image found">
-      <div class="blur"></div>
-    </div>
+      <div class="col-sm-3 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3>MEDIUM CRUISE</h3>
+          </div>
+          <div class="panel-body">
+            <h4><strong>BREAKFEST</strong></h4>
+            <h4><strong>CRUISE</strong></h4>
+            <h4><strong>FISHING</strong></h4>
+            <h4><strong>SNORKELING</strong></h4>
+            <h4><strong>LUNCH</strong></h4>
+            <h4><strong>-</strong></h4>
+            <h4><strong>-</strong></h4>
+          </div>
+          <div class="panel-footer">
+            <button id="like-btn2">Like!&nbsp<span></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3>MAXI CRUISE</h3>
+          </div>
+          <div class="panel-body">
+            <h4><strong>BREAKFEST</strong></h4>
+            <h4><strong>CRUISE</strong></h4>
+            <h4><strong>FISHING</strong></h4>
+            <h4><strong>SNORKELING</strong></h4>
+            <h4><strong>LUNCH</strong></h4>
+            <h4><strong>DINNER</strong></h4>
+            <h4><strong>-</strong></h4>
+          </div>
+          <div class="panel-footer">
+            <button id="like-btn3">Like!&nbsp<span></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3>EXTRA CRUISE</h3>
+          </div>
+          <div class="panel-body">
+            <h4><strong>BREAKFEST</strong></h4>
+            <h4><strong>CRUISE</strong></h4>
+            <h4><strong>FISHING</strong></h4>
+            <h4><strong>SNORKELING</strong></h4>
+            <h4><strong>LUNCH</strong></h4>
+            <h4><strong>DINNER</strong></h4>
+            <h4><strong>WATER PARK</strong></h4>
+          </div>
+          <div class="panel-footer">
+            <button id="like-btn4">Like!&nbsp<span></span></button>
+          </div>
+        </div>
+      </div>
 
-
-    <div class="options"><br><br>
-      <h4 style="color: red; text-align: center;">Alege raspunsul corect!</h4>
-      <div>
-        <div>
-          <h5 class="option"></h5>
-        </div>
-        <div>
-          <h5 class="option"></h5>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h5 class="option"></h5>
-        </div>
-        <div>
-          <h5 class="option"></h5>
-        </div>
-      </div>
     </div>
-    <div class="input-mode">
-      <input type="text" /><button></button>
-    </div>
-    <div class="quest-num"></div><br>
   </div>
 
 
+  <footer class="footer-section">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget company-intro-widget"><br>
+              <h5 class="site-logo" style="font-weight: 500; color: springgreen; text-align: left;">
+                GREEEN ADVENTURE
+              </h5>
+              <ul class="company-footer-contact-list">
+                <li><a href="#" style="font-weight: 500; color: transparent;">-</a></li>
+                <li><a href="#"> Terms</a></li>
+                <li><a href="#"> Rules</a></li>
+                <li><a href="#"> Cookies</a></li>
+                <li style="font-weight: 500; color: springgreen;">This is a demo website</li>
+                <li style="font-weight: 500; color: springgreen;">December 2024</li>
+              </ul>
+            </div>
+          </div><!-- widget end -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget course-links-widget">
+              <h5 class="widget-title" style="font-weight: 800; text-align:left; margin-top: 35px;">
+                INFORMATION</h5>
+              <ul class="courses-link-list">
+                <li style="list-style-type:none"><a href="#"> Services</a></li>
+                <li style="list-style-type:none"><a href="#"> Members</a></li>
+                <li style="list-style-type:none"><a href="#"> Partners</a></li>
+                <li style="list-style-type:none"><a href="#"> Procedure</a></li>
 
 
+              </ul>
+            </div>
+          </div><!-- widget end -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget latest-news-widget">
+              <h5 class="widget-title" style="font-weight: 800; text-align:left; margin-top: 35px;">
+                LINKS</h5>
+              <ul class="courses-link-list">
+
+                <li style="list-style-type:none"><a href="#"> Complaints</a></li>
+                <li style="list-style-type:none"><a href="#"> Careers</a></li>
+                <li style="list-style-type:none"><a href="#"> Data protection</a></li>
+                <li style="list-style-type:none"><a href="#"> Social Media</a></li>
+              </ul>
+
+              </li><!-- small-post-item end -->
+              </ul>
+            </div>
+          </div><!-- widget end -->
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget newsletter-widget">
+              <h5 class="widget-title" style="font-weight: 800; text-align:left; margin-top: 35px;">
+                ABOUT</a>
+              </h5>
 
 
+              <h5 class="widget-title" style="font-weight: 500; text-align:left; color: springgreen;">NEWSLETTER
+                SUBSCRIBE</h5>
+              <div class="footer-newsletter">
+                <form class="news-letter-form">
+                  <input type="email" name="news-email" id="news-email" placeholder="Your email address"><br>
+                  <input type="submit" value="Send">
+                </form><br><br>
+              </div>
+            </div>
+          </div><!-- widget end -->
+        </div>
+      </div>
+    </div>
 
 
+    <div class="col-md-12 text-center">
+      <div class="row">
+        <div id="logo">
+          <div class="logo-bar">
+            <a href="#" class="face" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="inst" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="yout" target="_blank"><i class="fa fa-youtube"></i></a>
+            <a href="#" class="link" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="twit" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="snap" target="_blank"><i class="fa fa-snapchat"></i></a>
+            <a href="#" class="pint" target="_blank"><i class="fa fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
 
 
+    </div>
+    </div><br>
 
 
+    <h5 style="margin-top: 3px; text-align: center;">GREEN ADVENTURE<br>Acesta este un website demonstrativ din
+      portofoliul
+      personal!<br>Marca
+      și serviciile prezentate sunt imaginare!<br>
+    </h5><br>
+
+
+  </footer>
 
 
 
