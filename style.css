@@ -142,7 +142,7 @@ h4 {
   }
 
   .mobile {
-    height: 700px;
+    height: 570px;
     width: 100%;
   }
 }
@@ -151,7 +151,7 @@ h4 {
   font-size: 71px;
   text-align: center;
   margin: 1px auto;
-  margin-top: -400px;
+  margin-top: -370px;
   margin-bottom: -10px;
   animation: rotation 12s infinite linear;
 }
