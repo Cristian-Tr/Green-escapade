@@ -143,6 +143,7 @@ h4 {
 
   .mobile {
     height: 570px;
+    width: 100%;
   }
 }
 
@@ -172,7 +173,7 @@ h4 {
 }
 
 .input-group {
-  width: 59%;
+  width: 75%;
   margin: auto;
 }
 
