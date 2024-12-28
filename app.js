@@ -2,22 +2,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
-  function loadvideo() {
-    var mobileSrc = "/boats-small.mp4";
-    var desktopSrc = "/boats-large.mp4";
-     
-       if (window.innerWidth > 630){
-           $("#video").attr("src",desktopSrc);
-        }else{
-           $("#video").attr("src",mobileSrc);
-        }
-    }
-    
-      window.addEventListener("resize", loadvideo);
-      window.onload=loadvideo; 
-
-
-
   //Buttons
   var button = document.querySelector('#like-btn1');
   var counter = 1;

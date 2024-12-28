@@ -123,11 +123,22 @@ h4 {
   font-family: Montserrat, sans-serif;
 }
 
+@media only screen and (min-width: 900px){
+  .mobile{
+      display: none;}
+}
+@media only screen and (max-width: 900px){
+  
+  .desktop {
+  display: none;
+ }
+}
+/*
 #video {
   max-width: 100%;
   height: auto;
 }
-
+*/
 
 #header-logo {
   font-size: 53px;
