@@ -13,8 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="./app.js"></script>
-  <script src="./like.js"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
@@ -34,7 +33,7 @@
         </button>
 
         <a class="navbar-brand" href="#myPage">
-          GREEN ADVENTURE</a>
+          <span id="nav-logo">🚤</span> GREEN ADVENTURE</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -49,27 +48,33 @@
 
     <div id="header" class="container-fluid text-center align-items-center">
 
-      <!-- Start video hero -->
+
+      <video id=video controls autoplay muted loop poster></video>
+
+      <!-- Start video hero 
       <div class="video-boats">
         <video autoplay muted loop poster>
-          <source src="boats.mp4" type="video/mp4">
+          <source src="video-small.mp4" type="video/mp4" media="(max-width: 768px)">
+          <source src="video-large.mp4" type="video/mp4" media="(min-width: 769px)">
         </video>
+      </div>
+      -->
 
 
-        <div id="header-logo">🚤</div>
-        <h1 style="color: springgreen;">GREEN ADVENTURE</h1>
-        <h4>UNFORGETTABLE</h4><br>
+      <div id="header-logo">🚤</div>
+      <h1 style="color: springgreen;">GREEN ADVENTURE</h1>
+      <h4>UNFORGETTABLE</h4><br>
 
-        <div class="col-sm-12">
-          <form>
-            <div class="input-group">
-              <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-              <div class="input-group-btn">
-                <button type="button" id="form" class="btn btn-danger">Subscribe</button>
-              </div>
+      <div class="col-sm-12">
+        <form>
+          <div class="input-group">
+            <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+            <div class="input-group-btn">
+              <button type="button" id="form" class="btn btn-danger">Subscribe</button>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
+      </div>
 
 
   </header><br><br>
@@ -177,7 +182,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <h4 style="color: springgreen;">"I like this company. I like the cruises organized by them. We fished,
+          <h4 style="color: springgreen;">"This company is the wow. I like the cruises organized by them. We fished,
             swam, went diving, the meals
             were enriched!"<br><span>French citizen</span></h4>
         </div>

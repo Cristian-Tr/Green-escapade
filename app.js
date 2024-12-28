@@ -1,34 +1,51 @@
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+document.addEventListener('DOMContentLoaded', function () {
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
+  function loadvideo() {
+    var mobileSrc = "/boats-small.mp4";
+    var desktopSrc = "/boats-large.mp4";
+     
+       if (window.innerWidth > 630){
+           $("#video").attr("src",desktopSrc);
+        }else{
+           $("#video").attr("src",mobileSrc);
         }
-    });
+    }
+    
+      window.addEventListener("resize", loadvideo);
+      window.onload=loadvideo; 
+
+
+
+  //Buttons
+  var button = document.querySelector('#like-btn1');
+  var counter = 1;
+  button.addEventListener('click', function () {
+    document.querySelector('#like-btn1 span').innerText = counter;
+    counter++;
   });
-})
+
+  var button = document.querySelector('#like-btn2');
+  var counter = 1;
+  button.addEventListener('click', function () {
+    document.querySelector('#like-btn2 span').innerText = counter;
+    counter++;
+  });
+
+  var button = document.querySelector('#like-btn3');
+  var counter = 1;
+  button.addEventListener('click', function () {
+    document.querySelector('#like-btn3 span').innerText = counter;
+    counter++;
+  });
+
+  var button = document.querySelector('#like-btn4');
+  var counter = 1;
+  button.addEventListener('click', function () {
+    document.querySelector('#like-btn4 span').innerText = counter;
+    counter++;
+  });
+
+
+}); 

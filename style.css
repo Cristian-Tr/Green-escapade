@@ -2,10 +2,8 @@ html,
 body {
   margin: 0px;
   padding: 0px;
+  background-color: black;
   margin: 0px !important;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 h1 {
@@ -42,6 +40,17 @@ h4 {
   opacity: 1;
   z-index: 2100;
 }
+
+#nav-logo {
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  #nav-logo {
+    font-size: 21px;
+  }
+}
+
 
 .navbar li a,
 .navbar .navbar-brand,
@@ -114,11 +123,9 @@ h4 {
   font-family: Montserrat, sans-serif;
 }
 
-
 video {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -145,17 +152,6 @@ video {
 
   to {
     transform: rotateY(360deg);
-  }
-}
-
-.input-group {
-  width: 90%;
-  margin: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .input-group {
-    width: 50%;
   }
 }
 
