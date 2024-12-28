@@ -142,7 +142,7 @@ h4 {
   }
 
   .mobile {
-    height: 590px;
+    height: 700px;
     width: 100%;
   }
 }
@@ -151,7 +151,7 @@ h4 {
   font-size: 71px;
   text-align: center;
   margin: 1px auto;
-  margin-top: -370px;
+  margin-top: -400px;
   margin-bottom: -10px;
   animation: rotation 12s infinite linear;
 }
@@ -173,7 +173,7 @@ h4 {
 }
 
 .input-group {
-  width: 90%;
+  width: 79%;
   margin: auto;
 }
 
