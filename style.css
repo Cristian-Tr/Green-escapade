@@ -123,36 +123,41 @@ h4 {
   font-family: Montserrat, sans-serif;
 }
 
-@media only screen and (min-width: 900px){
-  .mobile{
-      display: none;}
-}
-@media only screen and (max-width: 900px){
-  
+@media only screen and (min-width: 769px) {
+
+  .mobile {
+    display: none;
+  }
+
   .desktop {
-  display: none;
- }
+    width: 100%;
+  }
+
 }
-/*
-#video {
-  max-width: 100%;
-  height: auto;
+
+@media only screen and (max-width: 768px) {
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    height: 570px;
+  }
 }
-*/
 
 #header-logo {
-  font-size: 53px;
+  font-size: 71px;
   text-align: center;
   margin: 1px auto;
-  margin-top: -250px;
+  margin-top: -320px;
   margin-bottom: -10px;
   animation: rotation 12s infinite linear;
 }
 
 @media only screen and (min-width: 768px) {
   #header-logo {
-    font-size: 71px;
-    margin-top: -530px;
+    margin-top: -550px;
   }
 }
 
@@ -163,6 +168,17 @@ h4 {
 
   to {
     transform: rotateY(360deg);
+  }
+}
+
+.input-group {
+  width: 59%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 769px) {
+  .input-group {
+    width: 50%;
   }
 }
 

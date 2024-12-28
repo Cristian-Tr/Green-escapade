@@ -48,27 +48,18 @@
 
     <div id="header" class="container-fluid text-center align-items-center">
 
-<!-- Start video 
-      <video id="video" controls autoplay muted loop poster></video>
- -->
+<!-- Start video based on screen size-->
  <div class="video-boats">
-  <video id="video" class="desktop" src="./boats-large.mp4" autoplay="true" loop="true" muted="false" width="100%" ></video>
+  <video id="video" class="desktop" src="./desktopVideo.mp4" autoplay="true" loop="true" muted="false"></video>
 
-  <video id="video" class="mobile" src="./boats-small.mp4" autoplay="true" loop="true" muted="false" width="100%" ></video>
+  <video id="video" class="mobile" src="./mobileVideo.mp4" autoplay="true" loop="true" muted="false" ></video>
 
 </div>
-      <!-- Start video  
-      <div class="video-boats">
-        <video autoplay muted loop poster="4.png" width="618" height="347">
-          <source src="video-small.mp4" type="video/mp4" media="(max-width: 768px)">
-          <source src="video-large.mp4" type="video/mp4" media="(min-width: 769px)">
-        </video>
-      </div>
-     -->
-
+    <!-- Stop video -->
 
       <div id="header-logo">🚤</div>
       <h1 style="color: springgreen;">GREEN ADVENTURE</h1>
+      <h2 style="color: springgreen;">with green energy</h2>
       <h4>UNFORGETTABLE</h4><br>
 
       <div class="col-sm-12">
@@ -76,7 +67,7 @@
           <div class="input-group">
             <input type="email" class="form-control" size="50" placeholder="Email Address" required>
             <div class="input-group-btn">
-              <button type="button" id="form" class="btn btn-danger">Subscribe</button>
+              <button type="button" id="form" class="btn btn-danger" style="width: 88px;">Subscribe</button>
             </div>
           </div>
         </form>
