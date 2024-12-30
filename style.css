@@ -21,52 +21,7 @@ h3 {
 }
 
 h4 {
-  color: red;
-}
-
-.navbar {
-  padding-top: 10px;
-  padding-left: 35px;
-  padding-right: 50px;
-  margin: 1px auto;
-  background-color: transparent;
-  font-family: Montserrat, sans-serif;
-  margin: 0 auto;
-  height: 8px;
-  color: red;
-  font-size: 12px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  opacity: 1;
-  z-index: 2100;
-}
-
-#nav-logo {
-  font-size: 15px;
-}
-
-@media only screen and (min-width: 768px) {
-  #nav-logo {
-    font-size: 21px;
-  }
-}
-
-
-.navbar li a,
-.navbar .navbar-brand,
-.navbar-right {
-  font-size: 15px;
-  color: springgreen !important;
-  text-shadow: 1px 1px 1px black;
-  padding: 0;
-}
-
-.navbar-nav li a:hover,
-.navbar-nav li.active a {
-  color: springgreen !important;
-  font-weight: 900;
-  border-bottom: solid 2px red;
-  animation: btn-shake 0.35s ease-in-out;
+  color: springgreen;
 }
 
 @keyframes btn-shake {
@@ -89,34 +44,6 @@ h4 {
   100% {
     transform: translateX(0);
   }
-}
-
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  padding: 1px;
-  margin: 1px;
-}
-
-.open .dropdown-toggle {
-  color: red;
-  font-weight: 900;
-  background-color: transparent !important;
-}
-
-.dropdown-menu li a {
-  color: red;
-  font-weight: 800;
-  text-align: center;
-}
-
-.dropdown-menu li a:hover {
-  color: white;
-  background-color: springgreen !important;
-}
-
-.nav-tabs li a {
-  color: white;
-  font-weight: 800;
 }
 
 #header {
@@ -362,20 +289,6 @@ footer .glyphicon {
   background-color: springgreen;
   text-decoration: none;
   transform: scale(1.1);
-}
-
-
-.logo-bar a {
-  display: inline-block;
-  text-align: center;
-  font-size: 15px;
-  width: 21px;
-  height: 21px;
-  transition: all 0.2s;
-}
-
-.logo-bar a:hover {
-  transform: scale(1.2);
 }
 
 .face {
