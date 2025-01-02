@@ -130,7 +130,6 @@ h4 {
   line-height: 1.375em;
   font-weight: 400;
   font-style: italic;
-  margin: 70px 0;
 }
 
 .item span {
@@ -217,6 +216,45 @@ h4 {
   background-color: springgreen;
   text-decoration: none;
   transform: scale(1.1);
+}
+
+/* REVIEWS SECTION CAROUSEL*/
+#reviews {
+  width: 80%;
+  height: 620px;
+}
+
+@media (min-width: 768px) {
+  #reviews {
+    width: 70%;
+    height: 700px;
+  }
+}
+  
+@media (min-width: 1600px) {
+  #reviews {
+    width: 70%;
+    height: 900px;
+  }
+}
+
+/* My repositories screen shoots */
+.carousel-inner>.item>img {
+  margin: 0 auto;
+  padding: 1px;
+  width: 93%;
+}
+
+@media (min-width: 768px) {
+  .carousel-inner>.item>img {
+    width: 53%;
+  }
+}
+
+
+a.left.carousel-control,
+a.right.carousel-control {
+  opacity: 0;
 }
 
 /* RESERVATION SYSTEM */
@@ -391,7 +429,7 @@ ul {
 }
 
 .footer-top {
-  padding-top: 96px;
+  padding-top: 35px;
   padding-bottom: 50px;
 }
 
