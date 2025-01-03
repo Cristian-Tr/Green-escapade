@@ -83,15 +83,22 @@ h4 {
   }
 }
 
-.input-group {
-  width: 59%;
-  margin: auto;
+#callToAction {
+  font-weight: 800;
+  transform: rotateY(0deg);
 }
 
-@media only screen and (min-width: 769px) {
-  .input-group {
-    width: 50%;
-  }
+#callToAction a {
+  color: white;
+  font-weight: 800;
+  padding: 3px 17px 3px 17px;
+  background-color: red;
+  text-decoration: none;
+  border-radius: 17px;
+}
+
+#callToAction a:hover {
+  background-color: springgreen;
 }
 
 .btn {
@@ -233,7 +240,7 @@ h4 {
   
 @media (min-width: 1600px) {
   #reviews {
-    width: 70%;
+    width: 60%;
     height: 900px;
   }
 }
