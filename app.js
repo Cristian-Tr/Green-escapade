@@ -2,6 +2,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
+  var today = new Date();
+
+  document.getElementById("date").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
 
   document.getElementById("bookingForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -20,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById("ticket").style.display = "block";
     document.getElementById("ticket").classList.add("zoomIn");
-});
+  });
 
-function printTicket() {
+  function printTicket() {
     const ticket = document.getElementById('ticket');
     const printWindow = window.open('', '', 'width=600,height=600');
     printWindow.document.open();
@@ -32,7 +35,7 @@ function printTicket() {
     printWindow.document.close();
     printWindow.print();
     printWindow.close();
-}
+  }
 
   //Buttons
   var button = document.querySelector('#like-btn1');
