@@ -109,7 +109,7 @@ h4 {
 @media only screen and (min-width: 768px) {
   #callToAction h3 {
     padding-top: 17px;
-    letter-spacing: 8px;
+    letter-spacing: 1px;
   }
 }
 
@@ -267,7 +267,7 @@ h4 {
 @media (min-width: 768px) {
   #reviews {
     width: 70%;
-    height: 700px;
+    height: 710px;
   }
 }
 
@@ -275,6 +275,18 @@ h4 {
   #reviews {
     width: 60%;
     height: 900px;
+  }
+}
+
+#reviews h4 {
+  text-align: justify;
+  font-style: normal;
+}
+
+@media (min-width: 768px) {
+  #reviews h4 {
+    margin-left: 23.7%;
+    margin-right: 23.7%; 
   }
 }
 
