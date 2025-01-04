@@ -64,7 +64,7 @@ h4 {
   font-size: 71px;
   text-align: center;
   margin: 1px auto;
-  margin-top: -280px;
+  margin-top: -290px;
   margin-bottom: -10px;
   animation: rotation 12s infinite linear;
 }
@@ -138,9 +138,13 @@ h4 {
   border-radius: 5px;
 }
 
+header h4 {
+  padding-top: 1px;
+}
+
 @media only screen and (min-width: 768px) {
   header h4 {
-    padding-top: 1px;
+    padding-top: 12px;
     letter-spacing: 8px;
     font-weight: 800;
   }
@@ -281,12 +285,14 @@ h4 {
 #reviews h4 {
   text-align: justify;
   font-style: normal;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 @media (min-width: 768px) {
   #reviews h4 {
     margin-left: 23.7%;
-    margin-right: 23.7%; 
+    margin-right: 23.7%;
   }
 }
 
