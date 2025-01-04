@@ -39,10 +39,10 @@
       <div id="callToAction">
         <h1 style="color: springgreen;">GREEN ADVENTURE</h1>
         <h2 style="color: springgreen; margin-top: -4px;">WITH GREEN ENERGY</h2>
-        <h3><a href="#bookingForm">BUY NOW!</a>
+        <h3><a href="#bookingForm">BUY NOW</a>
       </div>
-      </h3>
-      <h4 style="color: magenta;">UNFORGETTABLE!</h4><br>
+      </h3> <br>
+      <h4 style="color: magenta;">UNFORGETTABLE!</h4>
 
 
   </header><br><br>
@@ -51,7 +51,7 @@
   <div class="container-fluid text-center bg-white" id="history">
 
     <div class="col-sm-12">
-      <h2>ABOUT US</h2><br>
+      <h2 style="font-weight: 800;">ABOUT US</h2><br>
 
       <img src="5.png" width="98%" alt="Cruise ship fleet" border="0"><br><br>
 
@@ -70,7 +70,7 @@
   <!-- Container (Pricing Section) -->
   <div id="pricing">
     <div class="text-center">
-      <h2>SERVICES</h2><br>
+      <h2 style="font-weight: 800;">SERVICES</h2><br>
     </div>
     <div class="row">
       <div class="col-sm-3 col-xs-12">
@@ -162,7 +162,7 @@
 
   <div id="reviews" class="container-fluid text-center bg-grey">
 
-    <h2>REVIEWS</h2><br>
+    <h2 style="font-weight: 800;">REVIEWS</h2><br>
 
     <!-- CAROUSEL -->
     <div class="row" class="container-fluid align-items-center">
@@ -174,7 +174,7 @@
             <img src="./21.png" alt="Swedish buffet on the ship"><br>
             <h4 style="color: magenta; text-align: justify;"> I choose an all inclusive cruise very well organized.
               I ate fresh fish every day! I am very satisfied with the quality-price ratio! Thank you very much Green
-              Asdventure!"</span><br>
+              Adventure!"</span><br>
               <span>Romanian citizen</span>
             </h4>
           </div>
@@ -183,8 +183,8 @@
             <img src="./22.png" alt="Boat cabin"><br>
             <h4 style="color: springgreen; text-align: justify;">
               <span>"I booked an ultra all inclusive cruise and relaxed in a comfortable cabin with fresh air from the
-                sea breeze. I highly appreciate the services of Green Adventure! That`s why I want to offer 5 stars to
-                this company!"</span><br>
+                sea breeze. I highly appreciate the services of Green Adventure! So, I can say that it deserves 5
+                stars!"</span><br>
               <span>Greek citizen</span>
             </h4>
           </div>
@@ -206,11 +206,11 @@
 
 
 
-  <h2 style="text-align: center;">RESERVATION SYSTEM</h2>
+  <h2 style="text-align: center;font-weight: 800;">RESERVATION SYSTEM</h2>
   <div class="row" class="bookingSystem">
     <div class="booking-container">
       <form id="bookingForm">
-        <h3 style="font-weight: 800; text-align: center;color: springgreen;">🎫 GREEN ADVENTURE TICKET</h3><br>
+        <h3 style="font-weight: 800; text-align: center;color: springgreen;">GREEN ADVENTURE TICKET</h3><br>
         <label for="number">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
         <input type="number" id="number" placeholder="1, 2, 3 ..." required>
 
@@ -223,7 +223,8 @@
         </select>
 
         <label for="date">📅 CRUISE DATE:</label>
-        <input type="date" id="date" required>
+        <input type="date" id="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='date')"
+          required>
 
         <label for="time">🕒 CRUISE TIME:</label>
         <input type="time" id="time" required>
@@ -235,12 +236,12 @@
       </form><br>
 
       <div class="ticket" id="ticket" style="display: none; margin: 1px auto;">
-        <h2 style="color: springgreen;">🎫 GREEN ADVENTURE TICKET</h2>
-        <p>👨‍👨‍👦 <strong>NUMBER OF PEOPLE:</strong> <span id="ticketNumber"></span></p>
-        <p>🚤 <strong>CRUISE TYPE:</strong> <span id="ticketType"></span></p>
-        <p>📅 <strong>CRUISE DATE:</strong> <span id="ticketDate"></span></p>
-        <p>🕒 <strong>CRUISE TIME:</strong> <span id="ticketTime"></span></p>
-        <p>📩 <strong>CRUISE INFO:</strong> <span id="ticketInfo"></span></p>
+        <h2 style="color: springgreen; text-align: center;">GREEN ADVENTURE TICKET</h2>
+        <p>👨‍👨‍👦 <strong>NUMBER OF PEOPLE:</strong> <span id="ticketNumber" style="font-weight: 800;"></span></p>
+        <p>🚤 <strong>CRUISE TYPE:</strong> <span id="ticketType" style="font-weight: 800;"></span></p>
+        <p>📅 <strong>CRUISE DATE:</strong> <span id="ticketDate" style="font-weight: 800;"></span></p>
+        <p>🕒 <strong>CRUISE TIME:</strong> <span id="ticketTime" style="font-weight: 800;"></span></p>
+        <p>📩 <strong>CRUISE INFO:</strong> <span id="ticketInfo" style="font-weight: 800;"></span></p>
         <button onclick="printTicket()">🖨️ PRINT TICKET</button>
       </div>
 
