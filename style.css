@@ -92,6 +92,7 @@ h4 {
 
 @media only screen and (min-width: 768px) {
   #callToAction h1 {
+    font-size: 53px;
     padding-top: 17px;
     font-weight: 800;
     letter-spacing: 8px;
@@ -100,7 +101,8 @@ h4 {
 
 @media only screen and (min-width: 768px) {
   #callToAction h2 {
-    padding-top: 17px;
+    font-size: 35px;
+    padding-top: 1px;
     font-weight: 800;
     letter-spacing: 8px;
   }
@@ -144,6 +146,7 @@ header h4 {
 
 @media only screen and (min-width: 768px) {
   header h4 {
+    font-size: 17px;
     padding-top: 12px;
     letter-spacing: 8px;
     font-weight: 800;
@@ -439,12 +442,6 @@ button:hover {
   font-size: 17px;
 }
 
-.snap {
-  background: hsl(60, 100%, 50%);
-  color: white;
-  font-size: 17px;
-}
-
 .pint {
   background: #c92228;
   color: white;
@@ -484,7 +481,7 @@ ul {
 }
 
 .footer-section {
-  background-color: black;
+  background-color: white;
   position: relative;
   overflow: hidden;
   z-index: 9;
@@ -512,7 +509,6 @@ ul {
 
 .link-list li a {
   color: red;
-  font-family: var(--para-font);
   font-weight: 400;
 }
 
@@ -562,4 +558,49 @@ li a:hover {
 .footer-bottom {
   padding: 13px 0;
   border-top: 1px solid cyan;
+}
+
+/* Animation Simple CSS Waves Animation https://codepen.io/goodkatz/pen/YbXqEV*/
+
+.waves {
+  position:relative;
+  display: block;
+  width: 100%;
+  height:170px;
+  margin:0 0 -1px 0;
+}
+.seafooter > use {
+  animation: move-forever 50s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.seafooter > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 14s;
+}
+.seafooter.image > use:nth-child(1) {
+  animation-delay: -3s;
+  animation-duration: 20s;
+}
+.seafooter.image > use:nth-child(2) {
+  animation-delay: -4s;
+  animation-duration: 26s;
+}
+.seafooter > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 40s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+/*prevent many large-by-comparison ripples by shrinking the height*/
+
+@media (max-width: 50em) {
+  .waves {
+    height: 17vw;
+  }
 }
