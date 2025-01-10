@@ -273,13 +273,16 @@ header h4 {
 
 .glyphicon-chevron-left,
 .glyphicon-chevron-right {
-  color: cyan;
+  color: red;
+  padding: 17px;
 }
 
-a.left.carousel-control,
-a.right.carousel-control {
-  opacity: 0;
-  color: red;
+@media only screen and (min-width: 768px) {
+
+  .glyphicon-chevron-left,
+  .glyphicon-chevron-right {
+    padding: 0;
+  }
 }
 
 /* RESERVATION SYSTEM */
@@ -574,8 +577,6 @@ li a:hover {
     transform: translate(85px, 0%);
   }
 }
-
-/*prevent many large-by-comparison ripples by shrinking the height*/
 
 @media (max-width: 50em) {
   .waves {
