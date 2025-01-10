@@ -265,10 +265,20 @@ header h4 {
   transform: scale(1.1);
 }
 
+.carousel-control.left,
+.carousel-control.right {
+  background: transparent;
+  width: 5%;
+}
+
+.glyphicon-chevron-left,
+.glyphicon-chevron-right {
+  color: cyan;
+}
 
 a.left.carousel-control,
 a.right.carousel-control {
-  opacity: 1;
+  opacity: 0;
   color: red;
 }
 
