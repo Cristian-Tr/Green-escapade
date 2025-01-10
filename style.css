@@ -22,7 +22,7 @@ h3 {
 
 h4 {
   color: springgreen;
-  text-shadow: .8px .8px 1px black;
+  text-shadow: .5px .5px .5px black;
 }
 
 #header {
@@ -265,57 +265,11 @@ header h4 {
   transform: scale(1.1);
 }
 
-/* REVIEWS SECTION CAROUSEL*/
-#reviews {
-  width: 80%;
-  height: 620px;
-}
-
-@media (min-width: 768px) {
-  #reviews {
-    width: 70%;
-    height: 710px;
-  }
-}
-
-@media (min-width: 1600px) {
-  #reviews {
-    width: 60%;
-    height: 900px;
-  }
-}
-
-#reviews h4 {
-  text-align: justify;
-  font-style: normal;
-  margin-left: 4%;
-  margin-right: 4%;
-}
-
-@media (min-width: 768px) {
-  #reviews h4 {
-    margin-left: 23.7%;
-    margin-right: 23.7%;
-  }
-}
-
-/* My repositories screen shoots */
-.carousel-inner>.item>img {
-  margin: 0 auto;
-  padding: 1px;
-  width: 93%;
-}
-
-@media (min-width: 768px) {
-  .carousel-inner>.item>img {
-    width: 53%;
-  }
-}
-
 
 a.left.carousel-control,
 a.right.carousel-control {
-  opacity: 0;
+  opacity: 1;
+  color: red;
 }
 
 /* RESERVATION SYSTEM */
@@ -530,29 +484,36 @@ li a:hover {
   margin-top: -28px;
 }
 
-.news-letter input {
-  width: 80%;
-  padding: 7px 5px;
-  border-radius: 5px;
+.news-letter input[type="email"] {
+  width: 75%;
   background-color: springgreen;
   color: red;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  padding: 8px;
+  border-radius: 8px 0 0 8px;
   border: none;
-  margin-left: -20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .news-letter input[type="email"] {
+    width: 35%;
+  }
 }
 
 .news-letter input[type="submit"] {
-  width: auto;
+  width: 25%;
+  background-color: red;
+  color: springgreen;
+  padding: 8px;
+  border-radius: 0 8px 8px 0;
+  margin-left: -5px;
   border: none;
-  background-color: springgreen;
-  padding: 7px 35px;
-  margin-left: -10px;
-  border-radius: 5px;
-  color: red;
-  margin-top: 10px;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .news-letter input[type="submit"] {
+    width: 17%;
+  }
 }
 
 .footer-bottom {
@@ -563,35 +524,42 @@ li a:hover {
 /* Animation Simple CSS Waves Animation https://codepen.io/goodkatz/pen/YbXqEV*/
 
 .waves {
-  position:relative;
+  position: relative;
   display: block;
   width: 100%;
-  height:170px;
-  margin:0 0 -1px 0;
+  height: 170px;
+  margin: 0 0 -1px 0;
 }
-.seafooter > use {
-  animation: move-forever 50s cubic-bezier(.55,.5,.45,.5) infinite;
+
+.seafooter>use {
+  animation: move-forever 50s cubic-bezier(.55, .5, .45, .5) infinite;
 }
-.seafooter > use:nth-child(1) {
+
+.seafooter>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 14s;
 }
-.seafooter.image > use:nth-child(1) {
+
+.seafooter.image>use:nth-child(1) {
   animation-delay: -3s;
   animation-duration: 20s;
 }
-.seafooter.image > use:nth-child(2) {
+
+.seafooter.image>use:nth-child(2) {
   animation-delay: -4s;
   animation-duration: 26s;
 }
-.seafooter > use:nth-child(4) {
+
+.seafooter>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 40s;
 }
+
 @keyframes move-forever {
   0% {
     transform: translate(-90px, 0%);
   }
+
   100% {
     transform: translate(85px, 0%);
   }
