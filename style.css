@@ -7,11 +7,26 @@ body {
 h1 {
   color: springgreen;
   text-shadow: .8px .8px 1.7px black;
+  animation: small-widening 12s infinite linear;
 }
 
 @media only screen and (min-width: 768px) {
   h1 {
     animation: widening 12s infinite linear;
+  }
+}
+
+@keyframes small-widening {
+  0% {
+    letter-spacing: 5px;
+  }
+
+  50% {
+    letter-spacing: 8px;
+  }
+
+  100% {
+    letter-spacing: 5px;
   }
 }
 
@@ -81,7 +96,7 @@ h4 {
 }
 
 #header-logo {
-  font-size: 53px;
+  font-size: 35px;
   text-align: center;
   margin: 1px auto;
   margin-top: -290px;
@@ -109,6 +124,7 @@ h4 {
 #callToAction {
   font-weight: 800;
   transform: rotateY(0deg);
+  letter-spacing: 5px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -125,7 +141,7 @@ h4 {
     font-size: 35px;
     padding-top: 1px;
     font-weight: 800;
-    letter-spacing: 8px;
+    letter-spacing: 5px;
   }
 }
 
@@ -206,12 +222,12 @@ header h4 {
 
 .panel {
   margin: 10px;
-  border-radius: 0;
+  border-radius: none;
   transition: box-shadow 0.5s;
 }
 
 .panel:hover {
-  box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+  box-shadow: 5px 0px 40px rgba(0, 0, 0, .5);
 }
 
 #panel1 {
@@ -320,9 +336,8 @@ header h4 {
 }
 
 .carousel .photo-scrolling {
-  animation: scroll 40s linear infinite;
+  animation: scroll 71s linear infinite;
   display: flex;
-  width: calc(297px * 14);
 }
 
 .carousel .photo {
@@ -336,7 +351,7 @@ header h4 {
   }
 
   100% {
-    transform: translateX(calc(-200px * 7));
+    transform: translateX(calc(-328px * 7));
   }
 }
 
@@ -531,7 +546,8 @@ ul {
 
 .link-list li a {
   color: red;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 li a:hover {
