@@ -7,6 +7,21 @@ body {
 h1 {
   color: springgreen;
   text-shadow: .8px .8px 1.7px black;
+  animation: widening 12s infinite linear;
+}
+
+@keyframes widening {
+  0% {
+    letter-spacing: 8px;
+  }
+
+  50% {
+    letter-spacing: 17px;
+  }
+
+  100% {
+    letter-spacing: 8px;
+  }
 }
 
 h2 {
@@ -61,7 +76,7 @@ h4 {
 }
 
 #header-logo {
-  font-size: 71px;
+  font-size: 53px;
   text-align: center;
   margin: 1px auto;
   margin-top: -290px;
@@ -71,6 +86,7 @@ h4 {
 
 @media only screen and (min-width: 768px) {
   #header-logo {
+    font-size: 71px;
     margin-top: -460px;
   }
 }
@@ -265,23 +281,57 @@ header h4 {
   transform: scale(1.1);
 }
 
-.carousel-control.left,
-.carousel-control.right {
-  background: transparent;
-  width: 5%;
+/* PHOTO CAROUSEL*/
+.carousel {
+  margin-top: 35px;
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 153px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 98%;
 }
 
-.glyphicon-chevron-left,
-.glyphicon-chevron-right {
-  color: red;
-  padding: 17px;
+.carousel::before,
+.carousel::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 153px;
+  position: absolute;
+  width: 50px;
+  z-index: 2;
 }
 
-@media only screen and (min-width: 768px) {
+.carousel::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
 
-  .glyphicon-chevron-left,
-  .glyphicon-chevron-right {
-    padding: 0;
+.carousel::before {
+  left: 0;
+  top: 0;
+}
+
+.carousel .photo-scrolling {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(297px * 14);
+}
+
+.carousel .photo {
+  height: 153px;
+  width: 297px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-200px * 7));
   }
 }
 
