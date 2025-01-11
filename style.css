@@ -7,7 +7,12 @@ body {
 h1 {
   color: springgreen;
   text-shadow: .8px .8px 1.7px black;
-  animation: widening 12s infinite linear;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    animation: widening 12s infinite linear;
+  }
 }
 
 @keyframes widening {
