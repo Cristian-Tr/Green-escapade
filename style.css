@@ -478,6 +478,13 @@ button:hover {
   background-color: red;
 }
 
+footer {
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 9;
+  margin-top: 35px;
+}
 
 a,
 a:active,
@@ -502,31 +509,8 @@ ul {
   list-style: none;
 }
 
-.footer-section {
-  background-color: white;
-  position: relative;
-  overflow: hidden;
-  z-index: 9;
-}
-
-.footer-top {
-  padding-top: 35px;
-  padding-bottom: 50px;
-}
-
-.footer-top .site-logo {
-  margin-bottom: 25px;
-  display: block;
-  max-width: 170px;
-}
-
-.footer-top .title {
-  color: red;
-  margin-bottom: 40px;
-}
-
 .link-list li+li {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .link-list li a {
@@ -538,15 +522,6 @@ ul {
 li a:hover {
   color: springgreen;
   text-decoration: none;
-}
-
-.link-list li i {
-  margin-right: 5px;
-}
-
-.footer-top .small-post-title a {
-  color: #ffffff;
-  font-weight: 400;
 }
 
 .news-letter {
@@ -583,11 +558,6 @@ li a:hover {
   .news-letter input[type="submit"] {
     width: 17%;
   }
-}
-
-.footer-bottom {
-  padding: 13px 0;
-  border-top: 1px solid cyan;
 }
 
 /* Animation Simple CSS Waves Animation https://codepen.io/goodkatz/pen/YbXqEV*/
