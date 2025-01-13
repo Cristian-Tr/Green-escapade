@@ -409,7 +409,7 @@ button:hover {
 }
 
 .ticket p {
-  font-size: 14px;
+  font-size: 12.5px;
 }
 
 /* CSS3 Animation */
@@ -430,50 +430,6 @@ button:hover {
 }
 
 /* FOOTER */
-.logo-bar {
-  margin: 1px auto;
-}
-
-.face {
-  background: hsl(221, 44%, 40%);
-  color: white;
-  font-size: 17px;
-}
-
-.twit {
-  background: hsl(206, 82%, 60%);
-  color: white;
-  font-size: 17px;
-}
-
-.inst {
-  background: hsl(315, 71%, 50%);
-  color: white;
-  font-size: 17px;
-}
-
-.link {
-  background: blue;
-  color: white;
-  font-size: 17px;
-}
-
-.yout {
-  background: hsl(0, 100%, 50%);
-  color: white;
-  font-size: 17px;
-}
-
-.pint {
-  background: #c92228;
-  color: white;
-  font-size: 17px;
-}
-
-#about {
-  margin-top: 100px;
-}
-
 .btn btn-default btn-lg {
   background-color: red;
 }
@@ -541,6 +497,46 @@ li a:hover {
   .news-letter input[type="email"] {
     width: 35%;
   }
+}
+
+.logo-bar {
+  margin: 1px auto;
+}
+
+.face {
+  background: hsl(221, 44%, 40%);
+  color: white;
+  font-size: 17px;
+}
+
+.twit {
+  background: hsl(206, 82%, 60%);
+  color: white;
+  font-size: 17px;
+}
+
+.inst {
+  background: hsl(315, 71%, 50%);
+  color: white;
+  font-size: 17px;
+}
+
+.link {
+  background: blue;
+  color: white;
+  font-size: 17px;
+}
+
+.yout {
+  background: hsl(0, 100%, 50%);
+  color: white;
+  font-size: 17px;
+}
+
+.pint {
+  background: #c92228;
+  color: white;
+  font-size: 17px;
 }
 
 .news-letter input[type="submit"] {
