@@ -175,6 +175,42 @@ header h4 {
   }
 }
 
+#myCarousel {
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  #myCarousel {
+    margin-top: 150px;
+  }
+}
+
+.carousel::after, .carousel:before {
+display: none;
+}
+
+.carousel-inner img {
+  width: 95%;
+  margin: auto;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  .carousel-inner img  {
+    width: 53%;
+  }
+}
+
+a.left.carousel-control,
+a.right.carousel-control {
+  opacity: 0;
+  background-color: transparent;
+  border: none;
+}
+
 #services {
   cursor: pointer;
 }
@@ -185,24 +221,41 @@ header h4 {
 }
 
 #history {
-  margin-top: 10px;
+  margin-top: 35px;
 }
 
 @media only screen and (min-width: 768px) {
   #history {
-    margin-top: 278px;
+    margin-top: 71px;
   }
 }
 
-.item h4 {
-  font-size: 19px;
-  line-height: 1.375em;
-  font-weight: 400;
-  font-style: italic;
+#history p {
+  font-size: 17px; 
+  color: springgreen; 
+  text-shadow: .5px .5px .5px black; 
+  font-weight: 500; 
+  text-align: center;
 }
 
-.item span {
-  font-style: normal;
+@media only screen and (min-width: 768px) {
+  #history p {
+    font-size: 21px; 
+  }
+}
+
+#history b {
+  font-size: 35px; 
+  color: springgreen; 
+  text-shadow: .5px .5px .5px black; 
+  font-weight: 500; 
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  #history b {
+    font-size: 53px; 
+  }
 }
 
 .panel {
@@ -288,7 +341,7 @@ header h4 {
 }
 
 /* PHOTO CAROUSEL*/
-.carousel {
+.slider {
   margin-top: 35px;
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
@@ -299,8 +352,8 @@ header h4 {
   width: 98%;
 }
 
-.carousel::before,
-.carousel::after {
+.slider::before,
+.slider::after {
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 153px;
@@ -309,23 +362,23 @@ header h4 {
   z-index: 2;
 }
 
-.carousel::after {
+.slider::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
 }
 
-.carousel::before {
+.slider::before {
   left: 0;
   top: 0;
 }
 
-.carousel .photo-scrolling {
+.slider .photo-scrolling {
   animation: scroll 71s linear infinite;
   display: flex;
 }
 
-.carousel .photo {
+.slider .photo {
   height: 153px;
   width: 297px;
 }
