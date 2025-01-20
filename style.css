@@ -178,7 +178,7 @@ header h4 {
 #myCarousel {
   width: 100%;
   height: auto;
-  margin-top: 8px;
+  margin-top: 1px;
 }
 
 @media (min-width: 768px) {
