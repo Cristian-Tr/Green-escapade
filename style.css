@@ -187,8 +187,9 @@ header h4 {
   }
 }
 
-.carousel::after, .carousel:before {
-display: none;
+.carousel::after,
+.carousel:before {
+  display: none;
 }
 
 .carousel-inner img {
@@ -199,7 +200,7 @@ display: none;
 }
 
 @media (min-width: 768px) {
-  .carousel-inner img  {
+  .carousel-inner img {
     width: 53%;
   }
 }
@@ -231,30 +232,30 @@ a.right.carousel-control {
 }
 
 #history p {
-  font-size: 17px; 
-  color: springgreen; 
-  text-shadow: .5px .5px .5px black; 
-  font-weight: 500; 
+  font-size: 17px;
+  color: springgreen;
+  text-shadow: .5px .5px .5px black;
+  font-weight: 500;
   text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   #history p {
-    font-size: 21px; 
+    font-size: 21px;
   }
 }
 
 #history b {
-  font-size: 35px; 
-  color: springgreen; 
-  text-shadow: .5px .5px .5px black; 
-  font-weight: 500; 
+  font-size: 35px;
+  color: springgreen;
+  text-shadow: .5px .5px .5px black;
+  font-weight: 500;
   text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   #history b {
-    font-size: 53px; 
+    font-size: 71px;
   }
 }
 
