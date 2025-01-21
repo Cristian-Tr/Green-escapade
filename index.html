@@ -14,8 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="app1.js"></script>
-  <script src="app2.js"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
@@ -35,7 +34,7 @@
       </div>
       <!-- Stop video -->
 
-      <div id="header-logo">🛥️</div>
+      <div id="header-logo">⛴️</div>
       <div id="callToAction">
         <h1 style="color: springgreen;">GREEN ESCAPADE</h1>
         <h2 style="color: springgreen; margin-top: -4px;">USING GREEN ENERGY</h2>
@@ -117,7 +116,7 @@
 
           <div class="col-sm-4">
             <b>
-            👪</b>
+              👪</b>
             <p>
               PASSENGERS</p>
             <div>
@@ -126,10 +125,10 @@
 
           </div>
 
-          
+
           <div class="col-sm-4">
             <b>
-             🚗</b>
+              🚗</b>
             <p>
               CARS</p>
             <div>
@@ -139,8 +138,9 @@
           </div>
 
         </div><br>
+        <h3 style="font-weight: 800;">NOT CONVINCED YET?</h3><br>
 
-        <button class="btn btn-default btn-lg">GET IN TOUCH</button><br><br><br><br><br>
+        <button class="btn btn-default btn-lg">GET IN TOUCH!</button><br><br><br><br><br>
 
 
       </div>
@@ -167,11 +167,6 @@
               </h4><br>
               <img src="11.png" width="100%" alt="fishing" border="0">
             </div>
-            <div class="panel-footer" style="background-color: cyan;">
-              <button id="like-btn1"
-                style="background-color: cyan; color: white; border: 3px solid white; text-shadow: .3px .5px .7px black;">👍
-                LIKE!&nbsp<span></span></button>
-            </div>
           </div>
         </div>
         <div class="col-sm-3 col-xs-12">
@@ -187,11 +182,6 @@
                 ★★★★☆ 4.9
               </h4><br>
               <img src="12.png" width="100%" alt="diving" border="0">
-            </div>
-            <div class="panel-footer" style="background-color: #ffa500;">
-              <button id="like-btn2"
-                style="background-color: #ffa500; color: white; border: 3px solid white; text-shadow: .3px .5px .7px black;">👍
-                LIKE!&nbsp<span></span></button>
             </div>
           </div>
         </div>
@@ -209,11 +199,6 @@
               </h4><br>
               <img src="13.png" width="100%" alt="jacuzzi" border="0">
             </div>
-            <div class="panel-footer" style="background-color: magenta;">
-              <button id="like-btn3"
-                style="background-color: magenta; color: white; border: 3px solid white; text-shadow: .3px .5px .7px black;">👍
-                LIKE!&nbsp<span></span></button>
-            </div>
           </div>
         </div>
         <div class="col-sm-3 col-xs-12">
@@ -229,11 +214,6 @@
                 ★★★★☆ 4.4
               </h4><br>
               <img src="14.png" width="100%" alt="water park in the cruise ship" border="0">
-            </div>
-            <div class="panel-footer" style="background-color: springgreen;">
-              <button id="like-btn4"
-                style="background-color: springgreen; color: white; border: 3px solid white; text-shadow: .3px .5px .7px black;">👍
-                LIKE!&nbsp<span></span></button>
             </div>
           </div>
         </div>
@@ -340,10 +320,10 @@
       <div class="booking-container">
         <form id="bookingForm"><br>
           <h3 style="font-weight: 800; text-align: center;color: springgreen;">GREEN ESCAPADE TICKET</h3><br>
-          <label for="number">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
+          <label for="number" style="text-align: left;">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
           <input type="number" id="number" placeholder="1, 2, 3 ..." required>
 
-          <label for="type">🚤 CRUISE TYPE:</label>
+          <label for="type" style="text-align: left;">🚤 CRUISE TYPE:</label>
           <select style="display: block;" id="type" type="text" required>
             <option value="MINCRUISE">MINCRUISE</option>
             <option value="MIDCRUISE">MIDCRUISE</option>
@@ -351,14 +331,14 @@
             <option value="BIGRUISE">BIGRUISE</option>
           </select>
 
-          <label for="date">📅 CRUISE DATE:</label>
+          <label for="date" style="text-align: left;">📅 CRUISE DATE:</label>
           <input type="date" id="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='date')"
             required>
 
-          <label for="time">🕒 CRUISE TIME:</label>
+          <label for="time" style="text-align: left;">🕒 CRUISE TIME:</label>
           <input type="time" id="time" required>
 
-          <label for="info">📩 CRUISE DETAILS:</label>
+          <label for="info" style="text-align: left;">📩 CRUISE DETAILS:</label>
           <textarea type="text" id="info" placeholder="Your message..." required></textarea><br><br>
 
           <button type="submit">BOOK TICKET</button>

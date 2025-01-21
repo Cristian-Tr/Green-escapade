@@ -316,21 +316,6 @@ a.right.carousel-control {
   }
 }
 
-#like-btn1,
-#like-btn2,
-#like-btn3,
-#like-btn4 {
-  padding: 5px 35px;
-  width: 180px;
-  height: 44px;
-  margin: 10px auto;
-  background-color: red;
-  color: white;
-  font-size: 17px;
-  transition: 0.2s;
-  border-radius: 5px;
-}
-
 .btn:hover,
 .btn:focus,
 .btn btn-default btn-lg:hover {
