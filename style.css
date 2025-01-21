@@ -97,12 +97,16 @@ h4 {
 }
 
 @keyframes rotation {
-  from {
-    transform: rotateY(0deg);
+  0% {
+    transform: rotate(8deg);
   }
 
-  to {
-    transform: rotateY(360deg);
+  53% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(8deg);
   }
 }
 
