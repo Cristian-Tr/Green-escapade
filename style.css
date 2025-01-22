@@ -120,7 +120,13 @@ h4 {
 #callToAction {
   font-weight: 800;
   transform: rotateY(0deg);
+  letter-spacing: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  #callToAction {
   letter-spacing: 5px;
+  }
 }
 
 .letters-waves {
@@ -132,7 +138,6 @@ h4 {
 }
 
 .letters-waves span {
-  font-family: 'Alfa Slab One', cursive;
   position: relative;
   display: inline-block;
   text-transform: uppercase;
@@ -162,7 +167,7 @@ h4 {
 }
 
 .letters-waves h1 {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 800;
 }
 
@@ -187,7 +192,7 @@ h4 {
 
 #callToAction h3 {
   padding-top: 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -206,7 +211,6 @@ h4 {
   background-color: red;
   text-decoration: none;
   border-radius: 17px;
-  padding-top: 1px;
 }
 
 #callToAction a:hover {
