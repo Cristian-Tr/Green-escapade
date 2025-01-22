@@ -11,7 +11,7 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   h1 {
-    animation: widening 12s infinite linear;
+    animation: widening 0s infinite linear;
   }
 }
 
@@ -81,32 +81,39 @@ h4 {
 }
 
 #header-logo {
-  font-size: 35px;
+  font-size: 44px;
   text-align: center;
   margin: 1px auto;
-  margin-top: -290px;
-  margin-bottom: -10px;
-  animation: rotation 12s infinite linear;
+  margin-top: -270px;
+  animation: rotation 3.5s infinite linear;
 }
 
 @media only screen and (min-width: 768px) {
   #header-logo {
-    font-size: 71px;
-    margin-top: -460px;
+    font-size: 107px;
+    margin-top: -500px;
   }
 }
 
 @keyframes rotation {
   0% {
-    transform: rotate(8deg);
+    transform: rotate(0) translateY(0);
   }
 
-  53% {
-    transform: rotate(-8deg);
+  20% {
+    transform: rotate(0) translateY(0);
+  }
+
+  35% {
+    transform: rotate(8deg) translateY(-28px);
+  }
+
+  57% {
+    transform: rotate(-6deg) translateY(0);
   }
 
   100% {
-    transform: rotate(8deg);
+    transform: rotate(0) translateY(0);
   }
 }
 
@@ -116,28 +123,79 @@ h4 {
   letter-spacing: 5px;
 }
 
-@media only screen and (min-width: 768px) {
-  #callToAction h1 {
-    font-size: 53px;
-    padding-top: 17px;
-    font-weight: 800;
-    letter-spacing: 8px;
+.letters-waves {
+  position: relative;
+  text-align: center;
+  -webkit-box-reflect: below -28px linear-gradient(transparent, rgba(0, 0, 0, .2));
+  color: springgreen;
+  font-weight: 800;
+}
+
+.letters-waves span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: waves 3.5s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waves {
+
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
   }
+
+  20% {
+    transform: translateY(-28px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.letters-waves h1 {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 768px) {
+  .letters-waves h1 {
+    font-size: 53px;
+  }
+}
+
+#callToAction h2 {
+  font-size: 14px;
+  padding-top: -5px;
+  font-weight: 800;
+  letter-spacing: 5px;
 }
 
 @media only screen and (min-width: 768px) {
   #callToAction h2 {
     font-size: 35px;
-    padding-top: 1px;
-    font-weight: 800;
-    letter-spacing: 5px;
   }
+}
+
+#callToAction h3 {
+  padding-top: 0;
+  font-size: 14px;
 }
 
 @media only screen and (min-width: 768px) {
   #callToAction h3 {
     padding-top: 17px;
     letter-spacing: 1px;
+    padding-top: 5px;
+    font-size: 25px;
   }
 }
 
@@ -148,6 +206,7 @@ h4 {
   background-color: red;
   text-decoration: none;
   border-radius: 17px;
+  padding-top: 1px;
 }
 
 #callToAction a:hover {
@@ -167,15 +226,17 @@ h4 {
 }
 
 header h4 {
-  padding-top: 1px;
+  padding-top: 2px;
+  font-size: 12px;
+  font-weight: 800;
 }
 
 @media only screen and (min-width: 768px) {
   header h4 {
     font-size: 17px;
-    padding-top: 12px;
+    padding-top: 5px;
     letter-spacing: 8px;
-    font-weight: 800;
+    font-size: 21px;
   }
 }
 
@@ -247,7 +308,7 @@ a.right.carousel-control {
 }
 
 #history b {
-  font-size: 35px;
+  font-size: 44px;
   color: springgreen;
   text-shadow: .5px .5px .5px black;
   font-weight: 500;
