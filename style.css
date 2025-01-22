@@ -120,7 +120,6 @@ h4 {
 #callToAction {
   font-weight: 800;
   transform: rotateY(0deg);
-  letter-spacing: 1px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -164,7 +163,7 @@ h4 {
 }
 
 .letters-waves h1 {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 800;
 }
 
@@ -175,10 +174,9 @@ h4 {
 }
 
 #callToAction h2 {
-  font-size: 17px;
+  font-size: 18px;
   padding-top: -5px;
   font-weight: 800;
-  letter-spacing: 5px;
 }
 
 @media only screen and (min-width: 768px) {
