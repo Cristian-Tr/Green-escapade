@@ -83,7 +83,6 @@ h4 {
 #header-logo {
   font-size: 44px;
   text-align: center;
-  margin: 1px auto;
   margin-top: -270px;
   animation: rotation 3.5s infinite linear;
 }
