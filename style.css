@@ -25,6 +25,7 @@ h4 {
   color: springgreen;
   text-shadow: .5px .5px .5px black;
 }
+
 /* HEADER SETTINGS */
 #header {
   font-family: Montserrat, sans-serif;
@@ -36,8 +37,9 @@ h4 {
     height: 575px;
   }
 }
+
 /* NAVBAR */
-header .nav{
+header .nav {
   position: absolute;
   top: 1em;
   width: 100%;
@@ -47,21 +49,21 @@ header .nav{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  }
-  
-  header .nav a{
+}
+
+header .nav a {
   display: inline-block;
-  margin: 0px 5px;
+  margin: 0px 4px;
   text-decoration: none;
   font-size: 12px;
   color: springgreen;
-  }
-  
-  header .nav a:hover{
-  color: magenta;
-  }
+}
 
-  /* VIDEO SETTINGS */
+header .nav a:hover {
+  color: magenta;
+}
+
+/* VIDEO SETTINGS */
 @media only screen and (min-width: 769px) {
 
   .mobile {
@@ -85,6 +87,7 @@ header .nav{
     width: 100%;
   }
 }
+
 /* WEBSITE LOGO */
 #header-logo {
   font-size: 44px;
@@ -132,6 +135,7 @@ header .nav{
     letter-spacing: 5px;
   }
 }
+
 /* WEBSITE TITLE */
 .letters-waves {
   position: relative;
@@ -243,6 +247,7 @@ header h4 {
     font-size: 21px;
   }
 }
+
 /* CAROUSEL SETTINGS */
 #myCarousel {
   width: 100%;
@@ -280,6 +285,7 @@ a.right.carousel-control {
   background-color: transparent;
   border: none;
 }
+
 /* ABOUT US SECTION */
 .container-fluid {
   padding: 0;
@@ -325,6 +331,7 @@ a.right.carousel-control {
     font-size: 71px;
   }
 }
+
 /* SERVICES SECTION */
 #services {
   cursor: pointer;
