@@ -16,10 +16,9 @@
 
 .fish {
   position: absolute;
-  top: 35px;
+  top: 53px;
   width: 100px;
   z-index: 150;
-  left: 110px;
   top: 80px;
   animation: fish 35s infinite linear;
 }
