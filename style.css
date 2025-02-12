@@ -516,35 +516,6 @@ button:hover {
   background-color: springgreen;
 }
 
-/* Ticket Styles */
-.ticket {
-  margin-top: 35px;
-  padding: 8px;
-  border: 3px solid red;
-  background-color: grey;
-}
-
-.ticket p {
-  font-size: 12.5px;
-}
-
-/* CSS3 Animation */
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.zoomIn {
-  animation: zoom 0.5s;
-  font-size: 14px;
-  color: springgreen;
-}
-
 /* FOOTER */
 .btn btn-default btn-lg {
   background-color: red;
