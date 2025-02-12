@@ -332,6 +332,20 @@ a.right.carousel-control {
   }
 }
 
+.image-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  padding: 5.3vw;
+}
+
+#underwater {
+  width: 100vw;
+  background-image: url("./parallax-background.png");
+}
+
 /* SERVICES SECTION */
 #services {
   cursor: pointer;

@@ -1,0 +1,264 @@
+/* FISH */
+#fish-container {
+  padding-top: 25px;
+  width: 325px;
+  height: 420px;
+  margin: auto;
+  position: relative;
+  border-radius: 50% 50% 0 0;
+}
+
+.wrap {
+  width: 305px;
+  height: 315px;
+  position: relative;
+}
+
+.fish {
+  position: absolute;
+  top: 35px;
+  width: 100px;
+  z-index: 150;
+  left: 110px;
+  top: 80px;
+  animation: fish 15s infinite linear;
+}
+
+@keyframes fish {
+  from {
+    left: 45px;
+    top: 175px;
+  }
+
+  35% {
+    left: 45px;
+    transform: scaleX(1);
+    top: 10px;
+  }
+
+  35.5% {
+    left: 45px;
+    transform: scaleX(-1);
+    top: 10px;
+  }
+
+  70% {
+    left: 150px;
+    transform: scaleX(-1);
+    top: 210px;
+  }
+
+  70.5% {
+    left: 150px;
+    transform: scaleX(1);
+    top: 210px;
+  }
+
+  80% {
+    left: 45px;
+    top: 10px;
+  }
+
+  to {
+    left: 45px;
+    top: 175px;
+  }
+}
+
+.position {
+  transform: rotate(-37deg);
+}
+
+.body {
+  transform: skewX(30deg) skewY(5deg);
+  background-color: gold;
+  border-radius: 220px 132px 37px 62px;
+  box-shadow: 6px -12px 15px #3a2104 inset, -2px -3px 4px #281602 inset;
+  height: 70px;
+  position: absolute;
+  top: 60px;
+  width: 90px;
+}
+
+.eye {
+  transform: rotate(50deg);
+  background-color: white;
+  border: 1px solid blue;
+  border-radius: 50%;
+  width: 10px;
+  height: 20px;
+  left: 40px;
+  position: absolute;
+  top: 5px;
+}
+
+.eye:before {
+  border: 2px solid blue;
+  background: blue;
+  border-radius: 50%;
+  content: "";
+  width: 2px;
+  height: 7px;
+  left: 1px;
+  position: absolute;
+  top: 4px;
+  animation: eye 2.5s infinite ease-in;
+}
+
+@keyframes eye {
+  from {
+    background: blue;
+    border: 2px solid blue;
+  }
+
+  50% {
+    background: blue;
+    border: 2px solid blue;
+  }
+
+  60% {
+    background: white;
+    border: 2px solid white;
+  }
+
+  70% {
+    background: blue;
+    border: 2px solid blue;
+  }
+
+  to {
+    background: blue;
+  }
+}
+
+.mouth {
+  transform: rotate(150deg);
+  border-radius: 5px 50px 5px 5px;
+  border-right: 4px solid darkred;
+  height: 28px;
+  left: 17px;
+  position: absolute;
+  top: 14px;
+  width: 16px;
+  animation: mouth 0.9s infinite ease-in;
+}
+
+@keyframes mouth {
+  from {
+    transform: scale(1) rotate(150deg);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(150deg);
+  }
+
+  to {
+    transform: scale(1) rotate(150deg);
+  }
+}
+
+.gill {
+  transform: rotate(50deg);
+  border-radius: 50%;
+  border-right: 3px solid maroon;
+  height: 70px;
+  left: 15px;
+  position: absolute;
+  top: -10px;
+  width: 35px;
+  animation: gill 1s infinite ease-in;
+}
+
+@keyframes gill {
+  from {
+    transform: scale(1) rotate(50deg);
+  }
+
+  50% {
+    transform: scale(1.1) rotate(50deg);
+  }
+
+  to {
+    transform: scale(1) rotate(50deg);
+  }
+}
+
+.wing1 {
+  transform: skewX(35deg) skewY(8deg);
+  background-color: gold;
+  border-radius: 200px 112px 47px 62px;
+  box-shadow: -7px -8px 9px black inset;
+  height: 15px;
+  left: 53px;
+  position: absolute;
+  top: 80px;
+  width: 39px;
+  animation: wing 1s infinite ease-in;
+}
+
+@keyframes wing {
+  from {
+    transform: scale(1) rotate(19deg);
+  }
+
+  50% {
+    transform: scale(1.1) rotate(1deg);
+  }
+
+  to {
+    transform: scale(1) rotate(19deg);
+  }
+}
+
+.wing2 {
+  transform: skewX(140deg) skewY(28deg);
+  background-color: gold;
+  border-radius: 200px 112px 47px 62px;
+  box-shadow: -2px -3px 4px black inset;
+  height: 18px;
+  left: 18px;
+  position: absolute;
+  top: 108px;
+  width: 42px;
+}
+
+.tail {
+  transform: skewX(30deg) skewY(5deg);
+  background-color: gold;
+  border-radius: 200px 112px 47px 62px;
+  box-shadow: -10px -5px 9px #060200 inset;
+  height: 29px;
+  left: 93px;
+  position: absolute;
+  top: 105px;
+  width: 42px;
+  animation: tail 1s infinite ease-in;
+}
+
+.tail:before {
+  transform: skewX(30deg) skewY(5deg);
+  background-color: gold;
+  border-radius: 62px 112px 112px 200px;
+  box-shadow: 4px 10px 9px #2f1e01 inset, -6px -7px 2px black inset;
+  content: "";
+  height: 29px;
+  left: -10px;
+  position: absolute;
+  top: 23px;
+  width: 38px;
+  animation: tail 1s infinite ease-in;
+}
+
+@keyframes tail {
+  from {
+    transform: scale(0.8) skewY(1deg);
+  }
+
+  50% {
+    transform: scale(0.7) skewY(23deg);
+  }
+
+  to {
+    transform: scale(0.8) skewY(1deg);
+  }
+}
