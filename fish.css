@@ -21,46 +21,46 @@
   z-index: 150;
   left: 110px;
   top: 80px;
-  animation: fish 15s infinite linear;
+  animation: fish 35s infinite linear;
 }
 
 @keyframes fish {
-  from {
-    left: 45px;
+  0% {
+    left: 53px;
     top: 175px;
   }
 
   35% {
-    left: 45px;
+    left: 53px;
     transform: scaleX(1);
     top: 10px;
   }
 
   35.5% {
-    left: 45px;
+    left: 153px;
     transform: scaleX(-1);
     top: 10px;
   }
 
   70% {
-    left: 150px;
+    left: 153px;
     transform: scaleX(-1);
     top: 210px;
   }
 
   70.5% {
-    left: 150px;
+    left: 53px;
     transform: scaleX(1);
     top: 210px;
   }
 
   80% {
-    left: 45px;
+    left: 53px;
     top: 10px;
   }
 
-  to {
-    left: 45px;
+  100% {
+    left: 53px;
     top: 175px;
   }
 }
