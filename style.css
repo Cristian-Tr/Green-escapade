@@ -339,7 +339,8 @@ a.right.carousel-control {
   background-position: center;
   color: white;
   padding-bottom: 8vw;
-  margin-left: -10px;
+  margin-left: -11px;
+  padding-left: 0;
 }
 
 #underwater {
