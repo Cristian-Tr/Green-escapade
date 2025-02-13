@@ -339,12 +339,12 @@ a.right.carousel-control {
   background-position: center;
   color: white;
   padding-bottom: 8vw;
-  margin-left: -11px;
+  margin-left: -14px;
   padding-left: 0;
 }
 
 #underwater {
-  width: 101vw;
+  width: 102vw;
   background-image: url("./parallax-background.png");
 }
 
@@ -424,33 +424,11 @@ a.right.carousel-control {
 .slider {
   margin-top: 35px;
   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
   height: 153px;
   margin: auto;
   overflow: hidden;
   position: relative;
   width: 98%;
-}
-
-.slider::before,
-.slider::after {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 153px;
-  position: absolute;
-  width: 50px;
-  z-index: 2;
-}
-
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
 }
 
 .slider .photo-scrolling {
