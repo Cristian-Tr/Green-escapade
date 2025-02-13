@@ -79,90 +79,75 @@
   width: 90px;
 }
 
+
 .eye {
+  position: absolute;
   transform: rotate(50deg);
   background-color: white;
-  border: 1px solid black;
   border-radius: 50%;
-  width: 8px;
-  height: 15px;
+  width: 9.4px;
+  height: 17px;
   left: 40px;
-  position: absolute;
   top: 5px;
+  animation: blink-eye 3.5s infinite ease-in-out;
 }
 
-.eye:before {
-  border: 2px solid cyan;
-  background: cyan;
+@keyframes blink-eye {
+  10% {
+    background-color: transparent;
+  }
+  30% {
+    background-color: white;
+  }
+}
+
+.iris {
+  background-color: cyan;
   border-radius: 50%;
   content: "";
-  width: 4.4px;
-  height: 8px;
-  left: .8px;
-  position: absolute;
+  width: 5px;
+  height: 10px;
+  left: 1.5px;
   top: 2.5px;
-  animation: eye 3.5s infinite ease-in;
+  position: absolute;
+  animation: blink-iris 3.5s infinite ease-in;
 }
 
-@keyframes eye {
-  0% {
-    background: cyan;
-    border: 2px solid cyan;
+@keyframes blink-iris {
+  10% {
+    background-color: transparent;
   }
-
-  53% {
-    background: cyan;
-    border: 2px solid cyan;
-  }
-
-  53.9% {
-    background: black;
-    border: 2px solid black;
-  }
-  
-  59% {
-    background: black;
-    border: 2px solid black;
-  }
-
-59.3% {
-    background: cyan;
-    border: 2px solid cyan;
-  }
-
-  80% {
-    background: cyan;
-    border: 2px solid cyan;
-  }
-
-  100% {
-    background: cyan;
+  30% {
+    background-color: cyan;
   }
 }
 
 .mouth {
   transform: rotate(150deg);
-  border-radius: 5px 50px 5px 5px;
-  border-right: 4px solid darkred;
+  border-radius: 8px 50px 8px 8px;
+  border-right: 5.3px solid maroon;
+  width: 8px;
   height: 28px;
+  top: 14px;
   left: 17px;
   position: absolute;
-  top: 14px;
-  width: 16px;
   animation: mouth 3.5s infinite ease-in;
 }
 
 @keyframes mouth {
   from {
-    transform: scale(1) rotate(150deg);
+    transform: scale(1) rotate(135deg);
+    width: 8px;
   }
 
   50% {
-    transform: scale(1) rotate(170deg);
+    transform: scale(1) rotate(161deg);
+    width: 19px;
   }
 
   to {
-    transform: scale(1) rotate(150deg);
+    transform: scale(1) rotate(135deg);
+    width: 8px;
   }
 }
 
@@ -269,5 +254,65 @@
 
   to {
     transform: scale(0.8) skewY(1deg);
+  }
+}
+
+
+.bubble {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  margin-top: -50px;
+  margin-left: 26px;
+}
+
+#bubble1 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.7px solid cyan;
+  animation: bubble1 4s infinite linear;
+}
+
+@keyframes bubble1 {
+  0% {
+    margin-top: 39px;
+  }
+  100% {
+   margin-top: -91px;
+  }
+}
+
+#bubble2 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.7px solid cyan;
+  animation: bubble2 5s infinite linear;
+}
+
+@keyframes bubble2 {
+  0% {
+    margin-top: 2px;
+  }
+  100% {
+    margin-top: -18px;
+  }
+}
+
+#bubble3 {
+  width: 8px;
+  height:8px;
+  border-radius: 50%;
+  border: 1.7px solid cyan;
+  animation: bubble3 8s infinite linear;
+}
+
+@keyframes bubble3 {
+  0% {
+    margin-top: 15px;
+  }
+  100% {
+    margin-top: -18px;
   }
 }
