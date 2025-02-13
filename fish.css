@@ -82,10 +82,10 @@
 .eye {
   transform: rotate(50deg);
   background-color: white;
-  border: 1px solid blue;
+  border: 1px solid black;
   border-radius: 50%;
   width: 8px;
-  height: 17px;
+  height: 15px;
   left: 40px;
   position: absolute;
   top: 5px;
@@ -100,7 +100,7 @@
   height: 8px;
   left: .8px;
   position: absolute;
-  top: 4px;
+  top: 2.5px;
   animation: eye 3.5s infinite ease-in;
 }
 

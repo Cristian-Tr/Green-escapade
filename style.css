@@ -428,7 +428,7 @@ a.right.carousel-control {
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 98%;
+  width: 100%;
 }
 
 .slider .photo-scrolling {
