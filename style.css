@@ -90,6 +90,7 @@ header .nav a:hover {
 
 /* WEBSITE LOGO */
 #header-logo {
+  color: springgreen;
   font-size: 44px;
   text-align: center;
   margin-top: -270px;
@@ -138,11 +139,20 @@ header .nav a:hover {
 
 /* WEBSITE TITLE */
 .letters-waves {
+  margin-top: -10px;
   position: relative;
   text-align: center;
   -webkit-box-reflect: below -28px linear-gradient(transparent, rgba(0, 0, 0, .2));
   color: springgreen;
   font-weight: 800;
+}
+
+/* VIDEO SETTINGS */
+@media only screen and (min-width: 769px) {
+
+  .letters-waves {
+    margin-top: -36px;
+  }
 }
 
 .letters-waves span {
@@ -257,7 +267,7 @@ header h4 {
 
 @media (min-width: 768px) {
   #myCarousel {
-    margin-top: 150px;
+    margin-top: 170px;
   }
 }
 
@@ -291,6 +301,9 @@ a.right.carousel-control {
   padding: 0;
   margin: auto;
 }
+
+
+
 
 #history {
   margin-top: 35px;

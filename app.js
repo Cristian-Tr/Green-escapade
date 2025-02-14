@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -23,8 +24,7 @@ $(document).ready(function () {
 
 
 
-
-  //Carusel
+  // CAROUSEL WITH IMAGES
   var currentSlide;
   var rand;
   $(document).ready(function () {
@@ -60,7 +60,19 @@ $(document).ready(function () {
   }, 5300);
 
 
-
+  
+// CHANGING TEXT IN ABOUT US SECTION
+$(function () {
+  count = -1;
+  wordsArray = ["PROFESSIONAL FISHING", "SWIMMING", "JET SKI", "WATER SKIING", "SCUBA DIVING", "SEA WATER JACUZZI", "WATER PARK", "DUTY FREE SHOPPING", "SAUNA", "FRESH FISH MENU"]; //change this text items to your own
+  
+  setInterval(function () {
+    count++;
+    $("#word").fadeOut(400, function () {
+      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+    });
+  }, 1700); // set interval time
+});
 
 
 
