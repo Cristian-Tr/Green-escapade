@@ -60,10 +60,17 @@ header .nav {
 
 header .nav a {
   display: inline-block;
+  font-weight: 100;
   margin: 0px 4px;
   text-decoration: none;
   font-size: 12px;
   color: springgreen;
+}
+
+@media only screen and (min-width: 769px) {
+  header .nav a {
+    font-weight: 800;
+  }
 }
 
 header .nav a:hover {
@@ -98,6 +105,7 @@ header .nav a:hover {
 /* WEBSITE LOGO */
 #header-logo {
   color: springgreen;
+  width: 98%;
   font-size: 44px;
   text-align: center;
   margin-top: -270px;
@@ -256,42 +264,96 @@ header h4 {
   }
 }
 
-/* CAROUSEL SETTINGS */
-#myCarousel {
+
+article {
+  width: 96%;
+  margin-top: 26px;
+  height: 127px;
+}
+
+@media (min-width: 768px) {
+  article {
+    width: 100%;
+    margin-top: 235px;
+    height: 270px;
+  }
+}
+
+@media (min-width: 1420px) {
+  article {
+    width: 100%;
+    margin-top: 280px;
+    height: 350px;
+  }
+}
+
+.promo-carousel {
   width: 100%;
-  height: auto;
-  margin-top: 1px;
-}
-
-@media (min-width: 768px) {
-  #myCarousel {
-    margin-top: 197px;
-  }
-}
-
-.carousel::after,
-.carousel:before {
-  display: none;
-}
-
-.carousel-inner img {
-  width: 98%;
+  max-width: 1700px;
+  perspective: 53px;
+  perspective-origin: 53% 71%;
+  min-height: 8em;
   margin: auto;
-  background-color: transparent;
-  z-index: 1000;
 }
 
-@media (min-width: 768px) {
-  .carousel-inner img {
-    width: 53%;
+.promo-banner {
+  position: absolute;
+  width: 33%; 
+  padding-bottom: 19%;
+  transform-origin: left center;
+  animation: promo-carousel 12s infinite;
+}
+
+.promo-banner:first-child {
+  animation-delay: -4s;
+}
+
+.promo-banner:last-child {
+  animation-delay: -8s;
+}
+
+.promo-image {
+  position: absolute;
+  width: 100%;
+  border-radius: 2px;
+}
+
+@keyframes promo-carousel {
+  0%{
+    transform: translateX(100%) rotatey(0) scale(1.79, 1.79);
+    transform-origin: center center;
+    z-index: 10;
   }
-}
-
-a.left.carousel-control,
-a.right.carousel-control {
-  opacity: 0;
-  background-color: transparent;
-  border: none;
+  27%{
+    transform: translateX(100%) rotatey(0) scale(1.79, 1.79);
+    transform-origin: center center;
+    z-index: 10;
+  }
+  35%{
+    transform: translateX(12%) translateY(0) rotatey(10deg) scale(.8,1);
+    transform-origin: left center;
+    z-index: 5;
+  }
+  60%{
+    transform: translateX(12%) translateY(0) rotatey(10deg) scale(.8,1);
+    transform-origin: left center;
+    z-index: 5;
+  }
+  71%{
+    transform: translateX(188%) translateY(0) rotatey(-10deg) scale(.8,1);
+    transform-origin: right center;
+    z-index: 5;
+  }
+  93%{
+    transform: translateX(188%) translateY(0) rotatey(-10deg) scale(.8,1);
+    transform-origin: right center;
+    z-index: 5;
+  }
+  100%{
+    transform: translateX(100%) rotatey(0) scale(1.79, 1.79);
+    transform-origin: center center;
+    z-index: 10;
+  }
 }
 
 /* ABOUT US SECTION */
@@ -299,9 +361,6 @@ a.right.carousel-control {
   padding: 0;
   margin: auto;
 }
-
-
-
 
 #history {
   margin-top: 35px;
@@ -355,7 +414,7 @@ a.right.carousel-control {
 }
 
 #underwater {
-  width: 102vw;
+  width: 100%;
   background-image: url("./parallax-background.png");
 }
 
@@ -464,7 +523,7 @@ a.right.carousel-control {
 /* TICKET RESERVATION SECTION */
 .booking-container {
   width: 287px;
-  margin: 20px auto;
+  margin: 2px auto;
   background-color: darkgrey;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;

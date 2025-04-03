@@ -24,27 +24,6 @@ $(document).ready(function () {
 
 
 
-  // CAROUSEL WITH IMAGES
-  var currentSlide;
-  var rand;
-  $(document).ready(function () {
-    currentSlide = Math.floor((Math.random() * $('.item').length));
-    rand = currentSlide;
-    $('#myCarousel').carousel(currentSlide);
-    $('#myCarousel').fadeIn(5000);
-    setInterval(function () {
-      while (rand == currentSlide) {
-        rand = Math.floor((Math.random() * $('.item').length));
-      }
-      currentSlide = rand;
-      $('#myCarousel').carousel(rand);
-    }, 5000);
-  });
-
-  $('.carousel').carousel({
-    interval: 5000
-  })
-
   setInterval(function () {
     $('.count').each(function () {
       $(this).prop('Counter', 0).animate({
@@ -58,7 +37,6 @@ $(document).ready(function () {
       });
     });
   }, 5300);
-
 
   
 // CHANGING TEXT IN ABOUT US SECTION
