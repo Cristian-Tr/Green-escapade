@@ -42,7 +42,7 @@ $(document).ready(function () {
 // CHANGING TEXT IN ABOUT US SECTION
 $(function () {
   count = -1;
-  wordsArray = ["PROFESSIONAL FISHING", "SWIMMING", "JET SKI", "WATER SKIING", "SCUBA DIVING", "SEA WATER JACUZZI", "WATER PARK", "DUTY FREE SHOPPING", "SAUNA", "FRESH FISH MENU"]; //change this text items to your own
+  wordsArray = ["FISHING", "SWIMMING", "JET SKI", "WATER SKIING", "SCUBA DIVING", "JACUZZI", "WATER PARK", "DUTY FREE SHOPPING", "SAUNA", "ALL INCLUSIVE MENU"]; //change this text items to your own
   
   setInterval(function () {
     count++;
