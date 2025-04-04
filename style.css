@@ -269,10 +269,18 @@ header h4 {
 article {
   width: 94%;
   margin-top: 71px;
-  height: 153px;
+  height: 143px;
 }
 
 @media (min-width: 768px) {
+  article {
+    width: 100%;
+    margin-top: 260px;
+    height: 260px;
+  }
+}
+
+@media (min-width: 1200px) {
   article {
     width: 100%;
     margin-top: 287px;
@@ -316,7 +324,6 @@ article {
 .promo-image {
   position: absolute;
   width: 100%;
-  border-radius: 2px;
 }
 
 @keyframes promo-carousel {
