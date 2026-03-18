@@ -1,0 +1,162 @@
+
+/* STILURI FORMULAR COMPLETARE DATE REZERVARE */
+form {
+  margin: 15px;
+  font-size: 14px;
+  color: springgreen;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  height: 35px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: springgreen;
+  color: black;
+}
+
+/* CONTAINER CU overflow hidden PENTRU A ASCUNDE TICKETUL */
+.booking-container {
+  perspective: 1000px;
+  width: 323px;
+  margin: 2px auto;
+  background-color: darkgrey;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  /* Important pentru animație */
+  min-height: 480px;
+}
+
+/* FANTA DE IESIRE BILET (SLOT BILET) */
+.booking-container {
+  width: 323px;
+  margin: 2px auto;
+  background-color: darkgrey;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  /* BILETUL RAMANE ASCUNS */
+  min-height: 520px;
+}
+
+.slot-machine {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-bottom: 1px solid #555;
+  position: relative;
+  z-index: 10;
+}
+
+/* STILURI CU UMBRE */
+.ticket {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: springgreen;
+  transition: top 1.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 1.2s;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  /* Umbra care dă efectul de adâncime când biletul iese */
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ticket.active {
+  top: 0;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  /* Umbra devine mai intensă jos */
+}
+
+/* STILURI TICKET */
+.ticket-row {
+  padding: 14px 10px;
+  /* Mai mult spațiu între rânduri */
+  text-align: left;
+  padding-left: 35px;
+  font-weight: 900;
+  font-size: 17px;
+  /* Font mai mare și vizibil */
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.reset-btn {
+  background: red;
+  color: white;
+  margin-top: auto;
+  margin-bottom: 8px;
+  border: none;
+  padding-bottom: 1px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ticket::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(135deg, springgreen 25%, transparent 25%),
+    linear-gradient(225deg, springgreen 25%, transparent 25%);
+  background-size: 10px 20px;
+  background-position: left top;
+}
+
+/* STILURI TICKET */
+#generatedTicket .ticket-row {
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+}
+
+/* Specificăm culorile clar pentru rânduri ȘI span-urile din ele */
+#generatedTicket .ticket-row:nth-child(odd) {
+  color: white;
+}
+
+#generatedTicket .ticket-row:nth-child(even) {
+  color: black;
+}
+
+/* Ne asigurăm că și datele introduse (span) preiau culoarea rândului */
+#generatedTicket .ticket-row span {
+  color: inherit;
+}

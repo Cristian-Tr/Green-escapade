@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="fish.css">
+  <link rel="stylesheet" href="ticket.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
@@ -20,6 +21,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="app.js"></script>
+  <script src="ticket.js"></script>
 </head>
 
 <body>
@@ -93,7 +95,7 @@
 
   <!-- ABOUT US SECTION -->
   <div class="container-fluid text-center bg-white" id="history">
-      <h2 style="font-weight: 800;">ABOUT US</h2>
+    <h2 style="font-weight: 800;">ABOUT US</h2>
     <div class="col-sm-12">
 
       <img src="5.png" width="100%" alt="Cruise ship fleet" border="0" style="margin-top:35px;">
@@ -367,40 +369,58 @@
       </div>
     </div>
 
-    <!-- RESERVATION SYSTEM -->
-    <h2 id="tickets" style="text-align: center;font-weight: 800; margin-top: 53px;">
-      RESERVATION</h2><br><br>
+    <!-- RESERVATION SYSTEM START -->
+    <h2 id="tickets" style="text-align: center; font-weight: 800; margin-top: 53px;">RESERVATION</h2>
+    <br><br>
+
     <div class="bookingSystem">
       <div class="booking-container">
-        <form id="bookingForm"><br>
-          <h3 style="font-weight: 800; text-align: center;color: springgreen;">GREEN ESCAPADE TICKET</h3><br>
-          <label for="number" style="text-align: left;">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
+        <form id="bookingForm">
+          <br>
+          <h3 style="font-weight: 800; text-align: center; color: springgreen;">GREEN ESCAPADE TICKET</h3>
+          <br>
+          <label for="number">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
           <input type="number" id="number" placeholder="1, 2, 3 ..." required>
 
-          <label for="type" style="text-align: left;">🚤 CRUISE TYPE:</label>
-          <select style="display: block;" id="type" type="text" required>
+          <label for="type">🚤 CRUISE TYPE:</label>
+          <select id="type" required>
             <option value="MINCRUISE">MINCRUISE</option>
             <option value="MIDCRUISE">MIDCRUISE</option>
             <option value="MAXCRUISE">MAXCRUISE</option>
             <option value="BIGRUISE">BIGRUISE</option>
           </select>
 
-          <label for="date" style="text-align: left;">📅 CRUISE DATE:</label>
-          <input type="date" id="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='date')"
-            required>
+          <label for="date">📅 CRUISE DATE:</label>
+          <input type="date" id="date" required>
 
-          <label for="time" style="text-align: left;">🕒 CRUISE TIME:</label>
+          <label for="time">🕒 CRUISE TIME:</label>
           <input type="time" id="time" required>
 
-          <label for="info" style="text-align: left;">📩 CRUISE DETAILS:</label>
-          <textarea type="text" id="info" placeholder="Your message..." required></textarea><br><br>
+          <label for="info">📩 CRUISE DETAILS:</label>
+          <textarea id="info" placeholder="Your message..." required></textarea>
+          <br><br>
 
-          <button type="submit">BOOK TICKET</button>
-        </form><br>
+          <button type="submit" id="bookBtn">BOOK TICKET</button>
+        </form><br><br><br>
+
+        <div class="slot-machine"></div>
+
+
+        <div id="generatedTicket" class="ticket"><br><br><br>
+          <div class="ticket-row">RESERVATION TICKET</div>
+          <div class="ticket-row">GREEN ESCAPADE</div>
+          <div class="ticket-row">People: <span id="res-people"></span></div>
+          <div class="ticket-row">Type: <span id="res-type"></span></div>
+          <div class="ticket-row">Date: <span id="res-date"></span></div>
+          <div class="ticket-row">Time: <span id="res-time"></span></div>
+          <div class="ticket-row">Details: <span id="res-info"></span></div>
+          <div class="ticket-row">A PLEASANT CRUISE!</div>
+          <button type="button" onclick="resetForm()" class="reset-btn">ANOTHER TICKET?</button>
+        </div>
 
       </div>
     </div>
-
+    <!-- RESERVATION SYSTEM STOP -->
 
     <footer>
       <!-- INFO SECTION -->
