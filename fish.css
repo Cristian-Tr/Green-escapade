@@ -7,13 +7,11 @@
   position: relative;
   border-radius: 50% 50% 0 0;
 }
-
 .wrap {
   width: 305px;
   height: 315px;
   position: relative;
 }
-
 .fish {
   position: absolute;
   top: 53px;
@@ -78,7 +76,6 @@
   top: 60px;
   width: 90px;
 }
-
 
 .eye {
   position: absolute;
@@ -279,7 +276,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 2.5px solid cyan;
+  border: 1.7px solid cyan;
   animation: bubble1 4s infinite linear;
 }
 
@@ -327,7 +324,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 1.7px solid cyan;
+  border: 3.5px solid cyan;
   animation: bubble3 8s infinite linear;
 }
 
