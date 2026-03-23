@@ -265,10 +265,14 @@
 #bubble1,
 #bubble2,
 #bubble3 {
-  box-shadow: 0 0 5px cyan, inset 0 0 2px white;
-  /* Glow exterior și reflexie interioră */
-  background: rgba(0, 255, 255, 0.1);
-  /* Un fundal foarte discret, aproape transparent */
+    width: 8px;   /* Dimensiunea de start la gura peștelui */
+  height: 8px;
+  border-radius: 50%;
+  border: 2.5px solid white; /* Alb pentru contrast pe corali */
+  background: rgba(0, 255, 255, 0.3); /* Un pic de albastru marin */
+  box-shadow: 0 0 8px cyan;
+  position: absolute;
+  opacity: 0;
 }
 
 #bubble1 {
@@ -296,8 +300,8 @@
 }
 
 #bubble2 {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   border: 2.5px solid cyan;
   animation: bubble2 5s infinite linear;
@@ -320,8 +324,8 @@
 }
 
 #bubble3 {
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: 1.7px solid cyan;
   animation: bubble3 8s infinite linear;
@@ -338,7 +342,7 @@
   }
 
   100% {
-    transform: translateY(-18px);
+    transform: translateY(-38px);
     opacity: 0;
   }
 }
