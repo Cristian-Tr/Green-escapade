@@ -18,18 +18,39 @@
   position: absolute;
   width: 100px;
   z-index: 150;
-  will-change: transform; /* Spune browserului să pregătească placa video */
+  will-change: transform;
+  /* Spune browserului să pregătească placa video */
   animation: fish 35s infinite linear;
 }
 
 @keyframes fish {
-  0% { transform: translate(53px, 175px) scaleX(1); }
-  35% { transform: translate(53px, 10px) scaleX(1); }
-  35.5% { transform: translate(153px, 10px) scaleX(-1); }
-  70% { transform: translate(153px, 210px) scaleX(-1); }
-  70.5% { transform: translate(53px, 210px) scaleX(1); }
-  80% { transform: translate(53px, 10px) scaleX(1); }
-  100% { transform: translate(53px, 175px) scaleX(1); }
+  0% {
+    transform: translate(53px, 175px) scaleX(1);
+  }
+
+  35% {
+    transform: translate(53px, 10px) scaleX(1);
+  }
+
+  35.5% {
+    transform: translate(153px, 10px) scaleX(-1);
+  }
+
+  70% {
+    transform: translate(153px, 210px) scaleX(-1);
+  }
+
+  70.5% {
+    transform: translate(53px, 210px) scaleX(1);
+  }
+
+  80% {
+    transform: translate(53px, 10px) scaleX(1);
+  }
+
+  100% {
+    transform: translate(53px, 175px) scaleX(1);
+  }
 }
 
 .position {
@@ -64,6 +85,7 @@
   10% {
     background-color: transparent;
   }
+
   30% {
     background-color: white;
   }
@@ -85,6 +107,7 @@
   10% {
     background-color: transparent;
   }
+
   30% {
     background-color: cyan;
   }
@@ -230,20 +253,36 @@
   margin-left: 26px;
 }
 
+#bubble1,
+#bubble2,
+#bubble3 {
+  box-shadow: 0 0 5px cyan, inset 0 0 2px white;
+  /* Glow exterior și reflexie interioră */
+  background: rgba(0, 255, 255, 0.1);
+  /* Un fundal foarte discret, aproape transparent */
+}
+
 #bubble1 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1.7px solid cyan;
+  border: 2.5px solid cyan;
   animation: bubble1 4s infinite linear;
 }
 
 @keyframes bubble1 {
   0% {
-    margin-top: 39px;
+    transform: translateY(39px);
+    opacity: 0;
   }
+
+  50% {
+    opacity: 1;
+  }
+
   100% {
-   margin-top: -91px;
+    transform: translateY(-91px);
+    opacity: 0;
   }
 }
 
@@ -251,22 +290,29 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1.7px solid cyan;
+  border: 2.5px solid cyan;
   animation: bubble2 5s infinite linear;
 }
 
 @keyframes bubble2 {
   0% {
-    margin-top: 2px;
+    transform: translateY(2px);
+    opacity: 0;
   }
+
+  50% {
+    opacity: 1;
+  }
+
   100% {
-    margin-top: -18px;
+    transform: translateY(-18px);
+    opacity: 0;
   }
 }
 
 #bubble3 {
   width: 8px;
-  height:8px;
+  height: 8px;
   border-radius: 50%;
   border: 1.7px solid cyan;
   animation: bubble3 8s infinite linear;
@@ -274,10 +320,17 @@
 
 @keyframes bubble3 {
   0% {
-    margin-top: 15px;
+    transform: translateY(15px);
+    opacity: 0;
   }
+
+  50% {
+    opacity: 1;
+  }
+
   100% {
-    margin-top: -18px;
+    transform: translateY(-18px);
+    opacity: 0;
   }
 }
 
@@ -285,14 +338,17 @@
   .image-background {
     /* Dezactivăm parallax-ul nativ care cauzează sărituri pe mobil */
     background-attachment: scroll !important;
-    background-size: cover;
-    background-position: center;
+    background-position: center center !important;
+    /* Forțează imaginea să rămână pe mijloc */
+    background-size: cover !important;
+    width: 100%;
   }
-  
+
   #fish-container {
     /* Ajustăm dimensiunea containerului să nu forțeze scroll-ul aiurea */
     width: 100%;
     max-width: 325px;
-    overflow: hidden; /* Previne scroll-ul orizontal dacă peștele iese din cadru */
+    overflow: hidden;
+    /* Previne scroll-ul orizontal dacă peștele iese din cadru */
   }
 }
