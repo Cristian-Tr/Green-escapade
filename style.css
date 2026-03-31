@@ -128,17 +128,17 @@ header .nav a:hover {
 /* WEBSITE LOGO */
 #header-logo {
   color: springgreen;
-  width: 97%;
-  font-size: 44px;
+  width: 17%;
   text-align: center;
-  margin-top: -270px;
+  margin-top: -410px;
   animation: floatingOnWaves 3.5s infinite linear;
 }
 
 @media only screen and (min-width: 768px) {
   #header-logo {
+     width: 8%;
     font-size: 107px;
-    margin-top: -500px;
+    margin-top: -960px;
   }
 }
 
@@ -166,12 +166,14 @@ header .nav a:hover {
 
 #callToAction {
   font-weight: 800;
+  margin-top: -190px;
   transform: rotateY(0deg);
 }
 
 @media only screen and (min-width: 768px) {
   #callToAction {
     letter-spacing: 5px;
+    margin-top: -460px;
   }
 }
 
