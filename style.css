@@ -130,7 +130,7 @@ header .nav a:hover {
   color: springgreen;
   width: 17%;
   text-align: center;
-  margin-top: -410px;
+  margin-top: -400px;
   animation: floatingOnWaves 3.5s infinite linear;
 }
 
