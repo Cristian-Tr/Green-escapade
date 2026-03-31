@@ -289,6 +289,15 @@ header h4 {
   }
 }
 
+#slider {
+  margin-top: 125px;
+}
+
+@media only screen and (min-width: 768px) {
+  #slider {
+    margin-top: 500px;
+  }
+}
 
 article {
   width: 94%;
