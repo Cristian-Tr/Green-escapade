@@ -136,7 +136,7 @@ header .nav a:hover {
 
 @media only screen and (min-width: 768px) {
   #header-logo {
-     width: 8%;
+    width: 8%;
     font-size: 107px;
     margin-top: -960px;
   }
@@ -457,7 +457,7 @@ article {
 }
 
 #history {
-  margin-top: 71px;
+  margin-top: 53px;
 }
 
 @media only screen and (min-width: 768px) {
