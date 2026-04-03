@@ -130,7 +130,7 @@ header .nav a:hover {
   color: springgreen;
   width: 17%;
   text-align: center;
-  margin-top: -400px;
+  margin-top: -460px;
   animation: floatingOnWaves 3.5s infinite linear;
 }
 
@@ -166,7 +166,7 @@ header .nav a:hover {
 
 #callToAction {
   font-weight: 800;
-  margin-top: -190px;
+  margin-top: -220px;
   transform: rotateY(0deg);
 }
 
@@ -457,12 +457,12 @@ article {
 }
 
 #history {
-  margin-top: 35px;
+  margin-top: 71px;
 }
 
 @media only screen and (min-width: 768px) {
   #history {
-    margin-top: 71px;
+    margin-top: 152px;
   }
 }
 
