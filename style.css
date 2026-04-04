@@ -290,7 +290,7 @@ header h4 {
 }
 
 #slider {
-  margin-top: 100px;
+  margin-top: 88px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -457,7 +457,7 @@ article {
 }
 
 #history {
-  margin-top: 35px;
+  margin-top: 28px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -614,6 +614,9 @@ article {
   }
 }
 
+/* ============================================================
+   6. FOOTER
+   ============================================================ */
 footer {
   background-color: white;
   position: relative;
@@ -679,46 +682,6 @@ li a:hover {
   }
 }
 
-.logo-bar {
-  margin: 1px auto;
-}
-
-.face {
-  background: hsl(221, 44%, 40%);
-  color: white;
-  font-size: 18px;
-}
-
-.twit {
-  background: hsl(206, 82%, 60%);
-  color: white;
-  font-size: 18px;
-}
-
-.inst {
-  background: hsl(315, 71%, 50%);
-  color: white;
-  font-size: 18px;
-}
-
-.link {
-  background: blue;
-  color: white;
-  font-size: 18px;
-}
-
-.yout {
-  background: hsl(0, 100%, 50%);
-  color: white;
-  font-size: 18px;
-}
-
-.pint {
-  background: #c92228;
-  color: white;
-  font-size: 18px;
-}
-
 .news-letter input[type="submit"] {
   width: 25%;
   background-color: red;
@@ -736,7 +699,45 @@ li a:hover {
   }
 }
 
-/* Animation Simple CSS Waves Animation https://codepen.io/goodkatz/pen/YbXqEV*/
+.fa {
+   padding: 8px;
+  font-size: 21px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
 
 .waves {
   position: relative;
