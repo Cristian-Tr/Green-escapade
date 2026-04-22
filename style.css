@@ -52,10 +52,6 @@ h5 {
   text-shadow: .5px .8px 1px black;
 }
 
-small {
-  font-size: 1.2rem;
-}
-
 /* HEADER SETTINGS */
 #header {
   background-color: black;
@@ -166,7 +162,7 @@ header .nav a:hover {
 
 #callToAction {
   font-weight: 800;
-  margin-top: -220px;
+  margin-top: -280px;
   transform: rotateY(0deg);
 }
 
