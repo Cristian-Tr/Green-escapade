@@ -6,6 +6,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+/* Blocare inversare culori de catre browser */
+:root {
+  color-scheme: light only;
+}
+
 /* --- EFECT FADE IN LA INTRAREA PE SITE --- */
 @keyframes fadeInEfect {
   from {
@@ -285,163 +290,108 @@ header h4 {
   }
 }
 
+
 #slider {
-  margin-top: 88px;
+  margin-top: 8px;
+  width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-  #slider {
-    margin-top: 500px;
+@media (min-width: 768px) {
+  #slider  {
+    margin-top: 88px;
   }
 }
 
 article {
-  width: 94%;
-  margin-top: 71px;
-  height: 153px;
+  width: 100%;
+  min-height: 300px; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
   article {
-    width: 100%;
-    margin-top: 287px;
-    height: 305px;
-  }
-}
-
-@media (min-width: 1420px) {
-  article {
-    width: 100%;
-    margin-top: 323px;
-    height: 404px;
+    min-height: 500px; 
+    margin-top: 100px;
   }
 }
 
 .promo-carousel {
+  position: relative;
   width: 100%;
-  max-width: 1700px;
-  perspective: 53px;
-  perspective-origin: 53% 71%;
-  min-height: 8em;
-  margin: auto;
+  max-width: 1200px;
+  height: 100%; 
+  perspective: 1200px;
+  margin: 0 auto;
 }
 
 .promo-banner {
   position: absolute;
-  width: 33%;
-  padding-bottom: 19%;
-  transform-origin: left center;
-  animation: promo-carousel 24s infinite;
+  top: 40%; 
+  left: 50%;
+  width: 250px;
+  aspect-ratio: 16/9;
+  transform-style: preserve-3d;
+  animation: promo-carousel 24s infinite ease-in-out;
 }
 
-.promo-banner:first-child {
-  animation-delay: -8s;
-}
-
-.promo-banner:last-child {
-  animation-delay: -16s;
+@media (min-width: 768px) {
+  .promo-banner {
+    width: 350px; 
+  }
 }
 
 .promo-image {
-  position: absolute;
   width: 100%;
-  border-radius: 2px;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
+/* Delay-uri pentru rotatie */
+.promo-banner:nth-child(1) { animation-delay: 0s; }
+.promo-banner:nth-child(2) { animation-delay: -8s; }
+.promo-banner:nth-child(3) { animation-delay: -16s; }
+
+/* ANIMATIE CENTRATA */
 @keyframes promo-carousel {
-  0% {
-    transform: translateX(100%) rotatey(0) scale(2.1, 2.1);
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1.5) rotateY(0deg);
+    z-index: 10;
     opacity: 1;
-    transform-origin: center center;
-    z-index: 10;
   }
-
-  27% {
-    transform: translateX(100%) rotatey(0) scale(2.1, 2.1);
-    transform-origin: center center;
-    z-index: 10;
-  }
-
-  35% {
-    transform: translateX(12%) translateY(0) rotatey(10deg) scale(1, 1.2);
-    transform-origin: left center;
+  33% {
+    /* Poziția Dreapta */
+    transform: translate(10%, -50%) scale(0.9) rotateY(-20deg);
     z-index: 5;
+    opacity: 0.6;
   }
-
-  60% {
-    transform: translateX(12%) translateY(0) rotatey(10deg) scale(1, 1.2);
-    transform-origin: left center;
+  66% {
+    /* Pozitia Stânga */
+    transform: translate(-110%, -50%) scale(0.9) rotateY(20deg);
     z-index: 5;
-  }
-
-  67% {
-    transform: translateX(188%) translateY(0) rotatey(-10deg) scale(1, 1.2);
-    transform-origin: right center;
-    z-index: 5;
-  }
-
-  93% {
-    transform: translateX(188%) translateY(0) rotatey(-10deg) scale(1, 1.2);
-    opacity: .9;
-    transform-origin: right center;
-    z-index: 5;
-  }
-
-  100% {
-    transform: translateX(100%) rotatey(0) scale(2.1, 2.1);
-    opacity: 1;
-    transform-origin: center center;
-    z-index: 10;
+    opacity: 0.6;
   }
 }
 
-@media (max-width: 530px) {
+@media (min-width: 768px) {
   @keyframes promo-carousel {
-    0% {
-      transform: translateX(100%) rotatey(0) scale(3, 3);
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1.8) rotateY(0deg);
+      z-index: 10;
       opacity: 1;
-      transform-origin: center center;
-      z-index: 10;
     }
-
-    17% {
-      transform: translateX(100%) rotatey(0) scale(3, 3);
-      transform-origin: center center;
-      z-index: 10;
-    }
-
-    48% {
-      transform: translateX(12%) translateY(0) rotatey(10deg) scale(1, 1);
-      transform-origin: left center;
+    33% {
+      transform: translate(50%, -50%) scale(1) rotateY(-25deg);
       z-index: 5;
+      opacity: 0.7;
     }
-
-    57% {
-      transform: translateX(12%) translateY(0) rotatey(10deg) scale(1, 1);
-      opacity: .7;
-      transform-origin: left center;
+    66% {
+      transform: translate(-150%, -50%) scale(1) rotateY(25deg);
       z-index: 5;
-    }
-
-    64% {
-      transform: translateX(188%) translateY(0) rotatey(-10deg) scale(1, 1);
-      opacity: .7;
-      transform-origin: right center;
-      z-index: 5;
-    }
-
-    89% {
-      transform: translateX(188%) translateY(0) rotatey(-10deg) scale(1, 1);
-      opacity: .7;
-      transform-origin: right center;
-      z-index: 5;
-    }
-
-    100% {
-      transform: translateX(100%) rotatey(0) scale(3, 3);
-      opacity: 1;
-      transform-origin: center center;
-      z-index: 10;
+      opacity: 0.7;
     }
   }
 }
@@ -454,12 +404,6 @@ article {
 
 #history {
   margin-top: 8px;
-}
-
-@media only screen and (min-width: 768px) {
-  #history {
-    margin-top: 152px;
-  }
 }
 
 #history p {
@@ -659,42 +603,52 @@ li a:hover {
   text-decoration: none;
 }
 
-.news-letter {
-  margin-top: -28px;
+.news-letter-container {
+    display: flex;
+    flex-wrap: nowrap; /* INTERZICE trecerea pe rândul următor */
+    justify-content: center;
+    align-items: stretch;
+    margin: 20px auto;
+    width: 95%; 
+    max-width: 500px;
+    height: 45px; /* Setăm înălțimea pe container, nu pe buton */
 }
 
-.news-letter input[type="email"] {
-  width: 75%;
-  background-color: springgreen;
-  color: red;
-  padding: 8px;
-  border-radius: 8px 0 0 8px;
-  border: none;
+.news-letter-container input[type="email"] {
+    flex: 1 1 auto; /* Îi permite să se micșoreze dacă e nevoie */
+    min-width: 0;   /* FOARTE IMPORTANT: previne lărgirea forțată a input-ului pe mobil */
+    background-color: springgreen;
+    color: red;
+    padding: 0 15px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    height: 100%; /* Ocupă toată înălțimea containerului */
 }
 
+.news-letter-container button {
+    flex: 0 0 80px; /* Butonul rămâne FIX la 80px, nu se lățește, nu se strânge */
+    background-color: red;
+    color: springgreen;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    font-weight: 800;
+    font-size: 14px;
+    height: 100%; /* Ocupă toată înălțimea containerului */
+    cursor: pointer;
+}
+
+/* Ajustare pentru Desktop */
 @media only screen and (min-width: 768px) {
-  .news-letter input[type="email"] {
-    width: 35%;
-  }
+    .news-letter-container {
+        width: 50%;
+    }
 }
 
-.news-letter input[type="submit"] {
-  width: 25%;
-  background-color: red;
-  color: springgreen;
-  padding: 8px;
-  border-radius: 0 8px 8px 0;
-  margin-left: -5px;
-  border: none;
-  font-size: 14px;
+.news-letter-container button:hover {
+    filter: brightness(1.2);
 }
-
-@media only screen and (min-width: 768px) {
-  .news-letter input[type="submit"] {
-    width: 17%;
-  }
-}
-
 /* ── SOCIAL MEDIA BUTTON ── */
 .linkedin-container {
   display: flex;
@@ -770,6 +724,7 @@ li a:hover {
   animation-duration: 1.7s;
   /* Accelereaza lumina la hover */
 }
+
 /* Stil foto */
 .my-image {
   width: 34px;
@@ -794,7 +749,38 @@ li a:hover {
   padding-top: 5px;
 }
 
-/* Blocare inversare culori de catre browser */
-:root {
-  color-scheme: light only;
+/* VALURI FOOTER */
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; 
+  min-height: 100px;
+  max-height: 150px;
+}
+
+/* Animație */
+.wave-parallax1 {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.wave-parallax2 {
+  animation: move-forever 10s cubic-bezier(.55,.5,.45,.5) infinite;
+  animation-delay: -5s; 
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
 }

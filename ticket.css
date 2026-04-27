@@ -1,7 +1,7 @@
 
 /* STILURI FORMULAR COMPLETARE DATE REZERVARE */
 form {
-  margin: 15px;
+  margin: 8px;
   font-size: 14px;
   color: springgreen;
 }
@@ -23,7 +23,7 @@ textarea {
   box-sizing: border-box;
 }
 
-button {
+#bookingForm button {
   width: 100%;
   height: 35px;
   background-color: red;
@@ -33,7 +33,7 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+#bookingForm button:hover {
   background-color: springgreen;
   color: black;
 }
@@ -42,7 +42,7 @@ button:hover {
 .booking-container {
   perspective: 1000px;
   width: 323px;
-  margin: 2px auto;
+  margin: 1px auto;
   background-color: darkgrey;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -54,7 +54,7 @@ button:hover {
 
 /* FANTA DE IESIRE BILET (SLOT BILET) */
 .booking-container {
-  width: 323px;
+  width: 98%;
   margin: 2px auto;
   background-color: darkgrey;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -65,12 +65,18 @@ button:hover {
   min-height: 520px;
 }
 
+@media only screen and (min-width: 768px) {
+  .booking-container {
+    width: 440px;
+  }
+}
+
 .slot-machine {
   width: 100%;
   height: 10px;
   background: #333;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 8px;
   border-bottom: 1px solid #555;
   position: relative;
   z-index: 10;
@@ -88,31 +94,29 @@ button:hover {
   z-index: 5;
   display: flex;
   flex-direction: column;
-  /* Umbra care dă efectul de adâncime când biletul iese */
+  /* Umbra biletului */
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .ticket.active {
   top: 0;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-  /* Umbra devine mai intensă jos */
 }
 
 /* STILURI TICKET */
 .ticket-row {
   padding: 14px 10px;
-  /* Mai mult spațiu între rânduri */
   text-align: left;
   padding-left: 35px;
   font-weight: 900;
   font-size: 17px;
-  /* Font mai mare și vizibil */
   text-transform: uppercase;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .reset-btn {
   background: red;
+  height: 35px;
   color: white;
   margin-top: auto;
   margin-bottom: 8px;
@@ -147,7 +151,7 @@ button:hover {
   border: none;
 }
 
-/* Specificăm culorile clar pentru rânduri ȘI span-urile din ele */
+/* Specificăm culorile diferite pentru rânduri */
 #generatedTicket .ticket-row:nth-child(odd) {
   color: white;
 }
@@ -156,7 +160,7 @@ button:hover {
   color: black;
 }
 
-/* Ne asigurăm că și datele introduse (span) preiau culoarea rândului */
+/* Preluare culoare de catre datele introduse (span) */
 #generatedTicket .ticket-row span {
   color: inherit;
 }
