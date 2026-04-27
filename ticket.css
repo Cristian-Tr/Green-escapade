@@ -17,7 +17,6 @@ select,
 textarea {
   width: 100%;
   margin-bottom: 8px;
-  border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
@@ -44,7 +43,6 @@ textarea {
   margin: 1px auto;
   background-color: darkgrey;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
   position: relative;
   overflow: hidden;
   /* Important pentru animație */
@@ -57,7 +55,6 @@ textarea {
   margin: 2px auto;
   background-color: darkgrey;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
   position: relative;
   overflow: hidden;
   /* BILETUL RAMANE ASCUNS */
@@ -75,7 +72,6 @@ textarea {
   height: 10px;
   background: #333;
   margin: 0 auto;
-  border-radius: 8px;
   border-bottom: 1px solid #555;
   position: relative;
   z-index: 10;
@@ -144,7 +140,7 @@ textarea {
   padding: 12px 10px;
   text-align: center;
   font-weight: 900;
-  font-size: 16px;
+  font-size: 17px;
   text-transform: uppercase;
   font-family: 'Courier New', Courier, monospace;
   border: none;
