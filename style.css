@@ -576,95 +576,74 @@ article {
 /* ============================================================
    6. FOOTER
    ============================================================ */
-footer {
-  background-color: white;
-  position: relative;
-  overflow: hidden;
-  z-index: 9;
-  margin-top: 35px;
-}
 
-a,
-a:active,
-a:focus {
+footer ul li a {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: red;
+  font-size: 1rem;
   color: red;
   text-decoration: none;
-  transition-timing-function: ease-in-out;
-  -ms-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
-  -ms-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
+  font-weight: 800;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+footer ul li a:hover {
+  color: springgreen !important;
 }
 
-.link-list li+li {
-  margin-top: 8px;
-}
-
-.link-list li a {
-  color: red;
-  font-weight: 500;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-li a:hover {
-  color: springgreen;
-  text-decoration: none;
+/* SPATIU INTRE SECTIUNI */
+@media (max-width: 991px) {
+  .order-2 {
+    margin-top: 3rem;
+  }
 }
 
 .news-letter-container {
   display: flex;
   flex-wrap: nowrap;
-  /* INTERZICE trecerea pe rândul următor */
   justify-content: center;
   align-items: stretch;
+  /* Inaltime identica pt spatiile input & send */
   margin: 20px auto;
   width: 95%;
   max-width: 500px;
-  height: 45px;
+  height: 48px;
+  box-sizing: border-box;
 }
 
 .news-letter-container input[type="email"] {
   flex: 1 1 auto;
   min-width: 0;
-  /* FOARTE IMPORTANT: previne lărgirea forțată a input-ului pe mobil */
-  background-color: springgreen;
-  color: red;
+  background-color: springgreen !important;
+  color: red !important;
   padding: 0 15px;
+  border: 2px solid red;
+  border-right: none;
+  /* Eliminăm bordura pt lipire spatii */
   border-radius: 8px 0 0 8px;
-  border: none;
   outline: none;
   font-weight: bold;
   height: 100%;
-  /* Ocupă toată înălțimea containerului */
+  box-sizing: border-box;
 }
 
 .news-letter-container button {
-  flex: 0 0 80px;
-  /* Butonul rămâne FIX la 80px, nu se lățește, nu se strânge */
-  background-color: red;
-  color: springgreen;
+  flex: 0 0 100px;
+  background-color: red !important;
+  color: springgreen !important;
+  border: 2px solid red;
   border-radius: 0 8px 8px 0;
-  border: none;
   font-weight: 800;
   font-size: 14px;
   height: 100%;
-  /* Ocupă toată înălțimea containerului */
   cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Ajustare pentru Desktop */
+/* Ajustare pt. Desktop */
 @media only screen and (min-width: 768px) {
   .news-letter-container {
     width: 50%;
