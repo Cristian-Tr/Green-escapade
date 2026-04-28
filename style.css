@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Blocare inversare culori de catre browser */
 :root {
   color-scheme: light only;
@@ -171,7 +175,7 @@ header .nav a:hover {
 
 #callToAction {
   font-weight: 800;
-  margin-top: -280px;
+  margin-top: -287px;
   transform: rotateY(0deg);
 }
 
@@ -488,18 +492,26 @@ article {
 
 #panel1 {
   border: 1px solid cyan;
+  width: 98%;
+  margin: auto;
 }
 
 #panel2 {
   border: 1px solid #ffa500;
+  width: 98%;
+  margin: auto;
 }
 
 #panel3 {
   border: 1px solid magenta;
+  width: 98%;
+  margin: auto;
 }
 
 #panel4 {
   border: 1px solid springgreen;
+  width: 98%;
+  margin: auto;
 }
 
 .shake:hover,

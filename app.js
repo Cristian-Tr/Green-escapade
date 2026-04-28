@@ -1,62 +1,76 @@
-$(document).ready(function () {
-
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function () {
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-
-
-
-  setInterval(function () {
-    $('.count').each(function () {
-      $(this).prop('Counter', 0).animate({
-        Counter: $(this).text()
-      }, {
-        duration: 3500,
-        easing: 'swing',
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      });
-    });
-  }, 5300);
-
+document.addEventListener("DOMContentLoaded", () => {
   
-// CHANGING TEXT IN ABOUT US SECTION
-$(function () {
-  count = -1;
-  wordsArray = ["FISHING", "SWIMMING", "JET SKI", "WATER SKIING", "SCUBA DIVING", "JACUZZI", "WATER PARK", "DUTY FREE SHOPPING", "SAUNA", "ALL INCLUSIVE MENU"]; //change this text items to your own
-  
-  setInterval(function () {
-    count++;
-    $("#word").fadeOut(400, function () {
-      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
+
+  // --- 2. COUNTER ANIMATION (INTERSECTION OBSERVER) ---
+  const animateCounter = (el) => {
+    const target = +el.getAttribute('data-target');
+    const duration = 2500; // 2.5 secunde
+    const startStep = 0;
+    const startTime = performance.now();
+
+    const step = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function (echivalent cu 'swing')
+      const ease = 0.5 - Math.cos(progress * Math.PI) / 2;
+      
+      const currentValue = Math.ceil(ease * target);
+      el.innerText = currentValue;
+
+      if (progress < 1) {
+        el.dataset.animationFrame = requestAnimationFrame(step);
+      } else {
+        el.innerText = target;
+      }
+    };
+
+    el.dataset.animationFrame = requestAnimationFrame(step);
+  };
+
+  const observerOptions = { threshold: 0.3 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+      } else {
+        // Oprim animația și resetăm
+        cancelAnimationFrame(entry.target.dataset.animationFrame);
+        entry.target.innerText = "0";
+      }
     });
-  }, 1700); // set interval time
+  }, observerOptions);
+
+  document.querySelectorAll('.count').forEach(el => observer.observe(el));
+
+
+  // --- 3. CHANGING TEXT (ABOUT US SECTION) ---
+  const wordElement = document.getElementById("word");
+  if (wordElement) {
+    let count = 0;
+    const wordsArray = [
+      "FISHING", "SWIMMING", "JET SKI", "WATER SKIING", 
+      "SCUBA DIVING", "JACUZZI", "WATER PARK", 
+      "DUTY FREE SHOPPING", "SAUNA", "ALL INCLUSIVE MENU"
+    ];
+
+    setInterval(() => {
+      count++;
+      // Efect de Fade Out / Fade In folosind CSS Opacity
+      wordElement.style.transition = "opacity 0.4s";
+      wordElement.style.opacity = 0;
+
+      setTimeout(() => {
+        wordElement.innerText = wordsArray[count % wordsArray.length];
+        wordElement.style.opacity = 1;
+      }, 400);
+
+    }, 1700);
+  }
+
 });
 
 
 
 
-
-
-
-
-})
