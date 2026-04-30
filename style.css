@@ -700,7 +700,8 @@ footer ul li a:hover {
 .linkedin-container {
   display: flex;
   justify-content: center;
-  margin: 1px auto;
+  width: 100%; /* Forțează lățimea completă */
+  margin: 8px 0; /* Oferă-i puțin spațiu sus/jos */
 }
 
 .animated-linkedin-btn {
@@ -822,7 +823,7 @@ footer ul li a:hover {
 	}
 
 	100% {
-		stroke: bla;
+		stroke: black;
 		stroke-dashoffset: 0;
 	}
 }
