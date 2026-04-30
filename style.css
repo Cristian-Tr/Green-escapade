@@ -65,6 +65,13 @@ h5 {
   text-shadow: .5px .8px 1px black;
 }
 
+h6 {
+  color: springgreen;
+  text-align: center;
+  font-weight: 800;
+  text-shadow: .5px .8px 1px black;
+}
+
 /* HEADER SETTINGS */
 #header {
   background-color: black;
@@ -77,7 +84,7 @@ h5 {
 }
 
 /* NAVBAR */
-header .nav {
+.nav {
   position: absolute;
   top: 1em;
   width: 100%;
@@ -89,7 +96,7 @@ header .nav {
   justify-content: center;
 }
 
-header .nav a {
+.nav a {
   display: inline-block;
   font-weight: 100;
   margin: 0px 4px;
@@ -100,12 +107,12 @@ header .nav a {
 }
 
 @media only screen and (min-width: 769px) {
-  header .nav a {
+  .nav a {
     font-weight: 800;
   }
 }
 
-header .nav a:hover {
+.nav a:hover {
   color: magenta;
 }
 
@@ -300,7 +307,7 @@ header h4 {
 
 
 #slider {
-  margin-top: 8px;
+  margin-top: 1px;
   width: 100%;
 }
 
@@ -336,9 +343,9 @@ article {
 
 .promo-banner {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
-  width: 215px;
+  width: 224px;
   aspect-ratio: 16/9;
   transform-style: preserve-3d;
   animation: promo-carousel 24s infinite ease-in-out;
@@ -427,6 +434,15 @@ article {
 
 #history {
   margin-top: 8px;
+}
+
+#word {
+  font-size: 1.25rem;
+  color: springgreen;
+  text-shadow: .5px .5px .5px black;
+  font-weight: 800;
+  text-align: center;
+  margin: auto;
 }
 
 #history p {
@@ -545,7 +561,7 @@ article {
     transform: rotateZ(5deg);
   }
 }
-
+/* REVIEWS SECTION */
 .btn:hover,
 .btn:focus,
 .btn btn-default btn-lg:hover {
@@ -553,6 +569,13 @@ article {
   background-color: springgreen;
   text-decoration: none;
   transform: scale(1.1);
+}
+
+.reviews {
+  text-align: justify;
+  margin: 8px;
+  font-weight: 300;
+  text-shadow: .5px .8px 1px black;
 }
 
 /* PHOTO CAROUSEL*/
@@ -589,6 +612,13 @@ article {
    6. FOOTER
    ============================================================ */
 
+.footer-list {
+  color: springgreen;
+  text-align: center;
+  font-weight: 800;
+  text-shadow: .5px .8px 1px black;
+}
+
 footer ul li a {
   cursor: pointer;
   transition: color 0.3s ease;
@@ -596,7 +626,7 @@ footer ul li a {
   font-size: 1rem;
   color: red;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 footer ul li a:hover {
@@ -687,7 +717,7 @@ footer ul li a:hover {
   transition: transform 0.3s ease;
 }
 
-/* Elementul care generează lumina */
+/* CONTUR LUMINOS */
 .animated-linkedin-btn::before {
   content: '';
   position: absolute;
@@ -760,8 +790,43 @@ footer ul li a:hover {
   font-size: 1.25rem;
   font-weight: 800;
   color: cyan;
-  padding-top: 5px;
+  padding-bottom: 3px;
 }
+
+/* TEXT ANIMAT SVG */
+
+.text-animation {
+	fill: transparent;
+	stroke-width: 1;
+	stroke: black;
+	stroke-dasharray: 250 50;
+	animation: colorRotation 8s linear infinite;
+}
+
+@keyframes colorRotation {
+	0% {
+		stroke: black;
+		stroke-dashoffset: 1000;
+	}
+
+	35% {
+		stroke: cyan;
+	}
+
+	70% {
+		stroke: cyan;
+	}
+
+	70.1% {
+		stroke: black;
+	}
+
+	100% {
+		stroke: bla;
+		stroke-dashoffset: 0;
+	}
+}
+
 
 /* VALURI FOOTER */
 .waves {

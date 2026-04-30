@@ -4,19 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <title>GREEN ESCAPADE</title>
+  
   <meta name="Green Escapade" content="Sea cruises" />
   <meta name="description" content="eCommerce Landing page, Green Escapade">
-  <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
-  <link rel="icon" href="./green-escapade-symbol.png" type="image/png">
-  <link rel="canonical" href="https://cristian-tr.github.io/Green-escapade/">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Proiect realizat pe GitHub">
   <meta property="og:description" content="Vezi detalii in contul meu: github.com/Cristian-Tr">
   <meta property="og:type" content="profile">
   <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="./green-escapade-symbol.png" type="image/png">
+  <link rel="canonical" href="https://cristian-tr.github.io/Green-escapade/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preload" as="image" href="./poster-m.png" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="fish.css">
-  <link rel="stylesheet" href="ticket.css">
+
+  <link rel="stylesheet" href="fish.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="ticket.css" media="print" onload="this.media='all'">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" defer></script>
   <script src="app.js" defer></script>
   <script src="ticket.js" defer></script>
   <script type="application/ld+json">
@@ -32,26 +39,36 @@
 </head>
 
 <body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <a href="#history">ABOUT</a>
+    <a href="#services">SERVICES</a>
+    <a href="#" style="font-size: 17px; margin-top: -6px;"> <img src="./green-escapade-image.png" alt="Website pictogram
+            width=" 35px" height="12px"></a>
+    <a href="#reviews">REVIEWS</a>
+    <a href="#tickets">TICKETS</a>
+  </nav>
 
   <header id="myPage" data-spy="scroll">
 
     <div id="header" class="container-fluid text-center align-items-center">
-      <!-- NAVBAR -->
-      <nav class="nav">
-        <a href="#history">ABOUT</a>
-        <a href="#services">SERVICES</a>
-        <a href="#" style="font-size: 17px; margin-top: -6px;"> <img src="./green-escapade-image.png" alt="Website pictogram
-            width=" 35px" height="12px"></a>
-        <a href="#reviews">REVIEWS</a>
-        <a href="#tickets">TICKETS</a>
-      </nav>
-      <!-- Start video based on screen size-->
-      <div class="video-boats" style="padding: 0; margin: 0 auto;">
-        <video id="video" class="desktop" poster="./poster-d.png" src="./desktopVideo.mp4" autoplay="true" loop="true"
-          muted="false" alt="video from the port"></video>
 
-        <video id="video" class="mobile" poster="./poster-m.png" src="./mobileVideo.mp4" autoplay="true" loop="true"
-          muted="false" alt="video from the port"></video>
+      <!-- Start video based on screen size -->
+      <div class="video-boats" style="padding: 0; margin: 0 auto;">
+
+        <!-- Video pentru Desktop -->
+        <video class="desktop" poster="./poster-d.png" autoplay loop muted playsinline>
+          <source src="./desktopVideo.mp4" type="video/mp4">
+          <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
+          <p>Browserul tău nu suportă elementul video.</p>
+        </video>
+
+        <!-- Video pentru Mobile - Adăugat fetchpriority pentru LCP -->
+        <video class="mobile" poster="./poster-m.png" autoplay loop muted playsinline fetchpriority="high">
+          <source src="./mobileVideo.mp4" type="video/mp4">
+          <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
+          <p>Browserul tău nu suportă elementul video.</p>
+        </video>
 
       </div>
       <!-- Stop video -->
@@ -84,20 +101,23 @@
         <!-- MY GITHUB PORTFOLIO LINK - START -->
         <div class="container">
           <h4 style="color: cyan;">DEMO LANDING PAGE</h4>
-          <a href="https://cristian-tr.github.io/Cristian-T-Portfolio/"
-            style="font-size: 1rem; background-color: cyan; border-radius: 17px; color: white; font-weight: 800; padding-left: 17px; padding-right: 17px; text-decoration: none;">
+          <a href="https://cristian-tr.github.io/Cristian-T-Portfolio/" aria-label="Vizitează portofoliul meu GitHub"
+            style="font-size: 1rem; background-color: cyan; border-radius: 17px; color: white; font-weight: 800; padding-left: 12px; padding-right: 5px; text-decoration: none;">
             CRISTIAN T <img src="my-photo.jpg" alt="My picture" style="width: clamp(35px, 8vw, 53px); height: clamp(35px, 8vw, 53px); 
-                                   border-radius: 50%; margin-bottom: 7px; object-fit: cover; border: 1px solid cyan;">
+                                   border-radius: 50%; margin-bottom: 8px; object-fit: cover; border: 1px solid cyan;">
             PORTFOLIO</a>
           <!-- CALL TO ACTION SVG TEXT - START-->
-          <div style="width: 305px; margin: auto; margin-top: -5px; ">
-            <svg viewBox="0 0 450 60" style="width: 100%; overflow: visible; font-weight: 800; font-size: 1.25rem;">
+          <div style="width: 305px; margin: auto; margin-top: -5px;">
+            <svg viewBox="0 0 450 60" style="width: 100%; overflow: visible; font-weight: 700; font-size: 1.7rem;">
               <symbol id="portfolio-text">
-                <text text-anchor="middle" x="50%" y="50%" dy=".35em">
-                  Click to discover my projects!</text>
+                <text text-anchor="middle" x="50%" y="50%" dy=".1em">
+                  DISCOVER MY PROJECTS!
+                </text>
               </symbol>
-              <use xlink:href="#portfolio-text" fill="white" stroke="cyan"></use>
-              <use xlink:href="#portfolio-text" fill="transparent" stroke-dasharray="none"></use>
+              <!-- CULOARE FUNDAL TEXT -->
+              <use xlink:href="#portfolio-text" fill="cyan"></use>
+              <!-- CULOARE CONTUR TEXT ANIMAT -->
+              <use xlink:href="#portfolio-text" stroke="white"></use>
             </svg>
           </div>
         </div>
@@ -105,288 +125,288 @@
 
   </header>
 
-  <section class="col-sm-12 text-center">
+  <main>
+    <!-- CAROUSEL -->
+    <article id="slider">
+      <div class="container-fluid text-center bg-white">
+        <div class="row">
+          <div class="col-12">
+            <div class="promo-carousel">
+              <div class="promo-banner">
+                <img src="./7.png" class="promo-image" alt="Carousel image 1">
+              </div>
+              <div class="promo-banner">
+                <img src="./8.png" class="promo-image" alt="Carousel image 2">
+              </div>
+              <div class="promo-banner">
+                <img src="./9.png" class="promo-image" alt="Carousel image 3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
 
-  </section>
-  <!-- CAROUSEL -->
-  <article id="slider">
-    <div class="container-fluid text-center bg-white">
+
+    <!-- ABOUT US SECTION -->
+    <div class="container-fluid text-center bg-white" id="history">
+      <h2 style="font-weight: 800;">ABOUT US</h2>
+
       <div class="row">
         <div class="col-12">
-          <div class="promo-carousel">
-            <div class="promo-banner">
-              <img src="./7.png" class="promo-image" alt="Carousel image 1">
-            </div>
-            <div class="promo-banner">
-              <img src="./8.png" class="promo-image" alt="Carousel image 2">
-            </div>
-            <div class="promo-banner">
-              <img src="./9.png" class="promo-image" alt="Carousel image 3">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
+          <img src="5.png" width="100%" height="auto" alt="Cruise ship fleet" border="0"
+            style="margin-top:44px; margin-bottom: 53px;">
+          <br>
+          <h3> Our <span style="color: springgreen;">green energy cruises</span> include:<br>
+            <span id="word" style="color: springgreen;">FRESH FISH MENU</span>
+          </h3><br>
 
-
-  <!-- ABOUT US SECTION -->
-  <div class="container-fluid text-center bg-white" id="history">
-    <h2 style="font-weight: 800;">ABOUT US</h2>
-
-    <div class="row">
-      <div class="col-12">
-        <img src="5.png" width="100%" height="auto" alt="Cruise ship fleet" border="0"
-          style="margin-top:35px; margin-bottom: 53px;">
-        <br>
-        <h3> Our <span style="color: springgreen;">green energy cruises</span> include:<br>
-          <span id="word" style="color: springgreen;">FRESH FISH MENU</span>
-        </h3><br>
-
-        <div class="container py-5">
-          <div class="row g-4">
-            <div class="col-md-4 text-center">
-              <div class="p-3">
-                <span class="fs-1">⛴️</span>
-                <p class="fw-bold mt-2">RELAXATION CRUISES</p>
-                <p class="count display-4 fw-bold" data-target="530" style="color: red;">0</p>
-              </div>
-            </div>
-
-            <div class="col-md-4 text-center">
-              <div class="p-3">
-                <span class="fs-1">👪</span>
-                <p class="fw-bold mt-2">HAPPY PASSENGERS</p>
-                <p class="count display-4 fw-bold" data-target="7100" style="color: red;">0</p>
-              </div>
-            </div>
-
-            <div class="col-md-4 text-center">
-              <div class="p-3">
-                <span class="fs-1">🛥️</span>
-                <p class="fw-bold mt-2">FISHING CRUISES</p>
-                <p class="count display-4 fw-bold" data-target="1700" style="color: red;">0</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <h3>COME WITH US IN A<br>
-      <span style="color: springgreen; margin: 8px;">GREEN ESCAPADE</span>
-    </h3>
-    <h5 style="margin: 3px;">
-      Our routes include visiting uninhabited wild islands where
-      you can admire the beauty of nature created by God.<br>
-      Our program includes underwater sphere diving, to see the
-      underwater world up close and look for goldfish!🙂
-    </h5><br><br><br>
-
-    <div class="image-background" id="underwater">
-      <div id="fish-container">
-        <div class="wrap">
-          <div class="fish">
-            <div class="position">
-              <div class="wing1"></div>
-              <div class="wing2"></div>
-              <div class="tail"></div>
-              <div class="body">
-                <div class="eye">
-                  <div class="iris"></div>
+          <div class="container py-5">
+            <div class="row g-4">
+              <div class="col-md-4 text-center">
+                <div class="p-3">
+                  <span class="fs-1">⛴️</span>
+                  <p class="fw-bold mt-2">RELAXATION CRUISES</p>
+                  <p class="count display-4 fw-bold" data-target="530" style="color: red;">0</p>
                 </div>
-                <div class="bubble">
-                  <div id="bubble1"></div>
-                  <div id="bubble2"></div>
-                  <div id="bubble3"></div>
+              </div>
+
+              <div class="col-md-4 text-center">
+                <div class="p-3">
+                  <span class="fs-1">👪</span>
+                  <p class="fw-bold mt-2">HAPPY PASSENGERS</p>
+                  <p class="count display-4 fw-bold" data-target="7100" style="color: red;">0</p>
                 </div>
-                <div class="mouth"></div>
-                <div class="gill"></div>
+              </div>
+
+              <div class="col-md-4 text-center">
+                <div class="p-3">
+                  <span class="fs-1">🛥️</span>
+                  <p class="fw-bold mt-2">FISHING CRUISES</p>
+                  <p class="count display-4 fw-bold" data-target="1700" style="color: red;">0</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <h3>COME WITH US IN A<br>
+        <span style="color: springgreen; margin: 8px;">GREEN ESCAPADE</span>
+      </h3>
+      <h4 style="margin: 3px;">
+        Our routes include visiting uninhabited wild islands where
+        you can admire the beauty of nature created by God.<br>
+        Our program includes underwater sphere diving, to see the
+        underwater world up close and look for goldfish!🙂
+      </h4><br><br><br>
+
+      <div class="image-background" id="underwater">
+        <div id="fish-container">
+          <div class="wrap">
+            <div class="fish">
+              <div class="position">
+                <div class="wing1"></div>
+                <div class="wing2"></div>
+                <div class="tail"></div>
+                <div class="body">
+                  <div class="eye">
+                    <div class="iris"></div>
+                  </div>
+                  <div class="bubble">
+                    <div id="bubble1"></div>
+                    <div id="bubble2"></div>
+                    <div id="bubble3"></div>
+                  </div>
+                  <div class="mouth"></div>
+                  <div class="gill"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <h3 style="font-weight: 800; color: springgreen;">NOT CONVINCED YET?</h3><br>
-      <button class="btn btn-outline-dark btn-lg">GET IN TOUCH!</button><br>
-    </div><br><br><br>
+        <h3 style="font-weight: 800; color: springgreen;">NOT CONVINCED YET?</h3><br>
+        <button class="btn btn-outline-dark btn-lg">GET IN TOUCH!</button><br>
+      </div><br><br><br>
 
-    <div id="services" class="container-fluid text-center bg-white">
-      <div class="text-center">
-        <h2>SERVICES</h2><br><br>
+      <div id="services" class="container-fluid text-center bg-white">
+        <div class="text-center">
+          <h2>SERVICES</h2><br><br>
+        </div>
+
+        <div class="container-fluid px-md-5">
+          <div class="row">
+            <div class="col-sm-3 col-12 mb-4">
+              <div class="card text-center" id="panel1">
+                <div class="card-header" style="background-color: cyan;">
+                  <h3 style="color: gold;">MINCRUISE</h3>
+                </div>
+                <div class="card-body">
+                  <img src="1.png" width="100%" height="auto" alt="speedboat" class="shake"><br><br>
+                  <h4 style="color: cyan;">
+                    <strong>FISHING & SKIING</strong><br>
+                    <strong>BREAKFEST MENU</strong><br>
+                    ★★★★★ 4.9
+                  </h4><br>
+                  <img src="11.png" width="100%" height="auto" alt="fishing">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-12 mb-4">
+              <div class="card text-center" id="panel2">
+                <div class="card-header" style="background-color: #ffa500;">
+                  <h3 style="color: springgreen;">MIDCRUISE</h3>
+                </div>
+                <div class="card-body">
+                  <img src="2.png" width="100%" height="auto" alt="yacht" class="shake"><br><br>
+                  <h4 style="color: #ffa500;">
+                    <strong>DIVING & JETSKI</strong><br>
+                    <strong>HALF-BOARD MENU</strong><br>
+                    ★★★★☆ 4.1
+                  </h4><br>
+                  <img src="12.png" width="100%" height="auto" alt="diving">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-12 mb-4">
+              <div class="card text-center" id="panel3">
+                <div class="card-header" style="background-color: magenta;">
+                  <h3 style="color: springgreen;">MAXCRUISE</h3>
+                </div>
+                <div class="card-body">
+                  <img src="3.png" width="100%" height="auto" alt="ferry" class="shake"><br><br>
+                  <h4 style="color: magenta;">
+                    <strong>SAUNA & JACUZZI</strong><br>
+                    <strong>ALL INCLUSIVE MENU</strong><br>
+                    ★★★★★ 4.9
+                  </h4><br>
+                  <img src="13.png" width="100%" height="auto" alt="jacuzzi">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3 col-12 mb-4">
+              <div class="card text-center" id="panel4">
+                <div class="card-header" style="background-color: springgreen;">
+                  <h3 style="color: magenta;">BIGCRUISE</h3>
+                </div>
+                <div class="card-body">
+                  <img src="4.png" width="100%" height="auto" alt="cruise ship" class="shake"><br><br>
+                  <h4 style="color: springgreen;">
+                    <strong>WATER PARK & MALL</strong><br>
+                    <strong>ALL INCLUSIVE MENU</strong><br>
+                    ★★★★☆ 3.9
+                  </h4><br>
+                  <img src="14.png" width="100%" height="auto" alt="water park">
+                </div>
+              </div>
+            </div>
+          </div><br><br>
+        </div>
       </div>
 
-      <div class="container-fluid px-md-5">
+      <div id="reviews" class="container-fluid px-md-5 text-center">
+        <h2>REVIEWS</h2><br><br>
         <div class="row">
-          <div class="col-sm-3 col-12 mb-4">
-            <div class="card text-center" id="panel1">
-              <div class="card-header" style="background-color: cyan;">
-                <h3 style="color: gold;">MINCRUISE</h3>
-              </div>
-              <div class="card-body">
-                <img src="1.png" width="100%" height="auto" alt="speedboat" class="shake"><br><br>
-                <h4 style="color: cyan;">
-                  <strong>FISHING & SKIING</strong><br>
-                  <strong>BREAKFEST MENU</strong><br>
-                  ★★★★★ 4.9
-                </h4><br>
-                <img src="11.png" width="100%" height="auto" alt="fishing">
-              </div>
-            </div>
+          <div class="col-sm-4 col-12 text-center mb-4">
+            <img src="./21.png" width="97%" alt="Swedish buffet"><br>
+            <div class="reviews" style="color: cyan;">
+              I was impressed by the ▪ All Inclusive Cruise ▪ which was well organized.
+              I ate fresh fish every day! I`m very satisfied with the quality-price ratio!
+              Thank you GREEN ESCAPADE!"<br>
+              ★★★★☆<br>
+              Romanian citizen
+            </div><br>
           </div>
 
-          <div class="col-sm-3 col-12 mb-4">
-            <div class="card text-center" id="panel2">
-              <div class="card-header" style="background-color: #ffa500;">
-                <h3 style="color: springgreen;">MIDCRUISE</h3>
-              </div>
-              <div class="card-body">
-                <img src="2.png" width="100%" height="auto" alt="yacht" class="shake"><br><br>
-                <h4 style="color: #ffa500;">
-                  <strong>DIVING & JETSKI</strong><br>
-                  <strong>HALF-BOARD MENU</strong><br>
-                  ★★★★☆ 4.1
-                </h4><br>
-                <img src="12.png" width="100%" height="auto" alt="diving">
-              </div>
-            </div>
+          <div class="col-sm-4 col-12 text-center mb-4">
+            <img src="./22.png" width="97%" alt="Sea breeze"><br>
+            <div class="reviews" style="color: magenta;">
+              I booked an ▪ Ultra All Inclusive Cruise ▪ and relaxed in a comfortable
+              cabin with fresh air from the sea breeze. I highly appreciate the services
+              of GREEN ESCAPADE! 5 stars!<br>
+              ★★★★★<br>
+              Greek citizen
+            </div><br>
           </div>
 
-          <div class="col-sm-3 col-12 mb-4">
-            <div class="card text-center" id="panel3">
-              <div class="card-header" style="background-color: magenta;">
-                <h3 style="color: springgreen;">MAXCRUISE</h3>
-              </div>
-              <div class="card-body">
-                <img src="3.png" width="100%" height="auto" alt="ferry" class="shake"><br><br>
-                <h4 style="color: magenta;">
-                  <strong>SAUNA & JACUZZI</strong><br>
-                  <strong>ALL INCLUSIVE MENU</strong><br>
-                  ★★★★★ 4.9
-                </h4><br>
-                <img src="13.png" width="100%" height="auto" alt="jacuzzi">
-              </div>
-            </div>
+          <div class="col-sm-4 col-12 text-center mb-4">
+            <img src="./23.png" width="97%" alt="Ship mall"><br>
+            <div class="reviews" style="color: springgreen;">
+              I was on ▪ Half-Board Cruise ▪ and after diving in the sea, I went in
+              a shopping mall with low prices! The food was very tasty! So, thank
+              you for the beautiful moments!<br>
+              ★★★★☆<br>
+              French citizen
+            </div><br><br>
           </div>
-
-          <div class="col-sm-3 col-12 mb-4">
-            <div class="card text-center" id="panel4">
-              <div class="card-header" style="background-color: springgreen;">
-                <h3 style="color: magenta;">BIGCRUISE</h3>
-              </div>
-              <div class="card-body">
-                <img src="4.png" width="100%" height="auto" alt="cruise ship" class="shake"><br><br>
-                <h4 style="color: springgreen;">
-                  <strong>WATER PARK & MALL</strong><br>
-                  <strong>ALL INCLUSIVE MENU</strong><br>
-                  ★★★★☆ 3.9
-                </h4><br>
-                <img src="14.png" width="100%" height="auto" alt="water park">
-              </div>
-            </div>
-          </div>
-        </div><br><br>
-      </div>
-    </div>
-
-    <div id="reviews" class="container-fluid px-md-5 text-center">
-      <h2>REVIEWS</h2><br><br><br>
-      <div class="row">
-        <div class="col-sm-4 col-12 text-center mb-4">
-          <img src="./21.png" width="97%" alt="Swedish buffet"><br>
-          <h5 style="color: cyan; text-align: justify; margin: 8px;">
-            I was impressed by the ▪ All Inclusive Cruise ▪ which was well organized.
-            I ate fresh fish every day! I`m very satisfied with the quality-price ratio!
-            Thank you GREEN ESCAPADE!"<br>
-            ★★★★☆<br>
-            Romanian citizen
-          </h5><br>
-        </div>
-
-        <div class="col-sm-4 col-12 text-center mb-4">
-          <img src="./22.png" width="97%" alt="Sea breeze"><br>
-          <h5 style="color: magenta; text-align: justify; margin: 8px;">
-            I booked an ▪ Ultra All Inclusive Cruise ▪ and relaxed in a comfortable
-            cabin with fresh air from the sea breeze. I highly appreciate the services
-            of GREEN ESCAPADE! 5 stars!<br>
-            ★★★★★<br>
-            Greek citizen
-          </h5><br>
-        </div>
-
-        <div class="col-sm-4 col-12 text-center mb-4">
-          <img src="./23.png" width="97%" alt="Ship mall"><br>
-          <h5 style="color: springgreen; text-align: justify; margin: 8px;">
-            I was on ▪ Half-Board Cruise ▪ and after diving in the sea, I went in
-            a shopping mall with low prices! The food was very tasty! So, thank
-            you for the beautiful moments!<br>
-            ★★★★☆<br>
-            French citizen
-          </h5><br><br>
         </div>
       </div>
-    </div>
 
-    <h2 id="tickets">
-      RESERVATION</h2>
-    <br><br>
+      <h2 id="tickets">
+        RESERVATION</h2>
+      <br><br>
 
-    <div class="bookingSystem">
-      <div class="booking-container">
-        <form id="bookingForm">
-          <br>
-          <h3 style="color: springgreen;">
-            GREEN ESCAPADE TICKET</h3>
-          <br>
-          <label for="number">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
-          <input type="number" id="number" class="form-control mb-3" placeholder="1, 2, 3 ..." required>
+      <div class="bookingSystem">
+        <div class="booking-container">
+          <form id="bookingForm">
+            <br>
+            <h3 style="color: springgreen;">
+              GREEN ESCAPADE TICKET</h3>
+            <br>
+            <label for="number">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
+            <input type="number" id="number" class="form-control mb-3" placeholder="1, 2, 3 ..." required>
 
-          <label for="type">🚤 CRUISE TYPE:</label>
-          <select id="type" class="form-select mb-3" required>
-            <option value="MINCRUISE">MINCRUISE</option>
-            <option value="MIDCRUISE">MIDCRUISE</option>
-            <option value="MAXCRUISE">MAXCRUISE</option>
-            <option value="BIGRUISE">BIGRUISE</option>
-          </select>
+            <label for="type">🚤 CRUISE TYPE:</label>
+            <select id="type" class="form-select mb-3" required>
+              <option value="MINCRUISE">MINCRUISE</option>
+              <option value="MIDCRUISE">MIDCRUISE</option>
+              <option value="MAXCRUISE">MAXCRUISE</option>
+              <option value="BIGRUISE">BIGRUISE</option>
+            </select>
 
-          <label for="date">📅 CRUISE DATE:</label>
-          <input type="date" id="date" class="form-control mb-3" required>
+            <label for="date">📅 CRUISE DATE:</label>
+            <input type="date" id="date" class="form-control mb-3" required>
 
-          <label for="time">🕒 CRUISE TIME:</label>
-          <input type="time" id="time" class="form-control mb-3" required>
+            <label for="time">🕒 CRUISE TIME:</label>
+            <input type="time" id="time" class="form-control mb-3" required>
 
-          <label for="info">📩 CRUISE DETAILS:</label>
-          <textarea id="info" class="form-control mb-3" placeholder="Your message..." required></textarea>
-          <br>
-          <button type="submit" id="bookBtn" class="btn btn-success w-100">BOOK TICKET</button>
-        </form>
+            <label for="info">📩 CRUISE DETAILS:</label>
+            <textarea id="info" class="form-control mb-3" placeholder="Your message..." required></textarea>
+            <br>
+            <button type="submit" id="bookBtn" class="btn btn-success w-100">BOOK TICKET</button>
+          </form>
 
-        <div class="slot-machine"></div>
+          <div class="slot-machine"></div>
 
-        <div id="generatedTicket" class="ticket"><br><br><br>
-          <div class="ticket-row">RESERVATION TICKET</div>
-          <div class="ticket-row">GREEN ESCAPADE</div>
-          <div class="ticket-row">People: <span id="res-people"></span></div>
-          <div class="ticket-row">Type: <span id="res-type"></span></div>
-          <div class="ticket-row">Date: <span id="res-date"></span></div>
-          <div class="ticket-row">Time: <span id="res-time"></span></div>
-          <div class="ticket-row">Details: <span id="res-info"></span></div>
-          <div class="ticket-row">A PLEASANT CRUISE!</div>
-          <button type="button" onclick="resetForm()" class="reset-btn">ANOTHER TICKET?</button>
+          <div id="generatedTicket" class="ticket"><br><br><br>
+            <div class="ticket-row">RESERVATION TICKET</div>
+            <div class="ticket-row">GREEN ESCAPADE</div>
+            <div class="ticket-row">People: <span id="res-people"></span></div>
+            <div class="ticket-row">Type: <span id="res-type"></span></div>
+            <div class="ticket-row">Date: <span id="res-date"></span></div>
+            <div class="ticket-row">Time: <span id="res-time"></span></div>
+            <div class="ticket-row">Details: <span id="res-info"></span></div>
+            <div class="ticket-row">A PLEASANT CRUISE!</div>
+            <button type="button" onclick="resetForm()" class="reset-btn">ANOTHER TICKET?</button>
+          </div>
         </div>
       </div>
-    </div>
+  </main>
 
-    <footer>
 
+  <footer class="container-fluid px-md-5 text-center">
+    <div class="row">
       <h2 id="contacts" style="margin-top: 53px;">
         CONTACTS</h2>
       <div class="row gx-2 gy-3 text-center justify-content-center">
         <div class="col-6 col-md-3">
-          <h5 class="title" style="font-weight: 800; color: springgreen; margin-top: 35px;">
-            CRUISES</h5>
+          <div class="footer-list" style="font-weight: 800; color: springgreen; margin-top: 8px;">
+            CRUISES</div>
           <ul class="list-unstyled">
             <li><a href="#">
                 Mincruise
@@ -408,8 +428,8 @@
         </div>
 
         <div class="col-6 col-md-3">
-          <h5 class="title" style="font-weight: 800; color: springgreen; margin-top: 35px;">
-            SOCIAL</h5>
+          <div class="footer-list" style="font-weight: 800; color: springgreen; margin-top: 8px;">
+            SOCIAL</div>
           <ul class="list-unstyled">
             <li><a href="#">
                 Facebook
@@ -431,8 +451,8 @@
         </div>
 
         <div class="col-6 col-md-3">
-          <h5 class="title" style="font-weight: 800; color: springgreen; margin-top: 35px;">
-            SUPPORT</h5>
+          <div class="footer-list" style="font-weight: 800; color: springgreen; margin-top: 8px;">
+            SUPPORT</div>
           <ul class="list-unstyled">
             <li><a href="#">
                 Tickets
@@ -454,8 +474,8 @@
         </div>
 
         <div class="col-6 col-md-3">
-          <h5 class="title" style="font-weight: 800; color: springgreen; margin-top: 35px;">
-            LINKS</h5>
+          <div class="footer-list" style="font-weight: 800; color: springgreen; margin-top: 8px;">
+            LINKS</div>
           <ul class="list-unstyled">
             <li><a href="#">
                 Career
@@ -478,8 +498,8 @@
       </div>
 
       <div class="col-12 text-center">
-        <h5 class="title" style="font-weight: 800; margin-top: 35px;">NEWSLETTER</h5>
-        <h5 class="title" style="font-weight: 500; color: springgreen; margin-top: 10px;">SUBSCRIBE:</h5>
+        <h2 style="margin-top: 35px;">NEWSLETTER</h2>
+        <h3 style="font-weight: 300; color: springgreen; margin-top: 10px;">Subscribe:</h3>
 
         <form class="news-letter-container" onsubmit="return false;">
           <input type="email" name="news-email" id="news-email" placeholder="Your email address" required>
@@ -501,7 +521,7 @@
               <div class="btn-content">
                 <img src="./my-photo.jpg" alt="My photo" class="my-image">
                 <div class="text-group">
-                  <h5 class="btn-title">Cristian T Profile</h5>
+                  <div class="btn-title">Cristian T Profile</div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0077b5">
                   <path
@@ -512,13 +532,16 @@
           </div>
           <!-- CALL TO ACTION SVG TEXT - START-->
           <div style="width: 287px; margin: auto;">
-            <svg viewBox="0 0 450 60" style="width: 100%; overflow: visible; font-weight: 800; font-size: 1.7rem;">
+            <svg viewBox="0 0 450 60" style="width: 100%; overflow: visible; font-weight: 700; font-size: 1.9rem;">
               <symbol id="profile-text">
-                <text text-anchor="middle" x="50%" y="50%" dy=".35em">
-                  Passionate about digital tech!</text>
+                <text text-anchor="middle" x="50%" y="50%" dy=".1em">
+                  Passionate about digital tech!
+                </text>
               </symbol>
-              <use xlink:href="#profile-text" fill="white" stroke="cyan"></use>
-              <use xlink:href="#profile-text" fill="transparent" stroke-dasharray="none"></use>
+              <!-- CULOARE FUNDAL TEXT -->
+              <use xlink:href="#profile-text" fill="cyan"></use>
+              <!-- CULOARE CONTUR TEXT ANIMAT -->
+              <use xlink:href="#profile-text" class="text-animation"></use>
             </svg>
           </div>
           <!-- MY LINKEDIN ACCOUNT LINK & CTA SVG TEXT - END-->
@@ -539,26 +562,26 @@
 
         </section>
       </div>
-  </div>
-  <!-- INFO MY PORTFOLIO-->
+    </div>
+    <!-- INFO MY PORTFOLIO-->
 
 
-  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28"
-    preserveAspectRatio="none" shape-rendering="auto">
-    <defs>
-      <path id="small-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-    </defs>
-    <g class="seafooter">
-      <use xlink:href="#small-wave" x="48" y="0" fill="rgba(55,155,233,0.7)" class="wave-parallax1" />
-      <use xlink:href="#small-wave" x="48" y="7" fill="rgba(55,155,233,0.8)" class="wave-parallax2" />
-    </g>
-  </svg>
-
-  </div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="small-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="seafooter">
+        <use xlink:href="#small-wave" x="48" y="0" fill="rgba(55,155,233,0.7)" class="wave-parallax1" />
+        <use xlink:href="#small-wave" x="48" y="7" fill="rgba(55,155,233,0.8)" class="wave-parallax2" />
+      </g>
+    </svg>
+    </div>
+    </div>
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 
 </body>
 
