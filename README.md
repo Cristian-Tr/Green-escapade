@@ -1,7 +1,9 @@
 🚀 Green Escapade
 
 📈 Rezultate Audit Lighthouse
+
 🖥️ DESKTOP: Performance: 75 | Accesibility: 96 | Best practices: 100 | SEO: 100
+
 📱 MOBILE:  Performance: 35 | Accesibility: 96 | Best practices: 100 | SEO: 100
 
 🛠️ Tehnologii Utilizate
