@@ -55,14 +55,14 @@
         <video class="desktop" poster="./poster-d.webp" autoplay loop muted playsinline>
           <source src="./desktopVideo.mp4" type="video/mp4">
           <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
-          <p>Browserul tău nu suportă elementul video.</p>
+          <p>Browserul tău nu poate reda video.</p>
         </video>
 
         <!-- Video pentru Mobile - Adăugat fetchpriority pentru LCP -->
         <video class="mobile" poster="./poster-m.webp" autoplay loop muted playsinline fetchpriority="high">
           <source src="./mobileVideo.mp4" type="video/mp4">
           <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
-          <p>Browserul tău nu suportă elementul video.</p>
+          <p>Browserul tău nu poate reda video.</p>
         </video>
 
       </div>
@@ -97,24 +97,10 @@
         <div class="container">
           <h4 style="color: cyan;">DEMO LANDING PAGE</h4>
           <a href="https://cristian-tr.github.io/Cristian-T-Portfolio/" aria-label="Vizitează portofoliul meu GitHub"
-            style="font-size: 1rem; background-color: cyan; border-radius: 17px; color: white; font-weight: 800; padding-left: 12px; padding-right: 12px; text-decoration: none;">
+            style="font-size: 1rem; background-color: cyan; border-radius: 17px; color: white; font-weight: 800; padding-left: 12px; padding-right: 10px; text-decoration: none;">
             CRISTIAN T <img src="my-photo.jpg" alt="My picture" style="width: clamp(35px, 8vw, 53px); height: clamp(35px, 8vw, 53px); 
                                    border-radius: 50%; margin-bottom: 3px; object-fit: cover; border: 1px solid cyan;">
             PORTFOLIO</a>
-          <!-- CALL TO ACTION SVG TEXT - START-->
-          <div style="width: 305px; margin: auto; margin-top: -5px;">
-            <svg viewBox="0 0 450 60" style="width: 100%; overflow: visible; font-weight: 700; font-size: 1.7rem;">
-              <symbol id="portfolio-text">
-                <text text-anchor="middle" x="50%" y="50%" dy=".1em">
-                  DISCOVER MY PROJECTS&nbsp
-                </text>
-              </symbol>
-              <!-- CULOARE FUNDAL TEXT -->
-              <use xlink:href="#portfolio-text" fill="cyan"></use>
-              <!-- CULOARE CONTUR TEXT ANIMAT -->
-              <use xlink:href="#portfolio-text" stroke="white"></use>
-            </svg>
-          </div>
         </div>
         <!-- MY GITHUB ACCOUNT LINK & CTA TEXT - END -->
   </header>
@@ -227,13 +213,15 @@
             </div>
           </div>
         </div>
-        <h3 style="font-weight: 800; color: springgreen;">NOT CONVINCED YET?</h3><br>
-        <button class="btn btn-outline-dark btn-lg">GET IN TOUCH!</button><br>
-      </div><br><br><br>
+      </div><br><br>
+
+      <h3 style="font-weight: 800; color: springgreen;">NOT CONVINCED YET?</h3>
+      <button class="btn btn-outline-dark btn-lg" type="submit"
+            onclick="alert('Acesta este un website demo! Nu se pot trimite date personale!')">GET IN TOUCH!</button>
 
       <div id="services" class="container-fluid text-center bg-white">
         <div class="text-center">
-          <h2>SERVICES</h2><br><br>
+          <h2 style="margin-top: 71px; margin-bottom: 59px;">SERVICES</h2>
         </div>
 
         <div class="container-fluid px-md-5">
@@ -510,8 +498,8 @@
       <!-- MY LINKEDIN ACCOUNT LINK -->
       <div class="col-12 d-flex justify-content-center">
         <div class="linkedin-container">
-          <a href="URL" target="_blank" rel="noopener noreferrer" class="animated-linkedin-btn"
-            aria-label="Vizitează profilul meu LinkedIn">
+          <a href="https://www.linkedin.com/in/cristian-t-664193210/" target="_blank" rel="noopener noreferrer"
+            class="animated-linkedin-btn" aria-label="Vizitează profilul meu LinkedIn">
             <div class="btn-content">
               <img src="./my-photo.jpg" alt="My photo" class="my-image">
               <div class="text-group">
