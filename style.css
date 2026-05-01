@@ -54,6 +54,8 @@ h3 {
 }
 
 h4 {
+  font-weight: 100;
+  text-align: center;
   color: springgreen;
   text-shadow: .5px .5px .5px black;
 }
@@ -70,6 +72,10 @@ h6 {
   text-align: center;
   font-weight: 800;
   text-shadow: .5px .8px 1px black;
+}
+
+strong {
+  text-align: center;
 }
 
 /* HEADER SETTINGS */
@@ -305,32 +311,57 @@ header h4 {
   }
 }
 
+/* ==========================================================================
+   1. SLIDER
+   ========================================================================== */
 
 #slider {
-  margin-top: 1px;
   width: 100%;
+  overflow: hidden;
+  /* Oprire scroll orizontal */
 }
 
-@media (min-width: 768px) {
-  #slider {
-    margin-top: 107px;
-  }
-}
-
-article {
+/* spatiu carusel */
+.carousel-fixed-height {
+  position: relative;
   width: 100%;
-  min-height: 300px;
+  height: 380px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 @media (min-width: 768px) {
-  article {
-    min-height: 500px;
-    margin-top: 100px;
+  #slider {
+    margin-top: 107px;
+  }
+
+  .carousel-fixed-height {
+    height: 880px;
   }
 }
+
+
+.image-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  color: white;
+  padding-bottom: 8vw;
+  margin-left: -14px;
+}
+
+@media (min-width: 992px) {
+  .image-background {
+    background-attachment: fixed;
+  }
+}
+
+/* ==========================================================================
+   2. CAROUSEL PROMO
+   ========================================================================== */
 
 .promo-carousel {
   position: relative;
@@ -361,10 +392,9 @@ article {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* Delay-uri pentru rotatie */
+/* Delay Rotație */
 .promo-banner:nth-child(1) {
   animation-delay: 0s;
 }
@@ -377,7 +407,10 @@ article {
   animation-delay: -16s;
 }
 
-/* ANIMATIE CENTRATA */
+/* ==========================================================================
+   3. ANIMATII
+   ========================================================================== */
+
 @keyframes promo-carousel {
 
   0%,
@@ -388,14 +421,12 @@ article {
   }
 
   33% {
-    /* Poziția Dreapta */
     transform: translate(10%, -50%) scale(0.9) rotateY(-20deg);
     z-index: 5;
     opacity: 0.6;
   }
 
   66% {
-    /* Pozitia Stânga */
     transform: translate(-110%, -50%) scale(0.9) rotateY(20deg);
     z-index: 5;
     opacity: 0.6;
@@ -426,14 +457,18 @@ article {
   }
 }
 
-/* ABOUT US SECTION */
-.container-fluid {
-  padding: 0;
-  margin: auto;
-}
+/* ==========================================================================
+   4. HISTORY
+   ========================================================================== */
 
 #history {
-  margin-top: 8px;
+  margin-top: -100px;
+}
+
+@media (min-width: 768px) {
+  #history {
+    margin-top: 71px;
+  }
 }
 
 #word {
@@ -442,53 +477,31 @@ article {
   text-shadow: .5px .5px .5px black;
   font-weight: 800;
   text-align: center;
-  margin: auto;
 }
 
 #history p {
-  font-size: 17px;
+  font-size: 1.25rem;
   color: springgreen;
   text-shadow: .5px .5px .5px black;
   font-weight: 500;
   text-align: center;
-  margin: auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #history p {
-    font-size: 21px;
+    font-size: 1.7rem;
   }
-}
-
-#history b {
-  font-size: 44px;
-  color: springgreen;
-  text-shadow: .5px .5px .5px black;
-  font-weight: 500;
-  text-align: center;
-  margin: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  #history b {
-    font-size: 71px;
-  }
-}
-
-.image-background {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  color: white;
-  padding-bottom: 8vw;
-  margin-left: -14px;
-  padding-left: 0;
 }
 
 #underwater {
   width: 100%;
-  background-image: url("./parallax-background.png");
+  background-image: url("./6.webp");
+}
+
+#underwater {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
 }
 
 /* SERVICES SECTION */
@@ -561,6 +574,13 @@ article {
     transform: rotateZ(5deg);
   }
 }
+
+.card-body h4 {
+  text-align: center;
+  text-shadow: .5px .5px .5px black;
+  font-weight: 800;
+}
+
 /* REVIEWS SECTION */
 .btn:hover,
 .btn:focus,
@@ -700,8 +720,10 @@ footer ul li a:hover {
 .linkedin-container {
   display: flex;
   justify-content: center;
-  width: 100%; /* Forțează lățimea completă */
-  margin: 8px 0; /* Oferă-i puțin spațiu sus/jos */
+  width: 100%;
+  /* Forțează lățimea completă */
+  margin: 8px 0;
+  /* Oferă-i puțin spațiu sus/jos */
 }
 
 .animated-linkedin-btn {
@@ -797,35 +819,35 @@ footer ul li a:hover {
 /* TEXT ANIMAT SVG */
 
 .text-animation {
-	fill: transparent;
-	stroke-width: 1;
-	stroke: black;
-	stroke-dasharray: 250 50;
-	animation: colorRotation 8s linear infinite;
+  fill: transparent;
+  stroke-width: 1;
+  stroke: black;
+  stroke-dasharray: 250 50;
+  animation: colorRotation 8s linear infinite;
 }
 
 @keyframes colorRotation {
-	0% {
-		stroke: black;
-		stroke-dashoffset: 1000;
-	}
+  0% {
+    stroke: black;
+    stroke-dashoffset: 1000;
+  }
 
-	35% {
-		stroke: cyan;
-	}
+  35% {
+    stroke: cyan;
+  }
 
-	70% {
-		stroke: cyan;
-	}
+  70% {
+    stroke: cyan;
+  }
 
-	70.1% {
-		stroke: black;
-	}
+  70.1% {
+    stroke: black;
+  }
 
-	100% {
-		stroke: black;
-		stroke-dashoffset: 0;
-	}
+  100% {
+    stroke: black;
+    stroke-dashoffset: 0;
+  }
 }
 
 
