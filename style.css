@@ -493,16 +493,24 @@ header h4 {
   }
 }
 
-#underwater {
-  width: 100%;
-  background-image: url("./6.webp");
+.image-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  padding-bottom: 8vw;
+  margin-left: -14px;
+  padding-left: 0;
 }
 
 #underwater {
-  position: relative;
+  width: 100%;
+  background-image: url("./6.webp");
   overflow: hidden;
-  min-height: 500px;
+  min-height: 530px;
 }
+
 
 /* SERVICES SECTION */
 #services {
