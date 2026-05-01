@@ -100,7 +100,7 @@ h6 {
 
 .nav a {
   display: inline-block;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0px 4px;
   text-decoration: none;
   font-size: .8rem;
@@ -110,6 +110,7 @@ h6 {
 
 @media only screen and (min-width: 769px) {
   .nav a {
+     font-size: 1.2rem;
     font-weight: 800;
   }
 }
@@ -329,12 +330,14 @@ header h4 {
 }
 
 @media (min-width: 768px) {
-  #slider {
-    margin-top: 107px;
+ .carousel-fixed-height { 
+    height: 850px !important; 
   }
 
-  .carousel-fixed-height {
-    height: 880px;
+  .promo-banner {
+    width: 600px; 
+    top: 50% !important; 
+    left: 50%;
   }
 }
 
@@ -461,12 +464,6 @@ header h4 {
   margin-top: -100px;
 }
 
-@media (min-width: 768px) {
-  #history {
-    margin-top: 71px;
-  }
-}
-
 #word {
   font-size: 1.25rem;
   color: springgreen;
@@ -479,7 +476,8 @@ header h4 {
   font-size: 1.25rem;
   color: springgreen;
   text-shadow: .5px .5px .5px black;
-  font-weight: 500;
+  font-weight: 700;
+  padding: 8px;
   text-align: center;
 }
 
