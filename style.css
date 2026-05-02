@@ -101,6 +101,18 @@ h6 {
   color: magenta;
 }
 
+.nav img {
+  width: 35px;
+  height: 12px;
+}
+
+
+@media only screen and (min-width: 769px) {
+  .nav img {
+    width: 71px;
+    height: 25px;
+  }
+}
 
 /* =========================================
   HEADER
@@ -463,6 +475,11 @@ header h4 {
   text-shadow: .5px .5px .5px black;
   font-weight: 800;
   text-align: center;
+}
+
+
+#history img {
+  margin-top: -42px;
 }
 
 #history p {
