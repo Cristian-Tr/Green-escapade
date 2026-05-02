@@ -16,8 +16,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preload" as="image" href="./poster-m.webp" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="fish.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="ticket.css" media="print" onload="this.media='all'">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" defer></script>
   <script src="app.js" defer></script>
   <script src="ticket.js" defer></script>
@@ -138,8 +136,9 @@
         It all started with a ferry that transported farmers to Reflux Island, but now we also offer our customers the
         opportunity to spend their free time practicing sports activities such as fishing, swimming, water skiing or
         diving.<br>
-        That`s why today our company transports passengers with speedboats, yachts, ferries and modern cruise
-        ships to destinations all over the world.<br>
+        Today our company transports passengers with speedboats, yachts, ferries and cruise ships powered by green
+        energy to destinations around the world grouped into 4 maritime lines: MINCRUISE, MIDCRUISE, MAXCRUISE &
+        BIGCRUISE.<br>
         We will continue to improve all our activities so that Green Escapade remains your favorite maritime company in
         the future!
       </p>
@@ -154,28 +153,37 @@
           </h3>
 
           <div class="container py-5">
-            <div class="row g-4">
-              <div class="col-md-4 text-center">
+            <div class="row">
+
+              <div class="col-md-3 text-center">
                 <div class="p-3">
-                  <span class="fs-1">⛴️</span>
-                  <p class="fw-bold mt-2">RELAXATION CRUISES</p>
-                  <p class="count display-4 fw-bold" data-target="530" style="color: red;">0</p>
+                  <img src="mincruises.webp" width="100%" height="auto" alt="mincruises speedtboat" border="0">
+                  <p>MINCRUISES</p>
+                  <p class="count" data-target="7100" style="color: red;">0</p>
                 </div>
               </div>
 
-              <div class="col-md-4 text-center">
+              <div class="col-md-3 text-center">
                 <div class="p-3">
-                  <span class="fs-1">👪</span>
-                  <p class="fw-bold mt-2">HAPPY PASSENGERS</p>
-                  <p class="count display-4 fw-bold" data-target="7100" style="color: red;">0</p>
+                  <img src="midcruises.webp" width="100%" height="auto" alt="midcruises yacht" border="0">
+                  <p>MIDCRUISES</p>
+                  <p class="count" data-target="5300" style="color: red;">0</p>
                 </div>
               </div>
 
-              <div class="col-md-4 text-center">
+              <div class="col-md-3 text-center">
                 <div class="p-3">
-                  <span class="fs-1">🛥️</span>
-                  <p class="fw-bold mt-2">FISHING CRUISES</p>
-                  <p class="count display-4 fw-bold" data-target="1700" style="color: red;">0</p>
+                  <img src="maxcruises.webp" width="100%" height="auto" alt="mascruises ferry" border="0">
+                  <p>MAXCRUISES</p>
+                  <p class="count" data-target="3500" style="color: red;">0</p>
+                </div>
+              </div>
+
+              <div class="col-md-3 text-center">
+                <div class="p-3">
+                  <img src="bigcruises.webp" width="100%" height="auto" alt="bigcruises ship" border="0">
+                  <p>BIGCRUISES</p>
+                  <p class="count" data-target="1700" style="color: red;">0</p>
                 </div>
               </div>
 
@@ -185,40 +193,30 @@
         </div>
       </div>
 
-      <h3>COME WITH US IN A<br>
+      <h3 style="margin-bottom: 71px;">COME WITH US IN A<br>
         <span style="color: springgreen; margin: 8px;">GREEN ESCAPADE!</span>
-      </h3><br>
+      </h3>
 
+      <!-- PARALLAX - START -->
       <div class="image-background" id="underwater">
-        <div id="fish-container">
-          <div class="wrap">
-            <div class="fish">
-              <div class="position">
-                <div class="wing1"></div>
-                <div class="wing2"></div>
-                <div class="tail"></div>
-                <div class="body">
-                  <div class="eye">
-                    <div class="iris"></div>
-                  </div>
-                  <div class="bubble">
-                    <div id="bubble1"></div>
-                    <div id="bubble2"></div>
-                    <div id="bubble3"></div>
-                  </div>
-                  <div class="mouth"></div>
-                  <div class="gill"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+        <!-- CANVAS PEȘTE -->
+        <canvas id="fishCanvas"></canvas>
+
+        <!-- BATISCAF -->
+        <div class="batiscaf-wrapper">
+          <img src="batiscaf.webp" class="batiscaf-animat" alt="Batiscaf">
         </div>
-      </div><br><br>
 
-      <h3 style="font-weight: 800; color: springgreen;">NOT CONVINCED YET?</h3>
+      </div>
+      <!-- PARALLAX - STOP -->
+
+
+      <h3 style="font-weight: 800; color: springgreen; margin-top: 53px;">NOT CONVINCED YET?</h3>
       <button class="btn btn-outline-dark btn-lg" type="submit"
-            onclick="alert('Acesta este un website demo! Nu se pot trimite date personale!')">GET IN TOUCH!</button>
+        onclick="alert('Acesta este un website demo! Nu se pot trimite date personale!')">GET IN TOUCH!</button>
 
+      <!-- SERVICES -->
       <div id="services" class="container-fluid text-center bg-white">
         <div class="text-center">
           <h2 style="margin-top: 71px; margin-bottom: 59px;">SERVICES</h2>
@@ -232,13 +230,13 @@
                   <h3 style="color: gold;">MINCRUISE</h3>
                 </div>
                 <div class="card-body">
-                  <img src="1.webp" width="100%" height="auto" alt="speedboat" class="shake"><br><br>
+                  <img src="1.webp" width="100%" height="auto" alt="speedboat" class="enlarge-image"><br><br>
                   <h4 style="color: cyan;">
                     <small>FISHING & SKIING</small><br>
                     <small>BREAKFEST MENU</small><br>
                     ★★★★★ 4.9
                   </h4><br>
-                  <img src="11.webp" width="100%" height="auto" alt="fishing">
+                  <img src="11.webp" width="100%" height="auto" alt="fishing" class="enlarge-image">
                 </div>
               </div>
             </div>
@@ -249,13 +247,13 @@
                   <h3 style="color: springgreen;">MIDCRUISE</h3>
                 </div>
                 <div class="card-body">
-                  <img src="2.webp" width="100%" height="auto" alt="yacht" class="shake"><br><br>
+                  <img src="2.webp" width="100%" height="auto" alt="yacht" class="enlarge-image"><br><br>
                   <h4 style="color: #ffa500;">
                     <small>DIVING & JETSKI</small><br>
                     <small>HALF-BOARD MENU</small><br>
                     ★★★★☆ 4.1
                   </h4><br>
-                  <img src="12.webp" width="100%" height="auto" alt="diving">
+                  <img src="12.webp" width="100%" height="auto" alt="diving" class="enlarge-image">
                 </div>
               </div>
             </div>
@@ -266,13 +264,13 @@
                   <h3 style="color: springgreen;">MAXCRUISE</h3>
                 </div>
                 <div class="card-body">
-                  <img src="3.webp" width="100%" height="auto" alt="ferry" class="shake"><br><br>
+                  <img src="3.webp" width="100%" height="auto" alt="ferry" class="enlarge-image"><br><br>
                   <h4 style="color: magenta;">
                     <small>SAUNA & JACUZZI</small><br>
                     <small>ALL INCLUSIVE MENU</small><br>
                     ★★★★★ 4.9
                   </h4><br>
-                  <img src="13.webp" width="100%" height="auto" alt="jacuzzi">
+                  <img src="13.webp" width="100%" height="auto" alt="jacuzzi" class="enlarge-image">
                 </div>
               </div>
             </div>
@@ -283,13 +281,13 @@
                   <h3 style="color: magenta;">BIGCRUISE</h3>
                 </div>
                 <div class="card-body">
-                  <img src="4.webp" width="100%" height="auto" alt="cruise ship" class="shake"><br><br>
+                  <img src="4.webp" width="100%" height="auto" alt="cruise ship" class="enlarge-image"><br><br>
                   <h4 style="color: springgreen;">
                     <small>WATER PARK & MALL</small><br>
                     <small>ALL INCLUSIVE MENU</small><br>
                     ★★★★☆ 3.9
                   </h4><br>
-                  <img src="14.webp" width="100%" height="auto" alt="water park">
+                  <img src="14.webp" width="100%" height="auto" alt="water park" class="enlarge-image">
                 </div>
               </div>
             </div>
@@ -297,11 +295,12 @@
         </div>
       </div>
 
+      <!-- REVIEWS -->
       <div id="reviews" class="container-fluid px-md-5 text-center">
         <h2>REVIEWS</h2><br><br>
         <div class="row">
           <div class="col-sm-4 col-12 text-center mb-4">
-            <img src="./21.webp" width="97%" alt="Swedish buffet"><br>
+            <img src="./21.webp" width="97%" alt="Swedish buffet" class="customers-image"><br>
             <div class="reviews" style="color: cyan;">
               I was impressed by the ▪ All Inclusive Cruise ▪ which was well organized.
               I ate fresh fish every day! I`m very satisfied with the quality-price ratio!
@@ -312,7 +311,7 @@
           </div>
 
           <div class="col-sm-4 col-12 text-center mb-4">
-            <img src="./22.webp" width="97%" alt="Sea breeze"><br>
+            <img src="./22.webp" width="97%" alt="Sea breeze" class="customers-image"><br>
             <div class="reviews" style="color: magenta;">
               I booked an ▪ Ultra All Inclusive Cruise ▪ and relaxed in a comfortable
               cabin with fresh air from the sea breeze. I highly appreciate the services
@@ -323,7 +322,7 @@
           </div>
 
           <div class="col-sm-4 col-12 text-center mb-4">
-            <img src="./23.webp" width="97%" alt="Ship mall"><br>
+            <img src="./23.webp" width="97%" alt="Ship mall" class="customers-image"><br>
             <div class="reviews" style="color: springgreen;">
               I was on ▪ Half-Board Cruise ▪ and after diving in the sea, I went in
               a shopping mall with low prices! The food was very tasty! So, thank
@@ -335,6 +334,7 @@
         </div>
       </div>
 
+      <!-- TICKETS -->
       <h2 id="tickets">
         TICKETS</h2>
       <br><br>
@@ -386,7 +386,7 @@
       </div>
   </main>
 
-
+  <!-- CONTACTS -->
   <footer class="container-fluid px-md-5 text-center">
     <div class="row">
       <h2 id="contacts" style="margin-top: 53px;">
