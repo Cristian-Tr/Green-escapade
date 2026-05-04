@@ -131,11 +131,11 @@ h6 {
 /* VIDEO SETTINGS */
 @media only screen and (min-width: 769px) {
 
-  .mobile {
+  #mobile {
     display: none;
   }
 
-  .desktop {
+  #desktop {
     width: 100%;
   }
 
@@ -143,11 +143,11 @@ h6 {
 
 @media only screen and (max-width: 768px) {
 
-  .desktop {
+  #desktop {
     display: none;
   }
 
-  .mobile {
+  #mobile {
     height: 570px;
     width: 100%;
   }
