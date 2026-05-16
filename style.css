@@ -316,6 +316,18 @@ header h4 {
   }
 }
 
+.my-link {
+    font-size: 1rem;
+    background-color: #003388 !important;
+    border-radius: 17px;
+    color: azure;
+    font-weight: 800;
+    padding-left: 17px;
+    padding-right: 17px;
+    text-decoration: none;
+    padding-bottom: 3px;
+}
+
 /* ==========================================================================
    1. CARUSEL
    ========================================================================== */
