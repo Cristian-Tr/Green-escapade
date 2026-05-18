@@ -330,7 +330,7 @@ header h4 {
   padding-left: 17px;
   padding-right: 17px;
   text-decoration: none;
-  padding-bottom: 3px;
+  padding-bottom: 1px;
 }
 
 /* ==========================================================================
@@ -482,7 +482,7 @@ header h4 {
    ========================================================================== */
 
 #history {
-  margin-top: -130px;
+  margin-top: -150px;
 }
 
 .counter img {
