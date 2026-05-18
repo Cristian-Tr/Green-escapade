@@ -482,17 +482,8 @@ header h4 {
    ========================================================================== */
 
 #history {
-  margin-top: -100px;
+  margin-top: -110px;
 }
-
-#word {
-  font-size: 1.25rem;
-  color: springgreen;
-  text-shadow: .5px .5px .5px black;
-  font-weight: 800;
-  text-align: center;
-}
-
 
 .counter img {
   margin: auto;
@@ -514,7 +505,7 @@ header h4 {
 }
 
 .count {
-  margin-top: -32px;
+  margin-top: 1px;
 }
 
 #welcome-message {
@@ -528,9 +519,27 @@ header h4 {
   overflow: hidden;
 }
 
+#welcome-message h4 {
+  font-weight: 800;
+  text-shadow: .8px .8px .8px black;
+  font-size: 1.25rem !important;
+}
+
+@media (min-width: 768px) {
+  #welcome-message h4 {
+    font-size: 1.4rem !important;
+  }
+}
+
+#word {
+  color: springgreen;
+  text-align: center;
+  margin: auto;
+}
+
 .desk-text-container {
   position: absolute;
-  bottom: 12px;
+  bottom: 8px;
   left: 0;
   width: 100%;
   padding: 0 15px;
