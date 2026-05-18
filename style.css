@@ -485,10 +485,6 @@ header h4 {
   margin-top: -150px;
 }
 
-.counter img {
-  margin: auto;
-}
-
 #history p {
   font-size: 1.25rem;
   color: springgreen;
@@ -504,14 +500,18 @@ header h4 {
   }
 }
 
+.counter img {
+  margin: auto;
+}
+
 .count {
   margin-top: -20px;
 }
 
 #welcome-message {
   margin: auto;
-  width: 90%;
-  max-width: 440px;
+  width: 98%;
+  max-width: 350px;
   aspect-ratio: 1 / 1;
   background: url('ship-commander.webp') center / cover no-repeat;
   position: relative;
@@ -527,7 +527,7 @@ header h4 {
 
 @media (min-width: 768px) {
   #welcome-message h4 {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
     font-weight: 800;
   }
 }
@@ -540,13 +540,12 @@ header h4 {
 
 .desk-text-container {
   position: absolute;
-  bottom: 1px;
+  bottom: 17px;
   left: 0;
   width: 100%;
   padding: 1px;
   box-sizing: border-box;
 }
-
 
 /* =========================================
    SECTIUNE PARALLAX
@@ -965,6 +964,7 @@ footer ul li a {
   color: red;
   text-decoration: none;
   font-weight: 700;
+  text-shadow: .3px .3px .3px black;
 }
 
 footer ul li a:hover {
