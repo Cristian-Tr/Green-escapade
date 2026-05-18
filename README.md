@@ -4,9 +4,9 @@ Link: https://cristian-tr.github.io/Green-escapade/
 
 📈 Rezultate Audit Lighthouse
 
-🖥️ DESKTOP: Performance: 88 | Accesibility: 96 | Best practices: 100 | SEO: 100
+🖥️ DESKTOP: Performance: 89 | Accesibility: 94 | Best practices: 100 | SEO: 100
 
-📱 MOBILE:  Performance: 45 | Accesibility: 96 | Best practices: 100 | SEO: 100
+📱 MOBILE:  Performance: 40 | Accesibility: 94 | Best practices: 100 | SEO: 100
 
 🛠️ Tehnologii Utilizate
 HTML5 & CSS3 (Custom styling & Bootstrap 5) 🎨
