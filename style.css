@@ -24,6 +24,11 @@ html {
 header,
 main {
   animation: fadeInEfect 1s ease-out;
+  background-color: white;
+}
+
+#videos {
+  background-color: white;
 }
 
 h1 {
@@ -317,15 +322,15 @@ header h4 {
 }
 
 .my-link {
-    font-size: 1rem;
-    background-color: #003388 !important;
-    border-radius: 17px;
-    color: azure;
-    font-weight: 800;
-    padding-left: 17px;
-    padding-right: 17px;
-    text-decoration: none;
-    padding-bottom: 3px;
+  font-size: 1rem;
+  background-color: #003388 !important;
+  border-radius: 17px;
+  color: azure;
+  font-weight: 800;
+  padding-left: 17px;
+  padding-right: 17px;
+  text-decoration: none;
+  padding-bottom: 3px;
 }
 
 /* ==========================================================================
@@ -510,6 +515,26 @@ header h4 {
 
 .count {
   margin-top: -32px;
+}
+
+#welcome-message {
+  margin: auto;
+  width: 90%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1;
+  background: url('ship-commander.webp') center / cover no-repeat;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.desk-text-container {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 /* =========================================
@@ -753,7 +778,8 @@ header h4 {
 form {
   margin: 8px;
   font-size: 14px;
-  color: springgreen;
+  color: red;
+  text-shadow: .8px .8px .8px black;
 }
 
 label {

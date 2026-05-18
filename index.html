@@ -46,28 +46,29 @@
   <header id="myPage" data-spy="scroll">
 
     <div id="header" class="container-fluid text-center align-items-center">
+      <section class="row" id="videos">
+        <!-- Start video based on screen size -->
+        <div class="video-boats" style="padding: 0; margin: 0 auto;">
 
-      <!-- Start video based on screen size -->
-      <div class="video-boats" style="padding: 0; margin: 0 auto;">
+          <!-- Video pentru Mobile - Adăugat fetchpriority pentru LCP -->
 
-        <!-- Video pentru Mobile - Adăugat fetchpriority pentru LCP -->
+          <video id="mobile" autoplay loop muted playsinline poster="poster-mobile.webp" style="width: 100%;"
+            fetchpriority="high">
+            <source src="./mobileVideo.mp4" type="video/mp4" media="(max-width: 767px)">
+            <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
+            <p>Browserul tău nu poate reda video.</p>
+          </video>
+          <!-- Video pentru Desktop -->
+          <video id="desktop" autoplay loop muted playsinline poster="poster-desktop.webp" style="width: 100%;"
+            fetchpriority="high">
+            <source src="./desktopVideo.mp4" type="video/mp4" media="(min-width: 768px)">
+            <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
+            <p>Browserul tău nu poate reda video.</p>
+          </video>
 
-        <video id="mobile" autoplay loop muted playsinline poster="poster-mobile.webp" style="width: 100%;"
-          fetchpriority="high">
-          <source src="./mobileVideo.mp4" type="video/mp4" media="(max-width: 767px)">
-          <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
-          <p>Browserul tău nu poate reda video.</p>
-        </video>
-        <!-- Video pentru Desktop -->
-        <video id="desktop" autoplay loop muted playsinline poster="poster-desktop.webp" style="width: 100%;"
-          fetchpriority="high">
-          <source src="./desktopVideo.mp4" type="video/mp4" media="(min-width: 768px)">
-          <track src="./captions-ro.vtt" kind="captions" srclang="ro" label="Română" default>
-          <p>Browserul tău nu poate reda video.</p>
-        </video>
-
-      </div>
-      <!-- Stop video -->
+        </div>
+        <!-- Stop video -->
+      </section>
 
       <div><img src="./boat-on-waves.webp" width="100%" height="100%" id="header-logo" alt="Boat on waves"></div>
 
@@ -97,8 +98,10 @@
         <!-- MY GITHUB PORTFOLIO LINK - START -->
         <div class="container">
           <h4>DEMO LANDING PAGE</h4>
-          <a href="https://cristian-tr.github.io/Cristian-T-Portfolio/" aria-label="Vizitează portofoliul meu GitHub" class="my-link">
-            CRISTIAN T <img src="my-photo.jpg" alt="My picture" style="width: clamp(35px, 8vw, 53px); height: clamp(35px, 8vw, 53px); 
+          <a href="https://cristian-tr.github.io/Cristian-T-Portfolio/" aria-label="Vizitează portofoliul meu GitHub"
+            class="my-link">
+            CRISTIAN T <img src="my-photo.jpg" alt="My picture"
+              style="width: clamp(35px, 8vw, 53px); height: clamp(35px, 8vw, 53px); 
                                    border-radius: 50%; margin-bottom: 3px; object-fit: cover; border: 1px solid #003388;">
             PORTFOLIO</a>
         </div>
@@ -131,27 +134,35 @@
     </article>
 
     <!-- ABOUT US SECTION -->
-    <div class="container-fluid text-center bg-white" id="history">
-      <h2 style="font-weight: 800;">HISTORY</h2>
-      <br>
-      <p style="text-align: justify; font-weight: 300;">
-        It all started with a ferry that transported farmers to Reflux Island, but now we also offer our customers the
-        opportunity to spend their free time practicing sports activities such as fishing, swimming, water skiing or
-        diving.<br>
-        Today our company transports passengers with speedboats, yachts, ferries and cruise ships powered by green
-        energy to destinations around the world.<br>
-        We will continue to improve all our activities so that Green Escapade remains your favorite maritime company in
-        the future!
-      </p>
+    <div class="container-fluid text-center bg-white py-5" id="history">
+      <h2 style="font-weight: 800;">HISTORY</h2><br>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-md-11">
+
+            <img src="old-ferry.webp" class="img-fluid" alt="Old ferry boat" style="margin-bottom: 20px;">
+
+            <p style="text-align: justify; font-weight: 300; line-height: 1.2;">
+              It all started with a ferry that transported farmers to Reflux Island, but now we also offer our customers
+              the
+              opportunity to spend their free time practicing sports activities such as fishing, swimming, water skiing
+              or
+              diving.<br><br>
+              Today our company transports passengers with speedboats, yachts, ferries and cruise ships powered by green
+              energy to destinations around the world.<br><br>
+              We will continue to improve all our activities so that Green Escapade remains your favorite maritime
+              company in
+              the future!
+            </p>
+            <img src="5.webp" width="98%" height="auto" alt="Cruise ship fleet" border="0"
+              style="margin-bottom: 53px; max-width: 1400px; display: inline-block;">
+
+          </div>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-12">
-          <img src="5.webp" width="100%" height="auto" alt="Cruise ship fleet" border="0"
-            style="margin-top:44px; margin-bottom: 53px;">
-
-          <h3> Our <span style="color: springgreen;">green energy cruises</span> include:<br>
-            <span id="word" style="color: springgreen;">FRESH FISH MENU</span>
-          </h3>
 
           <div class="container py-5">
             <div class="row">
@@ -194,9 +205,16 @@
         </div>
       </div>
 
-      <h3 style="margin-top: -20px; margin-bottom: 71px;">COME WITH US IN A<br>
-        <span style="color: springgreen; margin: 8px;">GREEN ESCAPADE!</span>
-      </h3>
+      <section class="text-center" id="welcome-message" style="margin-bottom: 71px;">
+        <div class="desk-text-container">
+          <h4 style="font-weight: 500; color: red; margin: 0;">
+            COME WITH US IN A<br>
+            <span style="color: springgreen;">GREEN ESCAPADE!</span><br>
+            Our cruises include:<br>
+            <span id="word" style="color: springgreen;">FRESH FISH MENU</span>
+          </h4>
+        </div>
+      </section>
 
       <!-- PARALLAX - START -->
       <div class="image-background" id="underwater">
@@ -204,12 +222,16 @@
         <canvas id="fishCanvas"></canvas>
         <!-- BATISCAF -->
         <div class="batiscaf-wrapper">
-          <img src="batiscaf.webp" class="batiscaf-animat" alt="Batiscaf">
+          <img src="batiscaf.webp" width="100%" height="auto" class="batiscaf-animat" alt="Batiscaf">
         </div>
       </div>
       <!-- PARALLAX - STOP -->
 
-      <h3 style="font-weight: 800; color: springgreen; margin-top: 53px;">NOT CONVINCED YET?</h3>
+
+      <h3 style="font-weight: 800; color: springgreen; margin-top: 57px;">
+        NOT CONVINCED YET?</h3>
+      <img src="./sailor-miss.webp" alt="sailor miss" loading="lazy" width="100" height="100"
+        style="width: 250px; height: auto; object-fit: cover; margin-top:-42px; margin-left: 35px;"><br>
       <button class="btn btn-outline-dark btn-lg" type="submit"
         onclick="alert('Acesta este un website demo! Nu se pot trimite date personale!')">GET IN TOUCH!</button>
 
@@ -334,16 +356,14 @@
 
       <!-- TICKETS -->
       <h2 id="tickets">
-        TICKETS</h2>
+        TICKET</h2>
       <br><br>
-
+      <img src="./sailor-woman.webp" alt="Hana" loading="lazy" width="100" height="100"
+        style="width: 350px; height: auto; object-fit: cover; margin-top: -5px; margin-bottom: -2px;">
       <div class="bookingSystem">
         <div class="booking-container">
           <form id="bookingForm">
-            <br>
-            <h3 style="color: springgreen;">
-              GREEN ESCAPADE TICKET RESERVATION</h3>
-            <br>
+            <h3>CRUISE RESERVATION</h3>
             <label for="number">👨‍👨‍👦 NUMBER OF PEOPLE:</label>
             <input type="number" id="number" class="form-control mb-3" placeholder="1, 2, 3 ..." required>
 
@@ -363,7 +383,6 @@
 
             <label for="info">📩 CRUISE DETAILS:</label>
             <textarea id="info" class="form-control mb-3" placeholder="Your message..." required></textarea>
-            <br>
             <button type="submit" id="bookBtn" class="btn btn-success w-100">BOOK TICKET</button>
           </form>
 
