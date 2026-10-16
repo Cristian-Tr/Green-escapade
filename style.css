@@ -37,9 +37,35 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   color: red;
-  text-shadow: .8px .8px 1.7px black;
   font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 1px auto;
+  /* Contur litere */
+  -webkit-text-stroke: 1px black;
+  /* Gradient de culori */
+  background: linear-gradient(to left, magenta, red, white, lime, springgreen, springgreen, lime, white, red, magenta);
+  background-size: 200% auto;
+  /* Aplicare culoare */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Transparenta interior litere */
+  -webkit-text-fill-color: transparent;
+  /* Animație stânga - dreapta */
+  animation: animatieStangaDreapta 17s linear infinite;
+}
+
+/* Animația pt schimbare gradient */
+@keyframes animatieStangaDreapta {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
 }
 
 h3 {
@@ -898,7 +924,7 @@ textarea {
 
 /* STILURI TICKET */
 #generatedTicket .ticket-row {
- text-align: center;
+  text-align: center;
   font-weight: 900;
   font-size: 17px;
   text-transform: uppercase;
